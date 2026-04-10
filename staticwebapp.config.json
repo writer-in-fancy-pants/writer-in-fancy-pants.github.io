@@ -1,0 +1,25 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/*.js",
+      "/*.css",
+      "/*.ico",
+      "/*.png",
+      "/*.svg",
+      "/*.woff",
+      "/*.woff2"
+    ]
+  },
+  "mimeTypes": {
+    ".js": "application/javascript",
+    ".mjs": "application/javascript",
+    ".jsx": "application/javascript",
+    ".ts": "application/javascript",
+    ".tsx": "application/javascript",
+    ".css": "text/css",
+    ".json": "application/json"
+  }
+}   
