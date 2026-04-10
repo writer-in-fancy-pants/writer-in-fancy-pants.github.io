@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Personal Site</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+
+<!-- ══ NAV ════════════════════════════════════════════ -->
+<nav>
+  <span class="nav-logo"><span>Mehul</span></span>
+  <ul class="nav-tabs">
+    <li><button id="tab-about"    class="active">About Me</button></li>
+    <li><button id="tab-blog">Blog</button></li>
+    <li><button id="tab-projects">My Projects</button></li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle">☀️ Light</button>
+</nav>
+
+<!-- ══ ABOUT ══════════════════════════════════════════ -->
+<section id="about" class="page active">
+  <div>
+    <div class="about-header">
+      <div class="avatar">MK</div>
+      <div>
+        <h1 class="about-name">Mehul</h1>
+        <p class="about-tagline">Researcher · Tinkerer · Explorer</p>
+      </div>
+    </div>
+
+    <div class="about-bio">
+      <p>
+        Hi, I'm <strong>Mehul</strong> — a wandering researcher and software engineer, currently based in [India].
+        After years of working in exciting fields like Machine Learning, Quantum Computing, Blockchain, etc, I left my previous job as a corporate AI researcher to take advantage of the insane productivity that the advent of LLMs has created. I am exploring a lot, specially at the multidisciplinary fringes, and going through the long list of tools and POCs that I had always meant to create for myself. I will also be sharing most of them freely here.
+      </p>
+      <p>
+        I care deeply about [open source, democratic access, human rights, climate change, preserving knowledge, and improving human condition], with focus on personally experiencing the reality as it is, as well as the spiritual experiences that arise through dedicated practice, like [excessive reading, dance, music, yoga, scuba diving, and meditation]. To that end, I am also a DJ, a producer, a licensed Yoga instructor, and often dance Salsa, Bachata, Zouk at socials and festivals.
+      </p>
+      <p>
+        Here, on this website, I plan to keep a record of my organized thoughts and my projects, on various topics. All the projects share a few key aspects - my personal interest, free tier AI tools, serverless, proof-of-concept, and privacy first.
+        Feel free to reach out — I enjoy interesting conversations.
+      </p>
+    </div>
+
+    <hr class="divider">
+
+    <p class="socials-label">Find me online</p>
+    <div class="socials">
+      <a class="social-link" href="https://github.com/writer-in-fancy-pants" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a class="social-link" href="https://linkedin.com/in/mehul-kumar-66158a25" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a class="social-link" href="https://linktr.ee/djoctobass" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M13.51 5.886L16.686 2.7l2.106 2.106-3.188 3.175 4.496.01v2.976l-4.514-.01 3.206 3.176-2.106 2.106-3.187-3.2-3.187 3.2L8.206 14.13l3.206-3.176-4.514.01V7.991l4.496-.01L8.206 4.806 10.312 2.7zm-1.557 9.75h2.154V24h-2.154z"/></svg>
+        Linktree
+      </a>
+      <a class="social-link" href="https://soundcloud.com/djoctobass" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M1.175 12.225c-.108 0-.196.08-.212.19l-.299 2.048.3 2.006c.016.11.104.19.212.19.107 0 .195-.08.211-.19l.34-2.006-.34-2.048c-.016-.11-.104-.19-.211-.19zm1.574-.8c-.125 0-.228.093-.243.218l-.262 2.83.262 2.776c.015.124.118.217.243.217.124 0 .227-.093.242-.217l.297-2.776-.297-2.83c-.015-.125-.118-.218-.242-.218zm1.6-.29c-.143 0-.26.107-.273.249l-.227 3.119.227 3.053c.013.142.13.249.273.249.142 0 .26-.107.272-.249l.258-3.053-.258-3.119c-.012-.142-.13-.249-.272-.249zm1.614-.1c-.16 0-.292.122-.302.281l-.193 3.219.193 3.13c.01.16.142.281.302.281.16 0 .292-.121.302-.281l.22-3.13-.22-3.219c-.01-.16-.142-.281-.302-.281zm1.627-.052c-.177 0-.323.136-.33.312l-.16 3.271.16 3.196c.007.176.153.311.33.311.176 0 .322-.135.329-.311l.182-3.196-.182-3.271c-.007-.176-.153-.312-.329-.312zm4.989-1.98c-.218-.085-.45-.13-.693-.13-1.104 0-1.983.89-1.983 1.988v7.519c0 .23.187.417.418.417h7.517c1.066 0 1.93-.862 1.93-1.927 0-1.065-.864-1.928-1.93-1.928-.096 0-.189.008-.28.022.038-.2.059-.407.059-.618 0-1.815-1.474-3.286-3.292-3.286-.617 0-1.195.172-1.686.46v-.517zm-3.36 2.08c-.195 0-.355.15-.362.344l-.126 3.223.126 3.146c.007.195.167.344.362.344.194 0 .354-.149.361-.344l.143-3.146-.143-3.223c-.007-.194-.167-.344-.361-.344z"/></svg>
+        SoundCloud
+      </a>
+      <!-- <a class="social-link" href="https://twitter.com/yourusername" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Twitter / X
+      </a> -->
+      <!-- <a class="social-link" href="mailto:mksolorider@gmail.com">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a> -->
+      <!-- <a class="social-link" href="/resume.pdf" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        Résumé
+      </a> -->
+    </div>
+  </div>
+</section>
+
+<!-- ══ BLOG ═══════════════════════════════════════════ -->
+<section id="blog" class="page">
+  <div class="blog-inner">
+
+    <aside class="blog-sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-heading">By Topic</p>
+        <ul class="sidebar-list" id="topic-index"></ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">By Date</p>
+        <ul class="sidebar-list" id="date-index"></ul>
+      </div>
+    </aside>
+
+    <div class="blog-main">
+
+      <!-- List view -->
+      <div class="post-list-view" id="post-list-view">
+        <h2 class="blog-page-title">Writing</h2>
+        <p class="blog-subtitle">Occasional essays, notes, and technical deep-dives.</p>
+        <div id="posts-container"></div>
+      </div>
+
+      <!-- Single post view -->
+      <div class="single-post" id="single-post-view">
+        <button class="back-btn" id="back-btn">← Back to all posts</button>
+        <h1 class="single-post-title" id="sp-title"></h1>
+        <div class="single-post-meta">
+          <span id="sp-date"></span>
+          <span>·</span>
+          <span id="sp-topic" class="post-tag"></span>
+        </div>
+        <div class="single-post-body" id="sp-body"></div>
+
+        <!-- <div class="comments-section">
+          <h3 class="comments-heading">Comments</h3>
+
+          <div class="auth-bar">
+            <span id="auth-status">You are not logged in.</span>
+            <button class="auth-toggle" id="auth-toggle-btn">Sign in (demo)</button>
+          </div>
+
+          <div id="comments-list"></div>
+
+          <div class="login-notice" id="login-notice">
+            <a href="#" id="login-notice-link">Sign in</a> to leave a comment.
+          </div>
+
+          <div class="comment-form" id="comment-form">
+            <textarea id="comment-input" placeholder="Share your thoughts…"></textarea>
+            <div class="comment-form-actions">
+              <button class="btn btn-ghost" onclick="document.getElementById('comment-input').value=''">Clear</button>
+              <button class="btn btn-primary" onclick="submitComment()">Post comment</button>
+            </div>
+          </div>
+        </div> -->
+       
+        <!-- <div class="giscus">
+          <script src="https://giscus.app/client.js"
+            data-repo="writer-in-fancy-pants/writer-in-fancy-pants.github.io"
+            data-repo-id="R_kgDORj_ZYw"
+            data-category="Announcements"
+            data-category-id="DIC_kwDORj_ZY84C6jaI"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+          </script> 
+        </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ════════════════════════════════════════ -->
+<section id="projects" class="page">
+  <div>
+    <div class="projects-header">
+      <h2 class="projects-title">My Projects</h2>
+      <p class="projects-subtitle">A selection of things I've built, researched, or contributed to.</p>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════ -->
+<footer>
+  <p>© <span id="yr"></span> Mehul · Claude, Vite &amp; GitHub Pages</p>
+</footer>
+
+</body>
+</html>
