@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Personal Site</title>
+  <title>Mehul's Website</title>
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
@@ -114,8 +114,7 @@
           <span id="sp-topic" class="post-tag"></span>
         </div>
         <div class="single-post-body" id="sp-body"></div>
-
-        <!-- <div class="comments-section">
+        <div class="comments-section">
           <h3 class="comments-heading">Comments</h3>
 
           <div class="auth-bar">
@@ -132,11 +131,11 @@
           <div class="comment-form" id="comment-form">
             <textarea id="comment-input" placeholder="Share your thoughts…"></textarea>
             <div class="comment-form-actions">
-              <button class="btn btn-ghost" onclick="document.getElementById('comment-input').value=''">Clear</button>
-              <button class="btn btn-primary" onclick="submitComment()">Post comment</button>
+              <button class="btn btn-ghost" id='clear-comment-btn' onclick="document.getElementById('comment-input').value=''">Clear</button>
+              <button class="btn btn-primary" id='submit-comment-btn' onclick="submitComment()">Post comment</button>
             </div>
           </div>
-        </div> -->
+        </div>
        
         <!-- <div class="giscus">
           <script src="https://giscus.app/client.js"

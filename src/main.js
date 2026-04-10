@@ -5,54 +5,54 @@ import { loadPosts } from './blog.js'
    DATA — edit PROJECTS to describe your work
 ═══════════════════════════════════════════════ */
 const PROJECTS = [
-  {
-    name: 'ProjectAlpha',
-    status: 'active',
-    desc: 'A fast, open-source CLI tool for [problem you solved]. Handles edge cases that other tools miss, and processes files in parallel for large repos.',
-    tags: ['Rust', 'CLI', 'Open Source'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/yourusername/projectalpha', primary: true },
-      { label: 'Docs',   url: 'https://yourusername.github.io/projectalpha', primary: false }
-    ]
-  },
-  {
-    name: 'ML Experiment Tracker',
-    status: 'active',
-    desc: 'Lightweight experiment tracking for PyTorch training runs. Logs metrics, hyperparameters, and artifacts to a local SQLite database with a clean web UI — no cloud account needed.',
-    tags: ['Python', 'PyTorch', 'SQLite', 'FastAPI'],
-    links: [
-      { label: 'GitHub',    url: 'https://github.com/yourusername/ml-tracker', primary: true },
-      { label: 'Live Demo', url: 'https://ml-tracker-demo.vercel.app', primary: false }
-    ]
-  },
-  {
-    name: 'Research Paper: [Title]',
-    status: 'active',
-    desc: 'Published at [Conference / Journal]. Proposes a new approach to [problem area] that reduces [metric] by X% while maintaining [other property].',
-    tags: ['Research', 'ML', 'NLP'],
-    links: [
-      { label: 'arXiv', url: 'https://arxiv.org/abs/XXXX.XXXXX', primary: true },
-      { label: 'Code',  url: 'https://github.com/yourusername/paper-code', primary: false }
-    ]
-  },
-  {
-    name: 'Datavis Dashboard',
-    status: 'wip',
-    desc: 'An interactive dashboard for exploring [dataset]. Built to answer questions I kept having to write one-off scripts for. Work in progress — contributions welcome.',
-    tags: ['TypeScript', 'D3.js', 'React'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/yourusername/datavis', primary: true }
-    ]
-  },
-  {
-    name: 'OldProject',
-    status: 'archived',
-    desc: 'An early experiment in [domain]. No longer maintained, but the approach might still be interesting as a reference.',
-    tags: ['Python', 'Flask'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/yourusername/oldproject', primary: true }
-    ]
-  }
+  // {
+  //   name: 'ProjectAlpha',
+  //   status: 'active',
+  //   desc: 'A fast, open-source CLI tool for [problem you solved]. Handles edge cases that other tools miss, and processes files in parallel for large repos.',
+  //   tags: ['Rust', 'CLI', 'Open Source'],
+  //   links: [
+  //     { label: 'GitHub', url: 'https://github.com/yourusername/projectalpha', primary: true },
+  //     { label: 'Docs',   url: 'https://yourusername.github.io/projectalpha', primary: false }
+  //   ]
+  // },
+  // {
+  //   name: 'ML Experiment Tracker',
+  //   status: 'active',
+  //   desc: 'Lightweight experiment tracking for PyTorch training runs. Logs metrics, hyperparameters, and artifacts to a local SQLite database with a clean web UI — no cloud account needed.',
+  //   tags: ['Python', 'PyTorch', 'SQLite', 'FastAPI'],
+  //   links: [
+  //     { label: 'GitHub',    url: 'https://github.com/yourusername/ml-tracker', primary: true },
+  //     { label: 'Live Demo', url: 'https://ml-tracker-demo.vercel.app', primary: false }
+  //   ]
+  // },
+  // {
+  //   name: 'Research Paper: [Title]',
+  //   status: 'active',
+  //   desc: 'Published at [Conference / Journal]. Proposes a new approach to [problem area] that reduces [metric] by X% while maintaining [other property].',
+  //   tags: ['Research', 'ML', 'NLP'],
+  //   links: [
+  //     { label: 'arXiv', url: 'https://arxiv.org/abs/XXXX.XXXXX', primary: true },
+  //     { label: 'Code',  url: 'https://github.com/yourusername/paper-code', primary: false }
+  //   ]
+  // },
+  // {
+  //   name: 'Datavis Dashboard',
+  //   status: 'wip',
+  //   desc: 'An interactive dashboard for exploring [dataset]. Built to answer questions I kept having to write one-off scripts for. Work in progress — contributions welcome.',
+  //   tags: ['TypeScript', 'D3.js', 'React'],
+  //   links: [
+  //     { label: 'GitHub', url: 'https://github.com/yourusername/datavis', primary: true }
+  //   ]
+  // },
+  // {
+  //   name: 'OldProject',
+  //   status: 'archived',
+  //   desc: 'An early experiment in [domain]. No longer maintained, but the approach might still be interesting as a reference.',
+  //   tags: ['Python', 'Flask'],
+  //   links: [
+  //     { label: 'GitHub', url: 'https://github.com/yourusername/oldproject', primary: true }
+  //   ]
+  // }
 ]
 
 /* ═══════════════════════════════════════════════
