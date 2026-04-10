@@ -1,16 +1,23 @@
 {
-  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
       "/assets/*",
-      "/*.js",
-      "/*.css",
-      "/*.ico",
-      "/*.png",
-      "/*.svg",
-      "/*.woff",
-      "/*.woff2"
+      "*.js",
+      "*.css",
+      "*.json",
+      "*.ico",
+      "*.png",
+      "*.svg",
+      "*.jpg",
+      "*.jpeg",
+      "*.gif",
+      "*.webp",
+      "*.woff",
+      "*.woff2",
+      "*.ttf",
+      "*.eot",
+      "*.webmanifest"
     ]
   },
   "mimeTypes": {
