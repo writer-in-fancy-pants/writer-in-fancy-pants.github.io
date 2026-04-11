@@ -1,7 +1,7 @@
 ---
 id: what-i-read-q1-2026
 title: "What I Was/Am Reading: Q1 2026"
-date: "2026-04-1"
+date: "2026-04-01"
 topic: "Reading"
 excerpt: "Briefly revisiting the books I'm reading."
 ---

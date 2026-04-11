@@ -5,16 +5,26 @@ import { loadPosts } from './blog.js'
    DATA — edit PROJECTS to describe your work
 ═══════════════════════════════════════════════ */
 const PROJECTS = [
-  // {
-  //   name: 'ProjectAlpha',
-  //   status: 'active',
-  //   desc: 'A fast, open-source CLI tool for [problem you solved]. Handles edge cases that other tools miss, and processes files in parallel for large repos.',
-  //   tags: ['Rust', 'CLI', 'Open Source'],
-  //   links: [
-  //     { label: 'GitHub', url: 'https://github.com/yourusername/projectalpha', primary: true },
-  //     { label: 'Docs',   url: 'https://yourusername.github.io/projectalpha', primary: false }
-  //   ]
-  // },
+  {
+    name : "Muse 2 EEG Dashboard",
+    status: 'active',
+    desc: 'Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo',
+    tags: ['eeg', 'neurofeedback', 'python', 'js', 'open source', 'dashboard'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard', primary: false },
+      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/', primary: true }
+    ]
+  },
+  {
+    name : "Mind Acoustic Tools",
+    status: 'active',
+    desc: 'Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.',
+    tags: ['audio', 'emdr', 'python', 'js', 'open source', 'dashboard'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/mind-audio-tools', primary: false },
+      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/mind-audio-tools/', primary: true }
+    ]
+  }
   // {
   //   name: 'ML Experiment Tracker',
   //   status: 'active',
