@@ -357,16 +357,16 @@ meta-viewport: width=device-width, initial-scale=1.0
     .crystal-card { border: 1px solid #ccc; }
   }
 </style>
-<header>
-  <span class="label">Experimental Research Report · April 2026</span>
+Experimental Research Report · April 2026
   <h1>Healing Crystal <em>Veracity</em></h1>
   <p class="subtitle">A cross-cultural ethnographic survey of crystal healing traditions, mineral physics, resonance frequencies, and placebo theory.</p>
-  <div class="meta-row">
-    <div>Scope <span>African · Asian · Amazonian · Indigenous American</span></div>
-    <div>Framework <span>Hypothesis-driven · Dual-track</span></div>
-    <div>Status <span>Compiled Review</span></div>
+  <div>
+    <h6>African · Asian · Amazonian · Indigenous American </h6>
+    <h6> Hypothesis-driven · Dual-track · Compiled Review</h6>
   </div>
-</header>
+</div>
+
+tl;dr - There exist strong cross-cultural correlations between uses of specific crystals. Universal color associations and neurological conditioning (likely right-brain features) are plausible explanations. Quartz and Jade of particular interest. Strong bias towards belief in healing power of the crystals for them to work.
 
 <nav class="toc">
   <div class="toc-title">Contents</div>
@@ -466,145 +466,87 @@ meta-viewport: width=device-width, initial-scale=1.0
   <p>The following crystals emerge as most significant across multiple old-world traditions, excluding purely New Age sources.</p>
 
   <table class="crystal-grid">
-
-    <div class="crystal-card quartz">
-      <div class="crystal-name">Clear Quartz</div>
-      <div class="crystal-chem">SiO₂ · Trigonal · Piezoelectric</div>
-      <p><strong>Primary uses:</strong> Healing amplifier, clarity, diagnosis, spirit communication, protection</p>
-      <p><strong>Color:</strong> Colorless/white (full visible spectrum reflectance)</p>
-      <div class="culture-tags">
-        <span class="tag">Egypt</span>
-        <span class="tag">Aztec/Maya</span>
-        <span class="tag">Native American</span>
-        <span class="tag">Amazon</span>
-        <span class="tag">Australia Aboriginal</span>
-        <span class="tag">Celtic</span>
-      </div>
-    </div>
-
-    <div class="crystal-card amethyst">
-      <div class="crystal-name">Amethyst</div>
-      <div class="crystal-chem">SiO₂ + Fe³⁺ impurities · Trigonal</div>
-      <p><strong>Primary uses:</strong> Clarity, sobriety, calm, spiritual protection, transition</p>
-      <p><strong>Color:</strong> Violet–purple (~380–430 nm wavelength)</p>
-      <div class="culture-tags">
-        <span class="tag">Ancient Greece</span>
-        <span class="tag">Ayurvedic India</span>
-        <span class="tag green">East Africa</span>
-        <span class="tag">Medieval Europe</span>
-        <span class="tag">First Nations</span>
-      </div>
-    </div>
-
-    <div class="crystal-card jade">
-      <div class="crystal-name">Jade (Nephrite/Jadeite)</div>
-      <div class="crystal-chem">Ca₂(Mg,Fe)₅Si₈O₂₂(OH)₂ / NaAlSi₂O₆</div>
-      <p><strong>Primary uses:</strong> Kidney/organ healing, protection from evil, longevity, virtue</p>
-      <p><strong>Color:</strong> Green (~520–560 nm)</p>
-      <div class="culture-tags">
-        <span class="tag">Ancient China</span>
-        <span class="tag">Aztec</span>
-        <span class="tag">Maya</span>
-        <span class="tag">New Zealand Māori</span>
-        <span class="tag">Tibet</span>
-      </div>
-    </div>
-
-    <div class="crystal-card lapis">
-      <div class="crystal-name">Lapis Lazuli</div>
-      <div class="crystal-chem">Lazurite (Na,Ca)₈(AlSiO₄)₆(S,SO₄,Cl)₂</div>
-      <p><strong>Primary uses:</strong> Wisdom, divine power, eye healing, fever, protection</p>
-      <p><strong>Color:</strong> Deep blue + gold pyrite (~460–480 nm dominant)</p>
-      <div class="culture-tags">
-        <span class="tag">Ancient Egypt</span>
-        <span class="tag">Sumeria</span>
-        <span class="tag">Persia</span>
-        <span class="tag">Ancient Greece/Rome</span>
-        <span class="tag">India</span>
-      </div>
-    </div>
-
-    <div class="crystal-card obsidian">
-      <div class="crystal-name">Obsidian</div>
-      <div class="crystal-chem">Volcanic glass SiO₂ + MgO, Fe₂O₃</div>
-      <p><strong>Primary uses:</strong> Protection, truth, grounding, shadow integration, wound-healing tools</p>
-      <p><strong>Color:</strong> Black (full spectrum absorption)</p>
-      <div class="culture-tags">
-        <span class="tag">Aztec/Maya</span>
-        <span class="tag">Native American</span>
-        <span class="tag green">Amazon</span>
-        <span class="tag">Ancient Greece</span>
-        <span class="tag">Mesopotamia</span>
-      </div>
-    </div>
-
-    <div class="crystal-card carnelian">
-      <div class="crystal-name">Carnelian</div>
-      <div class="crystal-chem">SiO₂ + Fe₂O₃ (chalcedony) · Trigonal</div>
-      <p><strong>Primary uses:</strong> Vitality, blood, fertility, afterlife protection, courage</p>
-      <p><strong>Color:</strong> Orange-red (~600–640 nm)</p>
-      <div class="culture-tags">
-        <span class="tag">Ancient Egypt</span>
-        <span class="tag green">Nigeria/West Africa</span>
-        <span class="tag">Persia</span>
-        <span class="tag">Ancient Rome</span>
-        <span class="tag">Vedic India</span>
-      </div>
-    </div>
-
-    <div class="crystal-card turquoise">
-      <div class="crystal-name">Turquoise</div>
-      <div class="crystal-chem">CuAl₆(PO₄)₄(OH)₈·4H₂O · Triclinic</div>
-      <p><strong>Primary uses:</strong> Protection, strength, sky connection, health, wealth</p>
-      <p><strong>Color:</strong> Cyan-blue (~480–500 nm)</p>
-      <div class="culture-tags">
-        <span class="tag">Navajo/SW tribes</span>
-        <span class="tag">Ancient Egypt (Sinai)</span>
-        <span class="tag">Persia/Afghanistan</span>
-        <span class="tag">Tibet</span>
-        <span class="tag">Aztec</span>
-      </div>
-    </div>
-
-    <div class="crystal-card malachite">
-      <div class="crystal-name">Malachite</div>
-      <div class="crystal-chem">Cu₂CO₃(OH)₂ · Monoclinic</div>
-      <p><strong>Primary uses:</strong> Transformation, protection from evil, fertility, wound healing</p>
-      <p><strong>Color:</strong> Vivid green (~510–540 nm)</p>
-      <div class="culture-tags">
-        <span class="tag green">Southern Africa</span>
-        <span class="tag">Ancient Egypt</span>
-        <span class="tag">Ancient Greece</span>
-        <span class="tag green">Zambia/Congo</span>
-      </div>
-    </div>
-
-    <div class="crystal-card hematite">
-      <div class="crystal-name">Hematite</div>
-      <div class="crystal-chem">Fe₂O₃ · Trigonal</div>
-      <p><strong>Primary uses:</strong> Strength, grounding, blood health, protection, courage in battle</p>
-      <p><strong>Color:</strong> Black metallic (red powder; red ~620–750 nm)</p>
-      <div class="culture-tags">
-        <span class="tag green">South Africa</span>
-        <span class="tag green">Amazon</span>
-        <span class="tag">Ancient Greece/Rome</span>
-        <span class="tag">Mesopotamia</span>
-      </div>
-    </div>
-
-    <div class="crystal-card citrine">
-      <div class="crystal-name">Citrine</div>
-      <div class="crystal-chem">SiO₂ + Fe³⁺ traces · Trigonal (quartz var.)</div>
-      <p><strong>Primary uses:</strong> Solar energy, abundance, happiness, vitality, purification</p>
-      <p><strong>Color:</strong> Yellow-orange (~570–610 nm)</p>
-      <div class="culture-tags">
-        <span class="tag green">Congo (most sacred)</span>
-        <span class="tag">First Nations (coyote stone)</span>
-        <span class="tag">Ancient Rome</span>
-        <span class="tag">Scottish Highlanders</span>
-      </div>
-    </div>
-
+      <thead>
+      <tr>
+        <th>Crystal</th>
+        <th>Crystal Chemistry / Physics</th>
+        <th>Primary Uses</th>
+        <th>Color</th>
+        <th>Cultures</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td class="crystal-name">Clear Quartz</td>
+      <td class="crystal-chem">SiO₂ · Trigonal · Piezoelectric</td>
+      <td>Healing amplifier, clarity, diagnosis, spirit communication, protection</td>
+      <td> Colorless/white (full visible spectrum reflectance)</td>
+      <td>Egypt, Aztec/Maya, Native American, Amazon,Australia Aboriginal, Celtic</td>
+      </tr>
+    <tr>
+      <td class="crystal-name">Amethyst</td>
+      <td class="crystal-chem">SiO₂ + Fe³⁺ impurities · Trigonal</td>
+      <td> Clarity, sobriety, calm, spiritual protection, transition</td>
+      <td>Violet–purple (~380–430 nm wavelength)</td>
+      <td>Ancient Greece, Ayurvedic India, East Africa,Medieval Europe, First Nations</td>
+    </tr>
+    <tr class="crystal-card jade">
+      <td class="crystal-name">Jade (Nephrite/Jadeite)</td>
+      <td class="crystal-chem">Ca₂(Mg,Fe)₅Si₈O₂₂(OH)₂ / NaAlSi₂O₆</td>
+      <td>Kidney/organ healing, protection from evil, longevity, virtue</td>
+      <td> Green (~520–560 nm)</td>
+      <td class="culture-tags">Ancient China, Aztec, Maya, New Zealand Māori, Tibet</td>
+    </tr>
+    <tr class="crystal-card lapis">
+      <td class="crystal-name">Lapis Lazuli</td>
+      <td class="crystal-chem">Lazurite (Na,Ca)₈(AlSiO₄)₆(S,SO₄,Cl)₂</td>
+      <td>Wisdom, divine power, eye healing, fever, protection</td>
+      <td> Deep blue + gold pyrite (~460–480 nm dominant)</td>
+      <td class="culture-tags">
+        Ancient Egypt, Sumeria, Persia, Ancient Greece/Rome, India</td>
+    </tr>
+    <tr class="crystal-card obsidian">
+      <td class="crystal-name">Obsidian</td>
+      <td class="crystal-chem">Volcanic glass SiO₂ + MgO, Fe₂O₃</td>
+      <td> Protection, truth, grounding, shadow integration, wound-healing tools</td>
+      <td> Black (full spectrum absorption)</td>
+      <td>Aztec/Maya, Native American, Amazon, Ancient Greece, Mesopotamia</td>
+    </tr>
+    <tr class="crystal-card carnelian">
+      <td class="crystal-name">Carnelian</td>
+      <td class="crystal-chem">SiO₂ + Fe₂O₃ (chalcedony) · Trigonal</td>
+      <td> Vitality, blood, fertility, afterlife protection, courage</td>
+      <td> Orange-red (~600–640 nm)</td>
+      <td>Ancient Egypt, Nigeria/West Africa, Persia, Ancient Rome, Vedic India</td>
+    </tr>
+    <tr class="crystal-card turquoise">
+      <td class="crystal-name">Turquoise</td>
+      <td class="crystal-chem">CuAl₆(PO₄)₄(OH)₈·4H₂O · Triclinic</td>
+      <td> Protection, strength, sky connection, health, wealth</td>
+      <td> Cyan-blue (~480–500 nm)</td>
+      <td>Navajo/SW tribes, Ancient Egypt (Sinai), Persia/Afghanistan, Tibet, Aztec</td>
+    </tr>
+    <tr class="crystal-card malachite">
+      <td class="crystal-name">Malachite</td>
+      <td class="crystal-chem">Cu₂CO₃(OH)₂ · Monoclinic</td>
+      <td> Transformation, protection from evil, fertility, wound healing</td>
+      <td> Vivid green (~510–540 nm)</td>
+      <td>Southern Africa, Ancient Egypt, Ancient Greece, Zambia/Congo</td>
+    </tr>
+    <tr class="crystal-card hematite">
+      <td class="crystal-name">Hematite</td>
+      <td class="crystal-chem">Fe₂O₃ · Trigonal</td>
+      <td> Strength, grounding, blood health, protection, courage in battle</td>
+      <td> Black metallic (red powder; red ~620–750 nm)</td>
+      <td>South Africa, Amazon, Ancient Greece/Rome, Mesopotamia</td>
+    </tr>
+    <tr class="crystal-card citrine">
+      <td class="crystal-name">Citrine</td>
+      <td class="crystal-chem">SiO₂ + Fe³⁺ traces · Trigonal (quartz var.)</td>
+      <td> Solar energy, abundance, happiness, vitality, purification</td>
+      <td> Yellow-orange (~570–610 nm)</td>
+      <td>Congo (most sacred), First Nations (coyote stone), Ancient Rome, Scottish Highlanders</td>
+    </tr>
   </table>
 </section>
 
@@ -903,11 +845,8 @@ meta-viewport: width=device-width, initial-scale=1.0
   </ul>
 </section>
 
-<footer>
+<small>
   <div>Compiled: April 2026 · Research Report on Healing Crystal Veracity</div>
   <div>Methodology: Ethnographic survey, mineral physics review, RCT literature analysis</div>
   <div>This report is a research synthesis. It does not constitute medical advice.</div>
-</footer>
-
-</body>
-</html>
+</small>
