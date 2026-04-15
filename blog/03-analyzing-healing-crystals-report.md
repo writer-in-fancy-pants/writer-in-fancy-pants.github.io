@@ -31,7 +31,6 @@ meta-viewport: width=device-width, initial-scale=1.0
     font-family: var(--serif);
     font-size: 16px;
     line-height: 1.75;
-    max-width: 960px;
     margin: 0 auto;
     padding: 0 2rem 6rem;
   }
@@ -73,7 +72,6 @@ meta-viewport: width=device-width, initial-scale=1.0
     font-family: var(--serif);
     font-size: 1.05rem;
     color: var(--text-dim);
-    max-width: 620px;
     margin-bottom: 2rem;
   }
   .meta-row {
@@ -169,10 +167,17 @@ meta-viewport: width=device-width, initial-scale=1.0
 
   /* CRYSTAL CARDS */
   .crystal-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.2rem;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
     margin: 1.5rem 0;
+    font-family: var(--mono);
+  }
+  td {
+    padding: 0 15px;
+  }
+  th {
+    padding: 0 15px;
   }
   .crystal-card {
     background: var(--surface);
@@ -187,6 +192,7 @@ meta-viewport: width=device-width, initial-scale=1.0
     top: 0; left: 0; right: 0;
     height: 2px;
   }
+  .crystal-card.intro::before { background: linear-gradient(90deg, #111112, #131518);  }
   .crystal-card.quartz::before { background: linear-gradient(90deg, #a8d8ea, #dce8f0); }
   .crystal-card.amethyst::before { background: linear-gradient(90deg, #8c7aad, #c9a8d8); }
   .crystal-card.jade::before { background: linear-gradient(90deg, #7a9e7e, #b0d4a0); }
@@ -197,6 +203,9 @@ meta-viewport: width=device-width, initial-scale=1.0
   .crystal-card.malachite::before { background: linear-gradient(90deg, #3a8a4a, #7ab878); }
   .crystal-card.hematite::before { background: linear-gradient(90deg, #4a2a2a, #8a4a4a); }
   .crystal-card.citrine::before { background: linear-gradient(90deg, #c9a84c, #e8c86a); }
+  .crystal-card.intro{
+    color: #c9a84c;
+  }
   .crystal-name {
     font-family: var(--display);
     font-size: 1rem;
@@ -368,7 +377,7 @@ Experimental Research Report · April 2026
 
 tl;dr - There exist strong cross-cultural correlations between uses of specific crystals. Universal color associations and neurological conditioning (likely right-brain features) are plausible explanations. Quartz and Jade of particular interest. Strong bias towards belief in healing power of the crystals for them to work.
 
-<nav class="toc">
+<div class="toc">
   <div class="toc-title">Contents</div>
   <ol>
     <li><a href="#s1">Hypotheses & Scope</a></li>
@@ -387,7 +396,7 @@ tl;dr - There exist strong cross-cultural correlations between uses of specific 
     <li><a href="#s7">Synthesis & Open Questions</a></li>
     <li><a href="#s8">References</a></li>
   </ol>
-</nav>
+</div>
 
 <!-- SECTION 1 -->
 <section id="s1">
@@ -466,24 +475,22 @@ tl;dr - There exist strong cross-cultural correlations between uses of specific 
   <p>The following crystals emerge as most significant across multiple old-world traditions, excluding purely New Age sources.</p>
 
   <table class="crystal-grid">
-      <thead>
-      <tr>
-        <th>Crystal</th>
-        <th>Crystal Chemistry / Physics</th>
-        <th>Primary Uses</th>
-        <th>Color</th>
-        <th>Cultures</th>
+      <tbody>
+      <tr class="crystal-card intro">
+        <td ><strong>Crystal.</strong></td>
+        <td><strong>Crystal Chemistry / Physics</strong></td>
+        <td><strong>Primary Uses</strong></td>
+        <td><strong>Color</strong></td>
+        <td><strong>Cultures</strong></td>
       </tr>
-    </thead>
-    <tbody>
-      <tr>
+      <tr class="crystal-card quartz">
       <td class="crystal-name">Clear Quartz</td>
       <td class="crystal-chem">SiO₂ · Trigonal · Piezoelectric</td>
       <td>Healing amplifier, clarity, diagnosis, spirit communication, protection</td>
       <td> Colorless/white (full visible spectrum reflectance)</td>
       <td>Egypt, Aztec/Maya, Native American, Amazon,Australia Aboriginal, Celtic</td>
       </tr>
-    <tr>
+    <tr class="crystal-card amethyst">
       <td class="crystal-name">Amethyst</td>
       <td class="crystal-chem">SiO₂ + Fe³⁺ impurities · Trigonal</td>
       <td> Clarity, sobriety, calm, spiritual protection, transition</td>
