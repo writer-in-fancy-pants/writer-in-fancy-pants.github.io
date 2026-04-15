@@ -16,6 +16,16 @@ const PROJECTS = [
     ]
   },
   {
+    name : "Meditations",
+    status: 'active',
+    desc: 'Live neurofeedback / biofeedback training and monitored meditation via stream from health devices (EEG, Heart rate, etc).',
+    tags: ['alpha/theta', 'hrv', 'neurofeedback', 'python', 'audio', 'js', 'open source'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/meditations', primary: false },
+      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/meditations/', primary: true }
+    ]
+  }
+  {
     name : "Mind Acoustic Tools",
     status: 'active',
     desc: 'Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.',
