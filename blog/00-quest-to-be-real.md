@@ -1,6 +1,6 @@
 ---
 id: 00-quest-to-be-real
-title: "The Quest to be Real"
+title: "The Quest To Be Real"
 date: "2026-03-11"
 topic: "Spirituality"
 excerpt: "My life in hindsight, and where to go from here."
