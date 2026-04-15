@@ -367,11 +367,11 @@ meta-viewport: width=device-width, initial-scale=1.0
   }
 </style>
 Experimental Research Report · April 2026
-  <h1>Healing Crystal <em>Veracity</em></h1>
+  <!-- <h1>Healing Crystal <em>Veracity</em></h1> -->
   <p class="subtitle">A cross-cultural ethnographic survey of crystal healing traditions, mineral physics, resonance frequencies, and placebo theory.</p>
   <div>
-    <h6>African · Asian · Amazonian · Indigenous American </h6>
-    <h6> Hypothesis-driven · Dual-track · Compiled Review</h6>
+    <h4> African · Asian · Amazonian · Indigenous American </h4>
+    <h4> Hypothesis-driven · Dual-track · Compiled Review</h4>
   </div>
 </div>
 
