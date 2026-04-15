@@ -24,7 +24,7 @@ const PROJECTS = [
       { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/meditations', primary: false },
       { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/meditations/', primary: true }
     ]
-  }
+  },
   {
     name : "Mind Acoustic Tools",
     status: 'active',
