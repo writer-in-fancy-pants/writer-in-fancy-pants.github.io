@@ -703,8 +703,8 @@ footer {
 /* ══════════════════════════════════════════════════════════
    13. RESPONSIVE
 ══════════════════════════════════════════════════════════ */
-@media (max-width: 100%) {
-  nav { padding: 0 1rem; gap: .5rem; }
+@media (max-width: 1200px) {
+  nav { padding: 0 1rem; gap: .5rem; width: 100% }
   .nav-tabs { gap: 0; margin-left: .5rem; }
   .nav-tabs button { padding: .4rem .6rem; font-size: .8rem; }
   .rss-btn span { display: none; }
