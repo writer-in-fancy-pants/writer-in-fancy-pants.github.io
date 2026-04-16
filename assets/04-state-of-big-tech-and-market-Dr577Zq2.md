@@ -1,5 +1,5 @@
 ---
-id: 03-state-of-big-tech-and-market
+id: 04-state-of-big-tech-and-market
 title: "Big Tech in the AI Era — Strategic Analysis 2026"
 date: "2026-04-16"
 topic: "Research"
@@ -7,10 +7,6 @@ excerpt: "Analyzing impact of AI, War, Legal issues, Politics, Inflation, and mo
 meta-viewport: width=device-width, initial-scale=1.0
 ---
 
-<head>
-<meta charset="UTF-8">
-<title>Big Tech in the AI Era — Strategic Analysis 2026</title>
-<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"> -->
 <style>
 :root {
     --cream: #ede8da;
@@ -424,8 +420,6 @@ meta-viewport: width=device-width, initial-scale=1.0
     footer { padding: 16px 20px; flex-direction: column; gap: 8px; }
   }
 </style>
-</head>
-<body>
 
 <div class="masthead">
   <div class="masthead-left">
