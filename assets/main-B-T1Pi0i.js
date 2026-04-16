@@ -2162,6 +2162,454 @@ meta-viewport: width=device-width, initial-scale=1.0
   <p>Analysis based on public filings, market data, and reported financials through April 16, 2026.</p>
   <p>NOT INVESTMENT ADVICE — For informational and educational purposes only.</p>
 </footer>
+
+# References
+*All citations used across the strategic analysis, April 16, 2026*
+
+---
+
+## Markets & Economy
+
+1. **Is a Market Correction Coming?**
+   U.S. Bank Asset Management Group
+   https://www.usbank.com/investing/financial-perspectives/market-news/is-a-market-correction-coming.html
+
+2. **What to Expect from Stocks in 2026**
+   CNN Business
+   https://www.cnn.com/2026/01/01/investing/what-to-expect-stock-market-2026
+
+3. **Stock Market Predictions 2026: AI Boom, Dollar's Decline and Sticky Inflation**
+   Bloomberg Graphics
+   https://www.bloomberg.com/graphics/2026-investment-outlooks/
+
+4. **Stock Market Outlook 2026: Bull Market Still Has Room to Run**
+   Morgan Stanley
+   https://www.morganstanley.com/insights/articles/stock-market-outlook-2026
+
+5. **S&P and Nasdaq Hit Record Highs, Continuing Remarkable Recovery from War Shock**
+   CNN Business
+   https://www.cnn.com/2026/04/15/investing/us-stocks-iran-war
+
+6. **U.S. Stock Market Weekly Recap: Strongest Rally of 2026**
+   STL News
+   https://www.stl.news/u-s-stock-market-weekly-recap-strongest-rally-of-2026/
+
+7. **2026 Market Outlook**
+   Oppenheimer Asset Management
+   https://www.oppenheimer.com/news-media/2026/insights/oam/2026-market-outlook
+
+8. **Daily: Why 2026 Catalysts Matter More Than Any Year-End Rally**
+   UBS Global
+   https://www.ubs.com/global/en/wealthmanagement/insights/chief-investment-office/house-view/daily/2025/latest-22122025.html
+
+9. **The S&P 500 Is Expected to Rally 12% This Year**
+   Goldman Sachs
+   https://www.goldmansachs.com/insights/articles/the-sp-500-expected-to-rally-12-this-year
+
+10. **Stock Market News for April 13, 2026**
+    CNBC
+    https://www.cnbc.com/2026/04/12/stock-market-today-live-updates.html
+
+11. **Investment Backdrop Heading into 2026**
+    Goldman Sachs Asset Management
+    https://am.gs.com/en-us/advisors/insights/article/investment-outlook/investment-backdrop-2026
+
+12. **Market Know-How 2Q 2026**
+    Goldman Sachs Asset Management
+    https://am.gs.com/en-us/advisors/insights/article/market-know-how
+
+13. **Charting the Year Ahead: Investment Ideas for 2026**
+    PIMCO
+    https://www.pimco.com/us/en/insights/charting-the-year-ahead-investment-ideas-for-2026
+
+14. **Investment Strategy: Bull and Bear Scenarios for 2026**
+    PineBridge Investments
+    https://www.pinebridge.com/en/insights/investment-strategy-insights-assessing-scenarios-for-our-2026-outlook
+
+15. **Plan for 2026: Predictions from Our Portfolio Managers**
+    VanEck
+    https://www.vaneck.com/us/en/blogs/investment-outlook/plan-for-2026-predictions-from-our-portfolio-managers/
+
+16. **The Odds Are Changing: Investing in 2026**
+    BlackRock
+    https://www.blackrock.com/us/financial-professionals/insights/investing-in-2026
+
+17. **Outlook 2026**
+    Allianz Global Investors
+    https://www.allianzgi.com/en/insights/outlook-and-commentary/outlook-2026
+
+18. **30 Years of Foresight: The 2026 J.P. Morgan Long-Term Capital Market Assumptions**
+    J.P. Morgan
+    https://www.jpmorgan.com/insights/markets-and-economy/top-market-takeaways/tmt-october-twenty-four-twenty-five
+
+19. **How Market History Can Help Frame Your Expectations for 2026**
+    Carnegie Investment Counsel
+    https://blog.carnegieinvest.com/how-market-history-can-help-frame-your-expectations-for-2026
+
+---
+
+## Anthropic Mythos & Cybersecurity
+
+20. **Project Glasswing: Securing Critical Software for the AI Era**
+    Anthropic
+    https://www.anthropic.com/glasswing
+
+21. **Anthropic's Mythos Model Sparks Cybersecurity Concerns**
+    The Hill
+    https://thehill.com/policy/technology/5829315-anthropic-mythos-ai-cybersecurity-risks/
+
+22. **Anthropic Debuts Preview of Powerful New AI Model Mythos in New Cybersecurity Initiative**
+    TechCrunch
+    https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/
+
+23. **Exclusive: Anthropic 'Mythos' AI Model Representing 'Step Change'**
+    Fortune
+    https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/
+
+24. **Anthropic Withholds Mythos Preview Model Because Its Hacking Is Too Powerful**
+    Axios
+    https://www.axios.com/2026/04/07/anthropic-mythos-preview-cybersecurity-risks
+
+25. **Claude Mythos Preview — Red Team Technical Report**
+    Anthropic Frontier Red Team
+    https://red.anthropic.com/2026/mythos-preview/
+
+26. **Anthropic's Mythos Is a Wake-Up Call, but Experts Say the Era of AI-Driven Hacking Is Already Here**
+    Fortune
+    https://fortune.com/2026/04/10/anthropic-mythos-ai-driven-cybersecurity-risks-already-here/
+
+---
+
+## Sector Analysis — Defense, Energy, Healthcare
+
+27. **Monthly Stock Sector Outlook (2026)**
+    Charles Schwab
+    https://www.schwab.com/learn/story/stock-sector-outlook
+
+28. **Best Defense Stocks to Buy in 2026 and How to Invest**
+    The Motley Fool
+    https://www.fool.com/investing/stock-market/market-sectors/industrials/defense-stocks/
+
+29. **True Defensive Stocks That Rise Even Amid War as Triple-High Pressures Hit Markets**
+    Seoul Economic Daily
+    https://en.sedaily.com/finance/2026/04/15/true-defensive-stocks-that-rise-even-amid-war-as-triple
+
+30. **Best War Stocks to Buy in 2026: Top 5 Picks & Analysis**
+    Intellectia AI
+    https://intellectia.ai/blog/best-war-stocks-to-buy-2026
+
+31. **Defensive Stocks & Recession-Resistant Companies in 2026**
+    Bear Savings
+    https://www.bearsavings.com/investing/ideas/defensive-stocks/
+
+32. **The $1.5 Trillion Juggernaut: Defense Stocks Surge as White House Unveils Record Budget Amid Global Conflict**
+    FinancialContent / MarketMinute
+    https://www.financialcontent.com/article/marketminute-2026-4-6-the-15-trillion-juggernaut-defense-stocks-surge-as-white-house-unveils-record-budget-amid-global-conflict
+
+33. **7 Best Defense Stocks to Buy Now**
+    U.S. News & World Report
+    https://money.usnews.com/investing/articles/best-defense-stocks-to-buy-now
+
+34. **War Impact on Stock Market: Top Sectors and Stocks to Watch**
+    Multibagger Stock Ideas
+    https://www.multibaggerstockideas.com/2026/03/war-impact-on-stock-market-top-sectors.html
+
+35. **Defense Stocks Are Booming — These Are the 2 Hottest Contractors to Buy for 2026**
+    Yahoo Finance / InvestorPlace
+    https://finance.yahoo.com/news/defense-stocks-booming-2-hottest-172051202.html
+
+36. **The Defensive Playbook Isn't Your Average Inflation Roadmap**
+    J.P. Morgan
+    https://www.jpmorgan.com/insights/markets-and-economy/top-market-takeaways/tmt-the-defensive-playbook-isnt-your-average-inflation-roadmap
+
+37. **Power, Renewables & Energy: 2025 M&A Review, 2026 Outlook**
+    FTI Consulting
+    https://www.fticonsulting.com/insights/articles/power-renewables-energy-transition-2025-ma-year-review-2026-outlook
+
+38. **The American Solar Champion: An In-Depth Research Feature on First Solar (FSLR)**
+    FinancialContent / Finterra
+    https://markets.financialcontent.com/stocks/article/finterra-2026-4-15-the-american-solar-champion-an-in-depth-research-feature-on-first-solar-fslr
+
+39. **Who Will Own the Power? AI Data Centers Drive Power and Utilities M&A**
+    Deloitte
+    https://www.deloitte.com/us/en/insights/industry/power-and-utilities/mergers-and-acquisitions-power-sector.html
+
+40. **Energy Markets Race to Solve the AI Power Bottleneck**
+    Morgan Stanley
+    https://www.morganstanley.com/insights/articles/powering-ai-energy-market-outlook-2026
+
+41. **AI Market Trends 2026: Global Investment, Risks, and Buildout**
+    Morgan Stanley
+    https://www.morganstanley.com/insights/articles/ai-market-trends-institute-2026
+
+42. **The Power Architect: A Deep Dive into onsemi's (ON) Strategic Transformation**
+    FinancialContent / Finterra
+    https://markets.financialcontent.com/stocks/article/finterra-2026-4-13-the-power-architect-a-deep-dive-into-onsemis-on-strategic-transformation-and-sic-leadership
+
+---
+
+## Big Tech — AI Spending & Strategy
+
+43. **Big Tech's AI Spend in 2026: Following the Money**
+    Campaign US
+    https://www.campaignlive.com/article/big-techs-ai-spend-2026-following-money/1949168
+
+44. **Big Tech Set to Spend $650 Billion in 2026 as AI Investments Soar**
+    Yahoo Finance
+    https://finance.yahoo.com/news/big-tech-set-to-spend-650-billion-in-2026-as-ai-investments-soar-163907630.html
+
+45. **Investors Worried After Big Tech Plans $650bn Spend in 2026**
+    Silicon Republic
+    https://www.siliconrepublic.com/business/big-tech-650bn-capital-expense-bill-2026-meta-amazon-google-microsoft
+
+46. **Big Tech Faces $470B AI Spending Defense as Earnings Begin**
+    TechBuzz AI
+    https://www.techbuzz.ai/articles/big-tech-faces-470b-ai-spending-defense-as-earnings-begin
+
+47. **Big Tech AI Spending: $700B Capex Race in 2026**
+    Tech Insider
+    https://tech-insider.org/big-tech-ai-infrastructure-spending-2026/
+
+48. **Tech AI Spending Approaches $700 Billion in 2026, Cash Taking Big Hit**
+    CNBC
+    https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html
+
+49. **AI Spending Boom Accelerates: Big Tech to Invest an Aggregate of $400 Billion in 2025**
+    IEEE ComSoc Technology Blog
+    https://techblog.comsoc.org/2025/11/01/ai-spending-boom-accelerates-big-tech-to-invest-invest-an-aggregate-of-400-billion-in-2025-more-in-2026/
+
+50. **The Dirty Secret Behind Big Tech's AI Arms Race: Massive Hardware Investments That Are Obsolete in 3 Years**
+    Fortune
+    https://fortune.com/2026/04/15/data-centers-hyperscalers-spending-billions-on-hardware-thats-worthless-in-3-years/
+
+51. **AI and Enterprise Technology Predictions from Industry Experts for 2026**
+    Solutions Review
+    https://solutionsreview.com/ai-and-enterprise-technology-predictions-from-industry-experts-for-2026/
+
+52. **Vertical AI Investment: Why Specialized AI Is Winning in 2026**
+    The Recursive
+    https://therecursive.com/vertical-ai-investment-why-specialized-ai-is-winning-in-2026/
+
+---
+
+## Google / Alphabet
+
+53. **Google's 'Cannibalization' Risk Vs Microsoft's Azure Growth**
+    Benzinga
+    https://www.benzinga.com/markets/equities/26/01/49715103/googles-cannibalization-risk-vs-microsofts-azure-growth-expert-explains-how-ai-answers-could-sla
+
+54. **Why This Analyst Prefers Microsoft Over Google In The AI Race**
+    Sahm Capital
+    https://www.sahmcapital.com/news/content/why-this-analyst-prefers-microsoft-over-google-in-the-ai-race-you-dont-have-the-downside-risk-of-2026-01-02
+
+55. **This Is How Microsoft Is Making Money from AI Right Now**
+    The Motley Fool
+    https://www.fool.com/investing/2026/04/12/this-is-how-microsoft-is-making-money-from-ai-righ/
+
+---
+
+## Amazon
+
+56. **Amazon in 2026: The $200 Billion Bet on AI and the Future of the Everything Store**
+    FinancialContent / Finterra
+    https://www.financialcontent.com/article/finterra-2026-4-14-amazon-in-2026-the-200-billion-bet-on-ai-and-the-future-of-the-everything-store
+
+57. **Amazon in 2026: The $200 Billion Reinvention into an AI and Satellite Giant**
+    FinancialContent / Finterra
+    https://www.financialcontent.com/article/finterra-2026-4-15-amazon-in-2026-the-200-billion-reinvention-into-an-ai-and-satellite-giant
+
+58. **Amazon Form 8-K FY2026 — Shareholder Letter Excerpt**
+    SEC EDGAR
+    https://www.sec.gov/Archives/edgar/data/1018724/000110465926041034/tm263815d3_ex99-1.htm
+
+59. **3 Artificial Intelligence (AI) Stocks Caught in the Iran War Crossfire**
+    The Motley Fool
+    https://www.fool.com/investing/2026/03/20/3-artificial-intelligence-ai-stocks-caught-in-the/
+
+---
+
+## Apple
+
+60. **Apple in 2026: The AI Evolution and the Great Supply Chain Migration**
+    FinancialContent / Finterra
+    https://markets.financialcontent.com/stocks/article/finterra-2026-4-13-apple-in-2026-the-ai-evolution-and-the-great-supply-chain-migration
+
+61. **Apple Inc. (AAPL) Deep Dive: Navigating the 2026 Tariff Ruling and the AI Supercycle**
+    FinancialContent / Finterra
+    https://markets.financialcontent.com/stocks/article/finterra-2026-2-23-apple-inc-aapl-deep-dive-navigating-the-2026-tariff-ruling-and-the-ai-supercycle
+
+62. **Navigating the Tariff Storm: Why Apple's Supply Chain Mastery Positions It for Long-Term Gains**
+    AInvest
+    https://www.ainvest.com/news/navigating-tariff-storm-apple-supply-chain-mastery-positions-long-term-gains-2505/
+
+63. **How Apple Is Revolutionizing Supply Chain Management with AI Investments and Custom Infrastructure**
+    Logistics Viewpoints
+    https://logisticsviewpoints.com/2025/09/08/inside-apples-ai-supply-chain-silicon-strategy-and-scale-how-apple-is-revolutionizing-supply-chain-management-with-ai-investments-and-custom-infrastructure/
+
+64. **Apple's AI Strategy: Analysis of Dominance in Supply Chain AI**
+    Klover AI
+    https://www.klover.ai/apple-ai-strategy-analysis-of-dominance-in-supply-chain-ai/
+
+---
+
+## Meta & Children's Liability
+
+65. **Meta and YouTube Found Liable in Social Media Addiction Trial**
+    CNN Business
+    https://www.cnn.com/2026/03/25/tech/social-media-addiction-trial-jury-decision
+
+66. **Jury Finds Meta and Google Negligent in Social Media Harms Trial**
+    NPR
+    https://www.npr.org/2026/03/25/nx-s1-5746125/meta-youtube-social-media-trial-verdict
+
+67. **Meta Google Social Media Addiction Verdict 2026: $6M Ruling**
+    Tech Insider
+    https://tech-insider.org/meta-google-social-media-addiction-verdict-2026/
+
+---
+
+## Jobs, Productivity & AI Labor Displacement
+
+68. **CFOs Admit Privately That AI Layoffs Will Be 9x Higher This Year**
+    Fortune
+    https://fortune.com/2026/03/24/cfo-survey-ai-job-cuts-productivity-paradox-2026/
+
+69. **Companies Are Laying Off Workers Because of AI's Potential — Not Its Performance**
+    Harvard Business Review
+    https://hbr.org/2026/01/companies-are-laying-off-workers-because-of-ais-potential-not-its-performance
+
+70. **More Companies Are Pointing to AI as They Lay Off Employees**
+    CBS News
+    https://www.cbsnews.com/news/ai-layoffs-2026-artificial-intelligence-amazon-pinterest/
+
+71. **Tech Industry Lays Off Nearly 80,000 Employees in Q1 2026 — Almost 50% Due to AI**
+    Tom's Hardware
+    https://www.tomshardware.com/tech-industry/tech-industry-lays-off-nearly-80-000-employees-in-the-first-quarter-of-2026-almost-50-percent-of-affected-positions-cut-due-to-ai
+
+72. **Top 20 Predictions from Experts on AI Job Loss**
+    AIM Multiple
+    https://aimultiple.com/ai-job-loss
+
+73. **AI Isn't Causing a Jobs-Pocalypse. At Least, Not Yet**
+    CNN Business
+    https://www.cnn.com/2026/03/02/business/ai-tech-jobs-layoffs
+
+74. **Tech Layoffs Surge While AI Jobs Soar: Key Trends Shaping the 2026 Tech Industry**
+    TechTimes
+    https://www.techtimes.com/articles/315282/20260321/tech-layoffs-surge-while-ai-jobs-soar-key-trends-shaping-2026-tech-industry.htm
+
+---
+
+## Environmental Impact
+
+75. **Data Centers and Water Consumption**
+    Environmental and Energy Study Institute (EESI)
+    https://www.eesi.org/articles/view/data-centers-and-water-consumption
+
+76. **The Carbon and Water Footprints of Data Centers and What This Could Mean for Artificial Intelligence**
+    ScienceDirect
+    https://www.sciencedirect.com/science/article/pii/S2666389925002788
+
+77. **Explained: Generative AI's Environmental Impact**
+    MIT News
+    https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117
+
+78. **Data Drain: The Land and Water Impacts of the AI Boom**
+    Lincoln Institute of Land Policy
+    https://www.lincolninst.edu/publications/land-lines-magazine/articles/land-water-impacts-data-centers/
+
+79. **AI's Energy Demand: Challenges and Solutions for a Sustainable Future**
+    Penn State / Institute of Energy and the Environment
+    https://iee.psu.edu/news/blog/why-ai-uses-so-much-energy-and-what-we-can-do-about-it
+
+80. **Environmental Impact and Net-Zero Pathways for Sustainable AI Servers in the USA**
+    Nature Sustainability
+    https://www.nature.com/articles/s41893-025-01681-y
+
+81. **'Roadmap' Shows the Environmental Impact of AI Data Center Boom**
+    Cornell Chronicle
+    https://news.cornell.edu/stories/2025/11/roadmap-shows-environmental-impact-ai-data-center-boom
+
+82. **AI Data Centre Waste Heat Could Be Used for Water Purification and Carbon Capture**
+    European Commission / Science for Environment Policy
+    https://environment.ec.europa.eu/news/ai-data-centre-waste-heat-could-be-used-water-purification-and-carbon-capture-2026-03-30_en
+
+83. **AI: Five Charts That Put Data-Centre Energy Use — and Emissions — Into Context**
+    Carbon Brief
+    https://www.carbonbrief.org/ai-five-charts-that-put-data-centre-energy-use-and-emissions-into-context/
+
+84. **As Use of A.I. Soars, So Does the Energy and Water It Requires**
+    Yale Environment 360
+    https://e360.yale.edu/features/artificial-intelligence-climate-energy-emissions
+
+---
+
+## Semiconductor Supply Chain
+
+85. **Inside the AI Bottleneck: CoWoS, HBM, and 2–3nm Capacity Constraints Through 2027**
+    Fusion Worldwide
+    https://www.fusionww.com/insights/blog/inside-the-ai-bottleneck-cowos-hbm-and-2-3nm-capacity-constraints-through-2027
+
+86. **The Infinite AI Compute Loop: HBM Big Three + TSMC × NVIDIA × OpenAI**
+    TSPASE Semiconductor (Substack)
+    https://tspasemiconductor.substack.com/p/the-infinite-ai-compute-loop-hbm
+
+87. **HBM Is Coming for Your PC's RAM: AI Datacenter High-Bandwidth Memory Squeezes Global DDR5 Supply Chain**
+    Intelligent Living
+    https://www.intelligentliving.co/hbm-ram-ai-datacenter-ddr5-supply-chain/
+
+88. **A Deeper Look at the Tightened Chipmaking Supply Chain — "Nobody's Scaling Up"**
+    Tom's Hardware
+    https://www.tomshardware.com/tech-industry/a-deeper-look-at-the-tightened-chipmaking-supply-chain-and-where-it-may-be-headed-in-2026-nobodys-scaling-up-says-analyst-as-industry-remains-conservative-on-capacity
+
+89. **AI Manufacturing Constraint 2026: The Real AI Choke Point**
+    EnkiAI
+    https://enkiai.com/data-center/ai-manufacturing-constraint-2026-the-real-ai-choke-point
+
+90. **Nvidia Snaps Up AI Chip Packaging Capacity as TSMC Expands in U.S.**
+    CNBC
+    https://www.cnbc.com/2026/04/08/tsmc-nvidia-advanced-packaging-intel.html
+
+91. **2026 AI Landscape: Who Benefits the Most?**
+    UncoverAlpha
+    https://www.uncoveralpha.com/p/2026-ai-landscape-who-benefits-the
+
+---
+
+## Cloud Competition
+
+92. **China's Cloud and AI Giants Build a Parallel Tech Universe**
+    Fierce Network
+    https://www.fierce-network.com/cloud/chinese-cloud-giants-are-flying-under-radar
+
+93. **AWS, Microsoft, and Google Top Cloud Market Everywhere Bar China**
+    Data Center Dynamics / Synergy Research
+    https://www.datacenterdynamics.com/en/news/aws-microsoft-and-google-top-cloud-market-everywhere-bar-china-synergy/
+
+94. **Cloud Computing Market Share 2026: AWS, Azure, and Google Cloud Battle for Dominance**
+    Programming Helper Tech
+    https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis
+
+95. **Cloud Market Share Trends to Watch in 2026**
+    emma Blog
+    https://www.emma.ms/blog/cloud-market-share-trends
+
+96. **Holori — Cloud Market Share 2026: Top Cloud Providers and Trends**
+    Holori
+    https://holori.com/cloud-market-share-2026-top-cloud-vendors-in-2026/
+
+97. **Alibaba Holds Wide Lead over Rivals ByteDance, Huawei, Tencent in China's AI Cloud Market**
+    Yahoo Finance / South China Morning Post
+    https://finance.yahoo.com/news/alibaba-holds-wide-lead-over-093000369.html
+
+98. **Clash of the Tech Titans**
+    Third Way
+    https://www.thirdway.org/report/clash-of-the-tech-titans
+
+---
+
+*Note: This document is compiled for reference purposes. All sources reflect reporting and analysis available as of April 16, 2026. Not investment advice.*
+
 `;function a(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}var o=a();function s(e){o=e}var c=/[&<>"']/,l=new RegExp(c.source,`g`),u=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,d=new RegExp(u.source,`g`),f={"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`},p=e=>f[e];function m(e,t){if(t){if(c.test(e))return e.replace(l,p)}else if(u.test(e))return e.replace(d,p);return e}var ee=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function te(e){return e.replace(ee,(e,t)=>(t=t.toLowerCase(),t===`colon`?`:`:t.charAt(0)===`#`?t.charAt(1)===`x`?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):``))}var ne=/(^|[^\[])\^/g;function h(e,t){let n=typeof e==`string`?e:e.source;t||=``;let r={replace:(e,t)=>{let i=typeof t==`string`?t:t.source;return i=i.replace(ne,`$1`),n=n.replace(e,i),r},getRegex:()=>new RegExp(n,t)};return r}function g(e){try{e=encodeURI(e).replace(/%25/g,`%`)}catch{return null}return e}var _={exec:()=>null};function re(e,t){let n=e.replace(/\|/g,(e,t,n)=>{let r=!1,i=t;for(;--i>=0&&n[i]===`\\`;)r=!r;return r?`|`:` |`}).split(/ \|/),r=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),t)if(n.length>t)n.splice(t);else for(;n.length<t;)n.push(``);for(;r<n.length;r++)n[r]=n[r].trim().replace(/\\\|/g,`|`);return n}function v(e,t,n){let r=e.length;if(r===0)return``;let i=0;for(;i<r;){let a=e.charAt(r-i-1);if(a===t&&!n)i++;else if(a!==t&&n)i++;else break}return e.slice(0,r-i)}function ie(e,t){if(e.indexOf(t[1])===-1)return-1;let n=0;for(let r=0;r<e.length;r++)if(e[r]===`\\`)r++;else if(e[r]===t[0])n++;else if(e[r]===t[1]&&(n--,n<0))return r;return-1}function ae(e,t,n,r){let i=t.href,a=t.title?m(t.title):null,o=e[1].replace(/\\([\[\]])/g,`$1`);if(e[0].charAt(0)!==`!`){r.state.inLink=!0;let e={type:`link`,raw:n,href:i,title:a,text:o,tokens:r.inlineTokens(o)};return r.state.inLink=!1,e}return{type:`image`,raw:n,href:i,title:a,text:m(o)}}function oe(e,t){let n=e.match(/^(\s+)(?:```)/);if(n===null)return t;let r=n[1];return t.split(`
 `).map(e=>{let t=e.match(/^\s+/);if(t===null)return e;let[n]=t;return n.length>=r.length?e.slice(r.length):e}).join(`
 `)}var y=class{options;rules;lexer;constructor(e){this.options=e||o}space(e){let t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:`space`,raw:t[0]}}code(e){let t=this.rules.block.code.exec(e);if(t){let e=t[0].replace(/^ {1,4}/gm,``);return{type:`code`,raw:t[0],codeBlockStyle:`indented`,text:this.options.pedantic?e:v(e,`
