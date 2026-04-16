@@ -12,7 +12,7 @@ function rssPlugin() {
     closeBundle() {
       try {
         // Dynamically import helpers (CJS-safe in the build hook)
-        //const { marked }       = require('marked');
+        const { marked }       = require('marked');
         const postsDir         = resolve(__dirname, 'blog');
         const files            = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
 

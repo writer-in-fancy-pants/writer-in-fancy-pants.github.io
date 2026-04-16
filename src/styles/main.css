@@ -48,6 +48,20 @@ img { max-width: 100%; height: auto; }
   --shadow:        0 4px 24px rgba(0,0,0,.45);
   --shadow-sm:     0 2px 8px  rgba(0,0,0,.3);
   --nav-h:         58px;
+  --ink:      #e8e6df;
+  --paper:    #141412;
+  --muted:    #8a8880;
+  --rule:     #2c2c28;
+  --accent:   #e05a28;
+  --accent2:  #5b9fd6;
+  --surface:  #1e1e1a;
+  --surface2: #252520;
+  --code-bg:  #1e1e1a;
+  --code-fg:  #e8e6df;
+  --pre-bg:   #0e0e0c;
+  --pre-fg:   #e8e6df;
+  --shadow:   rgba(0,0,0,0.35);
+  --toggle-icon: "🌙";
 }
 
 [data-theme="light"] {
@@ -66,6 +80,20 @@ img { max-width: 100%; height: auto; }
   --danger:        #ef4444;
   --shadow:        0 4px 20px rgba(0,0,0,.08);
   --shadow-sm:     0 2px 8px  rgba(0,0,0,.06);
+  --ink:      #1a1a18;
+  --paper:    #faf9f6;
+  --muted:    #6b6b63;
+  --rule:     #e2e0d8;
+  --accent:   #c1440e;
+  --accent2:  #2a5f8f;
+  --surface:  #f2f0eb;
+  --surface2: #ebe9e2;
+  --code-bg:  #f2f0eb;
+  --code-fg:  #1a1a18;
+  --pre-bg:   #1a1a18;
+  --pre-fg:   #e8e6df;
+  --shadow:   rgba(0,0,0,0.07);
+  --toggle-icon: "☀️";
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -365,7 +393,9 @@ nav {
 /* ══════════════════════════════════════════════════════════
    7. SINGLE POST
 ══════════════════════════════════════════════════════════ */
-.single-post { display: none; }
+.single-post {
+  width: 100%;
+}
 .back-btn {
   background: none;
   border: none;

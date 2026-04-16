@@ -123,6 +123,7 @@ TABS.forEach(id => {
 function render({ section, sub }) {
   showSection(section);
 
+  console.log(section, sub)
   if (section === 'blog') {
     if (sub) renderPost(sub);
     else     renderPostList();
@@ -133,7 +134,7 @@ function render({ section, sub }) {
     initMusic();
     mountGiscus('giscus-music', sub ? `music/${sub}` : 'music');
   } else if (section === 'about') {
-    mountGiscus('giscus-about', 'about');
+    //mountGiscus('giscus-about', 'about');
   }
 }
 
@@ -276,16 +277,17 @@ function renderPost(id) {
   document.getElementById('sp-title').textContent       = post.title;
   document.getElementById('sp-date').textContent        = formatDate(post.date);
   document.getElementById('sp-topic').textContent       = post.topic;
-  document.getElementById('sp-reading-time').textContent = post.readingTime;
+  //document.getElementById('sp-reading-time').textContent = post.readingTime;
   document.getElementById('sp-body').innerHTML          = post.html;
 
   // Update SEO meta
-  document.title = `${post.title} — Mehul`;
+  document.title = `${post.title} - writer-in-fancy-pants.github.com`;
   document.getElementById('og-title')?.setAttribute('content', post.title);
   document.getElementById('og-description')?.setAttribute('content', post.excerpt);
   document.getElementById('og-url')?.setAttribute(
-    'content', `https://writer-in-fancy-pants.github.io/#blog/${post.id}`);
-
+     'content', `https://writer-in-fancy-pants.github.io/#blog/${post.id}`);
+  document.getElementById('sp-body')
+  // singleView.style.visibility = 'visible';
   // Sync like buttons
   syncLikeButtons(post.id);
 
