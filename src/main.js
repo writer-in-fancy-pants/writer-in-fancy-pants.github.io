@@ -123,7 +123,6 @@ TABS.forEach(id => {
 function render({ section, sub }) {
   showSection(section);
 
-  console.log(section, sub)
   if (section === 'blog') {
     if (sub) renderPost(sub);
     else     renderPostList();

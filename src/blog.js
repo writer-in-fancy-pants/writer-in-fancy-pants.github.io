@@ -7,10 +7,11 @@
 import { marked } from 'marked';
 
 // Vite eager glob — picks up every .md file in /blog/
-const RAW = import.meta.glob('/blog/*.md', { as: 'raw', eager: true });
+const RAW = import.meta.glob('/blog/*.md', { query: '?raw', import: 'default' , eager: true });
 
 // ── Frontmatter parser ────────────────────────────────────────
 function parseFrontmatter(raw) {
+  console.log(raw, typeof raw)
   const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
   if (!match) return { meta: {}, body: raw };
   const meta = {};
