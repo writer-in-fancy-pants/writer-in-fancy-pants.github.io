@@ -13,14 +13,6 @@ import { generateRSS }        from './rss.js';
 
 // ── Projects data ─────────────────────────────────────────────
 const PROJECTS = [
-    {
-    title : "Muse 2 EEG Dashboard",
-    status: 'active',
-    description : 'Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo',
-    tags: ['eeg', 'neurofeedback', 'python', 'js', 'open source', 'dashboard'],
-    link: 'https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard',
-    demo: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/'
-  },
   {
     title : "Meditations",
     status: 'active',
@@ -37,6 +29,14 @@ const PROJECTS = [
     link : 'https://github.com/writer-in-fancy-pants/mind-audio-tools',
     demo : 'https://writer-in-fancy-pants.github.io/mind-audio-tools/'
   }
+  {
+    title : "Muse 2 EEG Dashboard",
+    status: 'active',
+    description : 'Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo',
+    tags: ['eeg', 'neurofeedback', 'python', 'js', 'open source', 'dashboard'],
+    link: 'https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard',
+    demo: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/'
+  },
   // Add your projects here. Example:
   // {
   //   title:       'Project Name',
