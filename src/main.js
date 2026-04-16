@@ -28,7 +28,7 @@ const PROJECTS = [
     tags: ['audio', 'emdr', 'python', 'js', 'open source', 'dashboard'],
     link : 'https://github.com/writer-in-fancy-pants/mind-audio-tools',
     demo : 'https://writer-in-fancy-pants.github.io/mind-audio-tools/'
-  }
+  },
   {
     title : "Muse 2 EEG Dashboard",
     status: 'active',

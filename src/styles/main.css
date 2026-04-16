@@ -254,10 +254,12 @@ nav {
 }
 
 .blog-sidebar {
-  position: sticky;
+  /*position: sticky;*/
   top: calc(var(--nav-h) + 1rem);
 }
-.sidebar-section { margin-bottom: 1.5rem; }
+.sidebar-section { 
+  margin-bottom: 1.5rem;
+  display: "flex"; }
 .sidebar-heading {
   font-size: .72rem;
   font-weight: 700;
