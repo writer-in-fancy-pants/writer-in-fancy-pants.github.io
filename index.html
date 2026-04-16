@@ -3,23 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Dynamic SEO (filled by router) ───────────────────── -->
   <title>Mehul's Website</title>
+  <meta name="description" content="Mehul — researcher, tinkerer, DJ. Writing, projects, and music." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Mehul's Website" />
+  <meta property="og:title"       id="og-title"       content="Mehul's Website" />
+  <meta property="og:description" id="og-description" content="Mehul — researcher, tinkerer, DJ." />
+  <meta property="og:url"         id="og-url"         content="https://writer-in-fancy-pants.github.io/" />
+  <meta name="twitter:card"       content="summary" />
+
+  <!-- ── RSS autodiscovery ─────────────────────────────────── -->
+  <link rel="alternate" type="application/rss+xml"
+        title="Mehul's Blog — RSS Feed"
+        href="/feed.xml" />
+
   <script type="module" src="/src/main.js"></script>
 </head>
 <body>
 
-<!-- ══ NAV ════════════════════════════════════════════ -->
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
 <nav>
   <span class="nav-logo"><span>Mehul</span></span>
   <ul class="nav-tabs">
-    <li><button id="tab-about"    class="active">About Me</button></li>
+    <li><button id="tab-about"    class="active">About</button></li>
     <li><button id="tab-blog">Blog</button></li>
-    <li><button id="tab-projects">My Projects</button></li>
+    <li><button id="tab-projects">Projects</button></li>
+    <li><button id="tab-music">Music</button></li>
   </ul>
-  <button class="theme-toggle" id="theme-toggle">☀️ Light</button>
+  <div class="nav-actions">
+    <a  class="rss-btn" href="/feed.xml" target="_blank"
+        title="RSS Feed" aria-label="RSS Feed">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+        <path d="M6.18 15.64a2.18 2.18 0 010 4.36 2.18 2.18 0 010-4.36M4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44m0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+      </svg>
+      RSS
+    </a>
+    <button class="theme-toggle" id="theme-toggle">☀️ Light</button>
+  </div>
 </nav>
 
-<!-- ══ ABOUT ══════════════════════════════════════════ -->
+<!-- ══ ABOUT ════════════════════════════════════════════════ -->
 <section id="about" class="page active">
   <div>
     <div class="about-header">
@@ -32,20 +57,33 @@
 
     <div class="about-bio">
       <p>
-        Hi, I'm <strong>Mehul</strong> — a wandering researcher and software engineer, currently based in [India].
-        After years of working in exciting fields like Machine Learning, Quantum Computing, Blockchain, etc, I left my previous job as a corporate AI researcher to take advantage of the insane productivity that the advent of LLMs has created. I am exploring a lot, specially at the multidisciplinary fringes, and going through the long list of tools and POCs that I had always meant to create for myself. I will also be sharing most of them freely here.
+        Hi, I'm <strong>Mehul</strong> — a wandering researcher and software engineer,
+        currently based in [India]. After years of working in exciting fields like
+        Machine Learning, Quantum Computing, Blockchain, etc, I left my previous job
+        as a corporate AI researcher to take advantage of the insane productivity that
+        the advent of LLMs has created. I am exploring a lot, specially at the
+        multidisciplinary fringes, and going through the long list of tools and POCs
+        that I had always meant to create for myself. I will also be sharing most of
+        them freely here.
       </p>
       <p>
-        I care deeply about [open source, democratic access, human rights, climate change, preserving knowledge, and improving human condition], with focus on personally experiencing the reality as it is, as well as the spiritual experiences that arise through dedicated practice, like [excessive reading, dance, music, yoga, scuba diving, and meditation]. To that end, I am also a DJ, a producer, a licensed Yoga instructor, and often dance Salsa, Bachata, Zouk at socials and festivals.
+        I care deeply about [open source, democratic access, human rights, climate
+        change, preserving knowledge, and improving human condition], with focus on
+        personally experiencing the reality as it is, as well as the spiritual
+        experiences that arise through dedicated practice, like [excessive reading,
+        dance, music, yoga, scuba diving, and meditation]. To that end, I am also a DJ,
+        a producer, a licensed Yoga instructor, and often dance Salsa, Bachata, Zouk
+        at socials and festivals.
       </p>
       <p>
-        Here, on this website, I plan to keep a record of my organized thoughts and my projects, on various topics. All the projects share a few key aspects - my personal interest, free tier AI tools, serverless, proof-of-concept, and privacy first.
-        Feel free to reach out — I enjoy interesting conversations.
+        Here, on this website, I plan to keep a record of my organized thoughts and my
+        projects, on various topics. All the projects share a few key aspects — my
+        personal interest, free tier AI tools, serverless, proof-of-concept, and
+        privacy first. Feel free to reach out — I enjoy interesting conversations.
       </p>
     </div>
 
     <hr class="divider">
-
     <p class="socials-label">Find me online</p>
     <div class="socials">
       <a class="social-link" href="https://github.com/writer-in-fancy-pants" target="_blank" rel="noopener">
@@ -64,26 +102,23 @@
         <svg viewBox="0 0 24 24"><path d="M1.175 12.225c-.108 0-.196.08-.212.19l-.299 2.048.3 2.006c.016.11.104.19.212.19.107 0 .195-.08.211-.19l.34-2.006-.34-2.048c-.016-.11-.104-.19-.211-.19zm1.574-.8c-.125 0-.228.093-.243.218l-.262 2.83.262 2.776c.015.124.118.217.243.217.124 0 .227-.093.242-.217l.297-2.776-.297-2.83c-.015-.125-.118-.218-.242-.218zm1.6-.29c-.143 0-.26.107-.273.249l-.227 3.119.227 3.053c.013.142.13.249.273.249.142 0 .26-.107.272-.249l.258-3.053-.258-3.119c-.012-.142-.13-.249-.272-.249zm1.614-.1c-.16 0-.292.122-.302.281l-.193 3.219.193 3.13c.01.16.142.281.302.281.16 0 .292-.121.302-.281l.22-3.13-.22-3.219c-.01-.16-.142-.281-.302-.281zm1.627-.052c-.177 0-.323.136-.33.312l-.16 3.271.16 3.196c.007.176.153.311.33.311.176 0 .322-.135.329-.311l.182-3.196-.182-3.271c-.007-.176-.153-.312-.329-.312zm4.989-1.98c-.218-.085-.45-.13-.693-.13-1.104 0-1.983.89-1.983 1.988v7.519c0 .23.187.417.418.417h7.517c1.066 0 1.93-.862 1.93-1.927 0-1.065-.864-1.928-1.93-1.928-.096 0-.189.008-.28.022.038-.2.059-.407.059-.618 0-1.815-1.474-3.286-3.292-3.286-.617 0-1.195.172-1.686.46v-.517zm-3.36 2.08c-.195 0-.355.15-.362.344l-.126 3.223.126 3.146c.007.195.167.344.362.344.194 0 .354-.149.361-.344l.143-3.146-.143-3.223c-.007-.194-.167-.344-.361-.344z"/></svg>
         SoundCloud
       </a>
-      <!-- <a class="social-link" href="https://twitter.com/yourusername" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        Twitter / X
-      </a> -->
-      <!-- <a class="social-link" href="mailto:mksolorider@gmail.com">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        Email
-      </a> -->
-      <!-- <a class="social-link" href="/resume.pdf" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-        Résumé
-      </a> -->
+      <a class="social-link" href="https://www.youtube.com/@octobass" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        YouTube
+      </a>
+    </div>
+
+    <!-- Giscus for About page -->
+    <div class="giscus-section" style="margin-top:3rem">
+      <h3 class="comments-heading">Leave a note</h3>
+      <div id="giscus-about"></div>
     </div>
   </div>
 </section>
 
-<!-- ══ BLOG ═══════════════════════════════════════════ -->
+<!-- ══ BLOG ═════════════════════════════════════════════════ -->
 <section id="blog" class="page">
   <div class="blog-inner">
-
     <aside class="blog-sidebar">
       <div class="sidebar-section">
         <p class="sidebar-heading">By Topic</p>
@@ -93,14 +128,23 @@
         <p class="sidebar-heading">By Date</p>
         <ul class="sidebar-list" id="date-index"></ul>
       </div>
+      <div class="sidebar-section">
+        <p class="sidebar-heading">Search</p>
+        <div class="search-box">
+          <input type="search" id="blog-search" placeholder="Search posts…" autocomplete="off" />
+        </div>
+      </div>
     </aside>
 
     <div class="blog-main">
-
       <!-- List view -->
       <div class="post-list-view" id="post-list-view">
-        <h2 class="blog-page-title">Writing</h2>
-        <p class="blog-subtitle">Occasional essays, notes, and technical deep-dives.</p>
+        <div class="blog-list-header">
+          <div>
+            <h2 class="blog-page-title">Writing</h2>
+            <p class="blog-subtitle">Occasional essays, notes, and technical deep-dives.</p>
+          </div>
+        </div>
         <div id="posts-container"></div>
       </div>
 
@@ -112,56 +156,50 @@
           <span id="sp-date"></span>
           <span>·</span>
           <span id="sp-topic" class="post-tag"></span>
+          <span>·</span>
+          <span id="sp-reading-time" class="reading-time"></span>
         </div>
+
+        <div class="post-actions-bar" id="post-actions-bar">
+          <button class="action-btn like-btn" id="sp-like-btn" aria-label="Like this post">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span id="sp-like-count">0</span>
+          </button>
+          <button class="action-btn share-btn" id="sp-share-btn" aria-label="Share this post">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+            Share
+          </button>
+          <button class="action-btn copy-link-btn" id="sp-copy-btn" aria-label="Copy link">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            Copy link
+          </button>
+        </div>
+
         <div class="single-post-body" id="sp-body"></div>
-        <div class="comments-section">
-          <h3 class="comments-heading">Comments</h3>
 
-          <div class="auth-bar">
-            <span id="auth-status">You are not logged in.</span>
-            <button class="auth-toggle" id="auth-toggle-btn">Sign in (demo)</button>
-          </div>
-
-          <div id="comments-list"></div>
-
-          <div class="login-notice" id="login-notice">
-            <a href="#" id="login-notice-link">Sign in</a> to leave a comment.
-          </div>
-
-          <div class="comment-form" id="comment-form">
-            <textarea id="comment-input" placeholder="Share your thoughts…"></textarea>
-            <div class="comment-form-actions">
-              <button class="btn btn-ghost" id='clear-comment-btn' onclick="document.getElementById('comment-input').value=''">Clear</button>
-              <button class="btn btn-primary" id='submit-comment-btn' onclick="submitComment()">Post comment</button>
-            </div>
-          </div>
+        <!-- Post footer actions (repeated for convenience) -->
+        <div class="post-footer-actions">
+          <button class="action-btn like-btn" id="sp-like-btn-footer" aria-label="Like this post">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span id="sp-like-count-footer">0</span> likes
+          </button>
+          <button class="action-btn share-btn" id="sp-share-btn-footer" aria-label="Share">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+            Share
+          </button>
         </div>
-       
-        <!-- <div class="giscus">
-          <script src="https://giscus.app/client.js"
-            data-repo="writer-in-fancy-pants/writer-in-fancy-pants.github.io"
-            data-repo-id="R_kgDORj_ZYw"
-            data-category="Announcements"
-            data-category-id="DIC_kwDORj_ZY84C6jaI"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="preferred_color_scheme"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-          </script> 
+
+        <!-- Giscus comments -->
+        <div class="giscus-section">
+          <h3 class="comments-heading">Comments &amp; Reactions</h3>
+          <div id="giscus-blog"></div>
         </div>
-        -->
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ══ PROJECTS ════════════════════════════════════════ -->
+<!-- ══ PROJECTS ══════════════════════════════════════════════ -->
 <section id="projects" class="page">
   <div>
     <div class="projects-header">
@@ -169,12 +207,49 @@
       <p class="projects-subtitle">A selection of things I've built, researched, or contributed to.</p>
     </div>
     <div class="projects-grid" id="projects-grid"></div>
+
+    <!-- Giscus for Projects page -->
+    <div class="giscus-section" style="margin-top:3rem">
+      <h3 class="comments-heading">Comments &amp; Reactions</h3>
+      <div id="giscus-projects"></div>
+    </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══════════════════════════════════════════ -->
+<!-- ══ MUSIC ════════════════════════════════════════════════ -->
+<section id="music" class="page">
+  <div class="music-inner">
+    <div class="music-header">
+      <h2 class="music-title">Music</h2>
+      <p class="music-subtitle">DJ sets, live recordings, and original productions.</p>
+      <div class="music-external-links">
+        <a href="https://www.youtube.com/@octobass"       target="_blank" rel="noopener" class="music-ext-link yt">▶ YouTube</a>
+        <a href="https://soundcloud.com/djoctobass"       target="_blank" rel="noopener" class="music-ext-link sc">☁ SoundCloud</a>
+        <a href="https://www.mixcloud.com/djoctobass"     target="_blank" rel="noopener" class="music-ext-link mc">◎ Mixcloud</a>
+        <a href="https://octobass.bandcamp.com/"          target="_blank" rel="noopener" class="music-ext-link bc">⬡ Bandcamp</a>
+      </div>
+    </div>
+
+    <div class="music-grid" id="music-grid">
+      <!-- Populated by music.js -->
+    </div>
+
+    <!-- Giscus for Music page -->
+    <div class="giscus-section" style="margin-top:3rem">
+      <h3 class="comments-heading">Comments &amp; Reactions</h3>
+      <div id="giscus-music"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TOAST ════════════════════════════════════════════════ -->
+<div id="toast" class="toast" aria-live="polite"></div>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
 <footer>
-  <p>© <span id="yr"></span> Mehul · Claude, Vite &amp; GitHub Pages</p>
+  <p>© <span id="yr"></span> Mehul · Vite &amp; GitHub Pages ·
+    <a href="/feed.xml" class="footer-rss">RSS</a>
+  </p>
 </footer>
 
 </body>

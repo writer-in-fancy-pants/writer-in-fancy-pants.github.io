@@ -1,372 +1,401 @@
-import './styles/main.css'
-import { loadPosts } from './blog.js'
+// src/main.js
+// ─────────────────────────────────────────────────────────────
+// App shell: routing, tab switching, blog renderer,
+// likes, share, search, giscus, RSS, theme toggle.
+// ─────────────────────────────────────────────────────────────
 
-/* ═══════════════════════════════════════════════
-   DATA — edit PROJECTS to describe your work
-═══════════════════════════════════════════════ */
+import { POSTS, getLikes, isLiked, toggleLike,
+         getTopics, getDateGroups, searchPosts } from './blog.js';
+import { initMusic }          from './music.js';
+import { mountGiscus, updateGiscusTheme } from './giscus.js';
+import { generateRSS }        from './rss.js';
+
+// ── Projects data ─────────────────────────────────────────────
 const PROJECTS = [
-  {
-    name : "Muse 2 EEG Dashboard",
-    status: 'active',
-    desc: 'Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo',
-    tags: ['eeg', 'neurofeedback', 'python', 'js', 'open source', 'dashboard'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard', primary: false },
-      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/', primary: true }
-    ]
-  },
-  {
-    name : "Meditations",
-    status: 'active',
-    desc: 'Live neurofeedback / biofeedback training and monitored meditation via stream from health devices (EEG, Heart rate, etc).',
-    tags: ['alpha/theta', 'hrv', 'neurofeedback', 'python', 'audio', 'js', 'open source'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/meditations', primary: false },
-      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/meditations/', primary: true }
-    ]
-  },
-  {
-    name : "Mind Acoustic Tools",
-    status: 'active',
-    desc: 'Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.',
-    tags: ['audio', 'emdr', 'python', 'js', 'open source', 'dashboard'],
-    links: [
-      { label: 'GitHub', url: 'https://github.com/writer-in-fancy-pants/mind-audio-tools', primary: false },
-      { label: 'Dashboard',   url: 'https://writer-in-fancy-pants.github.io/mind-audio-tools/', primary: true }
-    ]
-  }
+  // Add your projects here. Example:
   // {
-  //   name: 'ML Experiment Tracker',
-  //   status: 'active',
-  //   desc: 'Lightweight experiment tracking for PyTorch training runs. Logs metrics, hyperparameters, and artifacts to a local SQLite database with a clean web UI — no cloud account needed.',
-  //   tags: ['Python', 'PyTorch', 'SQLite', 'FastAPI'],
-  //   links: [
-  //     { label: 'GitHub',    url: 'https://github.com/yourusername/ml-tracker', primary: true },
-  //     { label: 'Live Demo', url: 'https://ml-tracker-demo.vercel.app', primary: false }
-  //   ]
+  //   title:       'Project Name',
+  //   description: 'What it does.',
+  //   tags:        ['Python', 'LLM'],
+  //   link:        'https://github.com/...',
+  //   demo:        'https://...',   // optional
   // },
-  // {
-  //   name: 'Research Paper: [Title]',
-  //   status: 'active',
-  //   desc: 'Published at [Conference / Journal]. Proposes a new approach to [problem area] that reduces [metric] by X% while maintaining [other property].',
-  //   tags: ['Research', 'ML', 'NLP'],
-  //   links: [
-  //     { label: 'arXiv', url: 'https://arxiv.org/abs/XXXX.XXXXX', primary: true },
-  //     { label: 'Code',  url: 'https://github.com/yourusername/paper-code', primary: false }
-  //   ]
-  // },
-  // {
-  //   name: 'Datavis Dashboard',
-  //   status: 'wip',
-  //   desc: 'An interactive dashboard for exploring [dataset]. Built to answer questions I kept having to write one-off scripts for. Work in progress — contributions welcome.',
-  //   tags: ['TypeScript', 'D3.js', 'React'],
-  //   links: [
-  //     { label: 'GitHub', url: 'https://github.com/yourusername/datavis', primary: true }
-  //   ]
-  // },
-  // {
-  //   name: 'OldProject',
-  //   status: 'archived',
-  //   desc: 'An early experiment in [domain]. No longer maintained, but the approach might still be interesting as a reference.',
-  //   tags: ['Python', 'Flask'],
-  //   links: [
-  //     { label: 'GitHub', url: 'https://github.com/yourusername/oldproject', primary: true }
-  //   ]
-  // }
-]
+];
 
-/* ═══════════════════════════════════════════════
-   THEME
-═══════════════════════════════════════════════ */
+// ─────────────────────────────────────────────────────────────
+// 1. THEME
+// ─────────────────────────────────────────────────────────────
 function initTheme() {
-  // Default to dark; honour saved preference
-  const saved = localStorage.getItem('theme')
-  const theme = saved || 'dark'
-  applyTheme(theme)
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.dataset.theme = saved;
+  updateToggleLabel(saved);
 }
 
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme)
-  localStorage.setItem('theme', theme)
-  const btn = document.getElementById('theme-toggle')
-  if (btn) btn.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark'
+function updateToggleLabel(theme) {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
 }
 
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme')
-  applyTheme(current === 'dark' ? 'light' : 'dark')
+document.getElementById('theme-toggle')?.addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('theme', next);
+  updateToggleLabel(next);
+  updateGiscusTheme();
+});
+
+// ─────────────────────────────────────────────────────────────
+// 2. TOAST
+// ─────────────────────────────────────────────────────────────
+function toast(msg) {
+  const el = document.getElementById('toast');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2200);
 }
 
-/* ═══════════════════════════════════════════════
-   TABS
-═══════════════════════════════════════════════ */
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
-  document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'))
-  document.getElementById(name).classList.add('active')
-  document.getElementById('tab-' + name).classList.add('active')
+// ─────────────────────────────────────────────────────────────
+// 3. HASH ROUTER
+// Route format:
+//   #about  #blog  #blog/post-id  #projects  #music  #music/track-id
+// ─────────────────────────────────────────────────────────────
+const TABS = ['about', 'blog', 'projects', 'music'];
+
+function parseHash() {
+  const raw = location.hash.replace('#', '') || 'about';
+  const [section, sub] = raw.split('/');
+  return { section: TABS.includes(section) ? section : 'about', sub: sub || null };
 }
 
-/* ═══════════════════════════════════════════════
-   BLOG
-═══════════════════════════════════════════════ */
-let posts = []
-let localComments = {}
-let isLoggedIn = false
-let currentPostId = null
+function navigate(hash, pushState = true) {
+  if (pushState) history.pushState(null, '', `#${hash}`);
+  render(parseHash());
+}
 
-function buildBlog(filtered, headingText) {
-  const container = document.getElementById('posts-container')
-  container.innerHTML = ''
+window.addEventListener('popstate', () => render(parseHash()));
 
-  const titleEl = document.querySelector('.blog-page-title')
-  titleEl.innerHTML = headingText || 'Writing'
-  if (headingText) {
-    const reset = document.createElement('a')
-    reset.href = '#'
-    reset.style.cssText = 'font-size:.8rem;color:var(--accent);margin-left:.7rem;'
-    reset.textContent = '(clear)'
-    reset.onclick = e => { e.preventDefault(); buildBlog(posts) }
-    titleEl.appendChild(reset)
+// ─────────────────────────────────────────────────────────────
+// 4. TAB SWITCHER
+// ─────────────────────────────────────────────────────────────
+function showSection(id) {
+  document.querySelectorAll('.page').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id)?.classList.add('active');
+  document.getElementById(`tab-${id}`)?.classList.add('active');
+  // Update OG url meta
+  document.getElementById('og-url')?.setAttribute('content',
+    `https://writer-in-fancy-pants.github.io/#${id}`);
+}
+
+TABS.forEach(id => {
+  document.getElementById(`tab-${id}`)?.addEventListener('click', () => navigate(id));
+});
+
+// ─────────────────────────────────────────────────────────────
+// 5. RENDER DISPATCHER
+// ─────────────────────────────────────────────────────────────
+function render({ section, sub }) {
+  showSection(section);
+
+  if (section === 'blog') {
+    if (sub) renderPost(sub);
+    else     renderPostList();
+  } else if (section === 'projects') {
+    renderProjects();
+    mountGiscus('giscus-projects', 'projects');
+  } else if (section === 'music') {
+    initMusic();
+    mountGiscus('giscus-music', sub ? `music/${sub}` : 'music');
+  } else if (section === 'about') {
+    mountGiscus('giscus-about', 'about');
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// 6. BLOG — LIST VIEW
+// ─────────────────────────────────────────────────────────────
+function renderPostList(postsToShow = POSTS, activeTopic = null) {
+  const listView   = document.getElementById('post-list-view');
+  const singleView = document.getElementById('single-post-view');
+  if (!listView || !singleView) return;
+  listView.style.display   = '';
+  singleView.style.display = 'none';
+
+  const container = document.getElementById('posts-container');
+  if (!container) return;
+  container.innerHTML = '';
+
+  if (postsToShow.length === 0) {
+    container.innerHTML = '<p class="empty-state">No posts found.</p>';
+    return;
   }
 
-  const list = filtered || posts
-  if (!list.length) {
-    container.innerHTML = '<p style="color:var(--muted);font-size:.9rem;padding:1.5rem 0;">No posts found.</p>'
-    return
-  }
+  postsToShow.forEach(post => {
+    const card = document.createElement('article');
+    card.className = 'post-card';
 
-  list.forEach(post => {
-    const card = document.createElement('div')
-    card.className = 'post-card'
+    const liked = isLiked(post.id);
+    const likes = getLikes(post.id);
+
     card.innerHTML = `
-      <div class="post-meta">
-        <span class="post-tag">${post.topic}</span>
-        <span>${formatDate(post.date)}</span>
-      </div>
-      <a class="post-title" href="#" data-id="${post.id}">${post.title}</a>
-      <p class="post-excerpt">${post.excerpt}</p>
-      <a class="read-more" href="#" data-id="${post.id}">Read more →</a>
-    `
-    card.querySelectorAll('[data-id]').forEach(el =>
-      el.addEventListener('click', e => { e.preventDefault(); openPost(post.id) })
-    )
-    container.appendChild(card)
-  })
-}
-
-function buildSidebar() {
-  // Topics
-  const topics = [...new Set(posts.map(p => p.topic))]
-  const topicList = document.getElementById('topic-index')
-  topicList.innerHTML = topics.map(t =>
-    `<li><a href="#" class="topic-tag" data-topic="${t}">${t}</a></li>`
-  ).join('')
-  topicList.querySelectorAll('[data-topic]').forEach(el =>
-    el.addEventListener('click', e => {
-      e.preventDefault()
-      const t = el.dataset.topic
-      buildBlog(posts.filter(p => p.topic === t), `Topic: ${t}`)
-    })
-  )
-
-  // Dates
-  const groups = {}
-  posts.forEach(p => {
-    const ym = p.date.slice(0, 7)
-    if (!groups[ym]) groups[ym] = []
-    groups[ym].push(p)
-  })
-
-  const dateList = document.getElementById('date-index')
-  dateList.innerHTML = Object.entries(groups)
-    .sort(([a], [b]) => b.localeCompare(a))
-    .map(([ym, ps]) => {
-      const label = new Date(ym + '-01').toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-      const sub = ps.map(p =>
-        `<li><a href="#" style="padding-left:.7rem;" data-id="${p.id}">↳ ${p.title.length > 28 ? p.title.slice(0,28)+'…' : p.title}</a></li>`
-      ).join('')
-      return `<li><a href="#" style="font-weight:500;" data-ym="${ym}">${label}</a></li>${sub}`
-    }).join('')
-
-  dateList.querySelectorAll('[data-id]').forEach(el =>
-    el.addEventListener('click', e => {
-      e.preventDefault()
-      openPost(el.dataset.id)
-    })
-  )
-  dateList.querySelectorAll('[data-ym]').forEach(el =>
-    el.addEventListener('click', e => {
-      e.preventDefault()
-      const ym = el.dataset.ym
-      const label = new Date(ym + '-01').toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
-      buildBlog(posts.filter(p => p.date.startsWith(ym)), label)
-    })
-  )
-}
-
-function openPost(id) {
-  const post = posts.find(p => p.id === id)
-  if (!post) return
-  currentPostId = id
-
-  document.getElementById('sp-title').textContent = post.title
-  document.getElementById('sp-date').textContent = formatDate(post.date)
-  document.getElementById('sp-topic').textContent = post.topic
-  document.getElementById('sp-body').innerHTML = post.html
-
-  renderComments(post)
-
-  document.getElementById('post-list-view').classList.add('hidden')
-  document.getElementById('single-post-view').classList.add('active')
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
-function closePost() {
-  currentPostId = null
-  document.getElementById('post-list-view').classList.remove('hidden')
-  document.getElementById('single-post-view').classList.remove('active')
-}
-
-function renderComments(post) {
-  const list = document.getElementById('comments-list')
-  const all = [...post.comments, ...(localComments[post.id] || [])]
-  list.innerHTML = all.length
-    ? all.map(c => `
-        <div class="comment">
-          <div class="comment-avatar">${(c.initials || c.author.slice(0,2)).toUpperCase()}</div>
-          <div class="comment-body">
-            <p class="comment-author">${c.author}</p>
-            <p class="comment-date">${c.date}</p>
-            <p class="comment-text">${c.text}</p>
+      <div class="post-card-header">
+        <div>
+          <h3 class="post-card-title">${post.title}</h3>
+          <div class="post-card-meta">
+            <span class="post-date">${formatDate(post.date)}</span>
+            <span class="post-tag">${post.topic}</span>
+            <span class="reading-time">${post.readingTime}</span>
           </div>
-        </div>`).join('')
-    : '<p style="font-size:.87rem;color:var(--muted);margin-bottom:1rem;">No comments yet.</p>'
+        </div>
+      </div>
+      <p class="post-excerpt">${post.excerpt}</p>
+      <div class="post-card-footer">
+        <a class="read-more" data-id="${post.id}" href="#blog/${post.id}">Read more →</a>
+        <div class="post-card-actions">
+          <button class="action-btn like-btn ${liked ? 'liked' : ''}"
+                  data-id="${post.id}" aria-label="Like">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>${likes}</span>
+          </button>
+          <button class="action-btn share-btn" data-id="${post.id}"
+                  data-title="${post.title}" aria-label="Share">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+            Share
+          </button>
+        </div>
+      </div>
+    `;
 
-  updateAuthUI()
+    // Read more click
+    card.querySelector('.read-more').addEventListener('click', e => {
+      e.preventDefault();
+      navigate(`blog/${post.id}`);
+    });
+
+    // Like
+    card.querySelector('.like-btn').addEventListener('click', e => {
+      const btn    = e.currentTarget;
+      const result = toggleLike(post.id);
+      btn.classList.toggle('liked', result.liked);
+      btn.querySelector('span').textContent = result.count;
+    });
+
+    // Share
+    card.querySelector('.share-btn').addEventListener('click', e => {
+      sharePost(e.currentTarget.dataset.id, e.currentTarget.dataset.title);
+    });
+
+    container.appendChild(card);
+  });
+
+  buildSidebar(activeTopic);
 }
 
-function updateAuthUI() {
-  const status  = document.getElementById('auth-status')
-  const btn     = document.getElementById('auth-toggle-btn')
-  const notice  = document.getElementById('login-notice')
-  const form    = document.getElementById('comment-form')
+// ─────────────────────────────────────────────────────────────
+// 7. BLOG — SIDEBAR
+// ─────────────────────────────────────────────────────────────
+function buildSidebar(activeTopic) {
+  const topicList = document.getElementById('topic-index');
+  const dateList  = document.getElementById('date-index');
+  if (!topicList || !dateList) return;
 
-  if (isLoggedIn) {
-    status.textContent = 'Signed in as Demo User.'
-    btn.textContent = 'Sign out'
-    notice.style.display = 'none'
-    form.classList.add('visible')
-  } else {
-    status.textContent = 'You are not logged in.'
-    btn.textContent = 'Sign in (demo)'
-    notice.style.display = ''
-    form.classList.remove('visible')
+  topicList.innerHTML = '';
+  const allLi = document.createElement('li');
+  allLi.innerHTML = `<button class="${!activeTopic ? 'active' : ''}">All <span class="count">${POSTS.length}</span></button>`;
+  allLi.querySelector('button').addEventListener('click', () => {
+    renderPostList(POSTS, null);
+  });
+  topicList.appendChild(allLi);
+
+  getTopics().forEach(([topic, count]) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<button class="${activeTopic === topic ? 'active' : ''}">${topic} <span class="count">${count}</span></button>`;
+    li.querySelector('button').addEventListener('click', () => {
+      renderPostList(POSTS.filter(p => p.topic === topic), topic);
+    });
+    topicList.appendChild(li);
+  });
+
+  dateList.innerHTML = '';
+  getDateGroups().forEach(([ym, count]) => {
+    const li = document.createElement('li');
+    const label = new Date(ym + '-01').toLocaleDateString('en-US', { year:'numeric', month:'long' });
+    li.innerHTML = `<button>${label} <span class="count">${count}</span></button>`;
+    li.querySelector('button').addEventListener('click', () => {
+      renderPostList(POSTS.filter(p => p.date?.startsWith(ym)), null);
+    });
+    dateList.appendChild(li);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────
+// 8. BLOG — SINGLE POST VIEW
+// ─────────────────────────────────────────────────────────────
+function renderPost(id) {
+  const post = POSTS.find(p => p.id === id);
+  const listView   = document.getElementById('post-list-view');
+  const singleView = document.getElementById('single-post-view');
+  if (!listView || !singleView) return;
+
+  if (!post) {
+    listView.style.display   = '';
+    singleView.style.display = 'none';
+    return;
+  }
+
+  listView.style.display   = 'none';
+  singleView.style.display = '';
+
+  // Fill fields
+  document.getElementById('sp-title').textContent       = post.title;
+  document.getElementById('sp-date').textContent        = formatDate(post.date);
+  document.getElementById('sp-topic').textContent       = post.topic;
+  document.getElementById('sp-reading-time').textContent = post.readingTime;
+  document.getElementById('sp-body').innerHTML          = post.html;
+
+  // Update SEO meta
+  document.title = `${post.title} — Mehul`;
+  document.getElementById('og-title')?.setAttribute('content', post.title);
+  document.getElementById('og-description')?.setAttribute('content', post.excerpt);
+  document.getElementById('og-url')?.setAttribute(
+    'content', `https://writer-in-fancy-pants.github.io/#blog/${post.id}`);
+
+  // Sync like buttons
+  syncLikeButtons(post.id);
+
+  // Back button
+  document.getElementById('back-btn').onclick = () => navigate('blog');
+
+  // Action bar buttons
+  bindPostActions(post.id, post.title);
+
+  // Mount Giscus for this specific post
+  mountGiscus('giscus-blog', `blog/${post.id}`);
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function syncLikeButtons(id) {
+  const liked = isLiked(id);
+  const count = getLikes(id);
+  ['sp-like-btn', 'sp-like-btn-footer'].forEach(btnId => {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.classList.toggle('liked', liked);
+    // update counter span inside button
+    const counter = btn.querySelector('span') || btn.querySelector('#sp-like-count') || btn.querySelector('#sp-like-count-footer');
+    if (counter) counter.textContent = count;
+  });
+  const c1 = document.getElementById('sp-like-count');
+  const c2 = document.getElementById('sp-like-count-footer');
+  if (c1) c1.textContent = count;
+  if (c2) c2.textContent = count;
+}
+
+function bindPostActions(id, title) {
+  ['sp-like-btn', 'sp-like-btn-footer'].forEach(btnId => {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.onclick = () => {
+      const result = toggleLike(id);
+      syncLikeButtons(id);
+    };
+  });
+
+  ['sp-share-btn', 'sp-share-btn-footer'].forEach(btnId => {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.onclick = () => sharePost(id, title);
+  });
+
+  const copyBtn = document.getElementById('sp-copy-btn');
+  if (copyBtn) {
+    copyBtn.onclick = () => {
+      const url = `${location.origin}${location.pathname}#blog/${id}`;
+      navigator.clipboard.writeText(url).then(() => toast('Link copied!'));
+    };
   }
 }
 
-function submitComment() {
-  const input = document.getElementById('comment-input')
-  const text  = input.value.trim()
-  if (!text || !currentPostId) return
+// ─────────────────────────────────────────────────────────────
+// 9. PROJECTS RENDERER
+// ─────────────────────────────────────────────────────────────
+function renderProjects() {
+  const grid = document.getElementById('projects-grid');
+  if (!grid || grid.dataset.rendered) return;
+  grid.dataset.rendered = '1';
+  grid.innerHTML = '';
 
-  if (!localComments[currentPostId]) localComments[currentPostId] = []
-  localComments[currentPostId].push({
-    author:   'Demo User',
-    initials: 'DU',
-    date:     new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-    text
-  })
+  if (PROJECTS.length === 0) {
+    grid.innerHTML = '<p class="empty-state">Projects coming soon.</p>';
+    return;
+  }
 
-  input.value = ''
-  const post = posts.find(p => p.id === currentPostId)
-  renderComments(post)
+  PROJECTS.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    const tags = (p.tags || []).map(t => `<span class="project-tag">${t}</span>`).join('');
+    const links = [
+      p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="project-link">GitHub →</a>` : '',
+      p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="project-link">Demo →</a>` : '',
+    ].join('');
+    card.innerHTML = `
+      <h3 class="project-title">${p.title}</h3>
+      <p class="project-desc">${p.description}</p>
+      <div class="project-tags">${tags}</div>
+      <div class="project-links">${links}</div>
+    `;
+    grid.appendChild(card);
+  });
 }
 
-/* ═══════════════════════════════════════════════
-   PROJECTS
-═══════════════════════════════════════════════ */
-function buildProjects() {
-  const statusLabels = { active: 'Active', archived: 'Archived', wip: 'In Progress' }
-  const grid = document.getElementById('projects-grid')
-  grid.innerHTML = PROJECTS.map(p => `
-    <div class="project-card">
-      <div class="project-card-header">
-        <span class="project-name">${p.name}</span>
-        <span class="project-status status-${p.status}">${statusLabels[p.status]}</span>
-      </div>
-      <p class="project-desc">${p.desc}</p>
-      <div class="project-tags">
-        ${p.tags.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-      </div>
-      <div class="project-links">
-        ${p.links.map(l => `
-          <a class="project-link ${l.primary ? 'project-link-primary' : 'project-link-secondary'}"
-             href="${l.url}" target="_blank" rel="noopener">
-            ${l.primary ? svgExternal() : ''}${l.label}
-          </a>`).join('')}
-      </div>
-    </div>`).join('')
+// ─────────────────────────────────────────────────────────────
+// 10. SHARE HELPER
+// ─────────────────────────────────────────────────────────────
+function sharePost(id, title) {
+  const url = `${location.origin}${location.pathname}#blog/${id}`;
+  if (navigator.share) {
+    navigator.share({ title, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url).then(() => toast('Link copied!'));
+  }
 }
 
-/* ═══════════════════════════════════════════════
-   HELPERS
-═══════════════════════════════════════════════ */
-function formatDate(d) {
-  if (!d) return ''
-  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric'
-  })
+// ─────────────────────────────────────────────────────────────
+// 11. SEARCH
+// ─────────────────────────────────────────────────────────────
+let _searchTimeout;
+document.getElementById('blog-search')?.addEventListener('input', e => {
+  clearTimeout(_searchTimeout);
+  _searchTimeout = setTimeout(() => {
+    const q = e.target.value.trim();
+    if (q.length === 0) renderPostList(POSTS, null);
+    else renderPostList(searchPosts(q), null);
+  }, 250);
+});
+
+// ─────────────────────────────────────────────────────────────
+// 12. RSS — inject <link> and expose /feed.xml at build time
+// ─────────────────────────────────────────────────────────────
+// The Vite plugin in vite.config.js handles writing the file.
+// Here we just expose the generator for the plugin to use.
+export { generateRSS, POSTS };
+
+// ─────────────────────────────────────────────────────────────
+// 13. UTILITIES
+// ─────────────────────────────────────────────────────────────
+function formatDate(iso) {
+  if (!iso) return '';
+  return new Date(iso).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
 }
 
-function svgExternal() {
-  return `<svg viewBox="0 0 16 16"><path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/><path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/></svg>`
-}
-
-/* ═══════════════════════════════════════════════
-   WIRE-UP
-═══════════════════════════════════════════════ */
-document.addEventListener('DOMContentLoaded', () => {
-  // Theme
-  initTheme()
-  document.getElementById('theme-toggle').addEventListener('click', toggleTheme)
-
-  // Nav logo
-  document.querySelector('.nav-logo').addEventListener('click', () => showPage('about'))
-
-  // Tab buttons
-  document.getElementById('tab-about').addEventListener('click',    () => showPage('about'))
-  document.getElementById('tab-blog').addEventListener('click',     () => showPage('blog'))
-  document.getElementById('tab-projects').addEventListener('click', () => showPage('projects'))
-
-  // Blog back button
-  document.getElementById('back-btn').addEventListener('click', closePost)
-
-  // Auth
-  document.getElementById('auth-toggle-btn').addEventListener('click', () => {
-    isLoggedIn = !isLoggedIn
-    updateAuthUI()
-  })
-  document.getElementById('login-notice-link').addEventListener('click', e => {
-    e.preventDefault()
-    isLoggedIn = true
-    updateAuthUI()
-  })
-
-  // Comment submit
-  document.getElementById('submit-comment-btn').addEventListener('click', submitComment)
-  document.getElementById('clear-comment-btn').addEventListener('click', () => {
-    document.getElementById('comment-input').value = ''
-  })
-
-  // Footer year
-  document.getElementById('yr').textContent = new Date().getFullYear()
-
-  // Load blog posts (sync via eager import.meta.glob)
-  posts = loadPosts()
-  buildBlog()
-  buildSidebar()
-
-  // Projects
-  buildProjects()
-})
+// ─────────────────────────────────────────────────────────────
+// 14. BOOT
+// ─────────────────────────────────────────────────────────────
+initTheme();
+document.getElementById('yr').textContent = new Date().getFullYear();
+render(parseHash());

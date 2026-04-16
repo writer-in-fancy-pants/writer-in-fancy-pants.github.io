@@ -1,70 +1,89 @@
-/**
- * blog.js
- * Loads all markdown files from /blog/*.md at build time via Vite's import.meta.glob.
- * Each file must begin with a YAML-like frontmatter block delimited by ---.
- *
- * Frontmatter fields:
- *   id       – unique slug (used for URL hash and anchors)
- *   title    – post title
- *   date     – ISO date string e.g. "2025-11-12"
- *   topic    – category string
- *   excerpt  – one-sentence summary shown in list view
- */
+// src/blog.js
+// ─────────────────────────────────────────────────────────────
+// Loads markdown posts at build time (Vite glob import),
+// parses frontmatter, and provides rendering helpers.
+// ─────────────────────────────────────────────────────────────
 
-import { marked } from 'marked'
+import { marked } from 'marked';
 
-// Vite eagerly imports all .md files under /blog at build time.
-// The `?raw` suffix gives us the file content as a plain string.
-const rawFiles = import.meta.glob('/blog/*.md', { eager: true, query: '?raw', import: 'default' })
+// Vite eager glob — picks up every .md file in /blog/
+const RAW = import.meta.glob('/blog/*.md', { as: 'raw', eager: true });
 
-/**
- * Parse YAML-ish frontmatter between the first pair of --- delimiters.
- * Returns { meta: {}, body: '' }
- */
+// ── Frontmatter parser ────────────────────────────────────────
 function parseFrontmatter(raw) {
-  const fm = {}
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/m)
-  if (!match) return { meta: fm, body: raw }
-
-  const [, header, body] = match
-  for (const line of header.split('\n')) {
-    const colonIdx = line.indexOf(':')
-    if (colonIdx === -1) continue
-    const key = line.slice(0, colonIdx).trim()
-    let value = line.slice(colonIdx + 1).trim()
-    // Strip surrounding quotes
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1)
-    }
-    fm[key] = value
-  }
-
-  return { meta: fm, body: body.trim() }
+  const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
+  if (!match) return { meta: {}, body: raw };
+  const meta = {};
+  match[1].split('\n').forEach(line => {
+    const idx = line.indexOf(':');
+    if (idx === -1) return;
+    const key = line.slice(0, idx).trim();
+    const val = line.slice(idx + 1).trim().replace(/^["']|["']$/g, '');
+    meta[key] = val;
+  });
+  return { meta, body: match[2] };
 }
 
-/**
- * Returns a sorted (newest first) array of post objects:
- * { id, title, date, topic, excerpt, html }
- */
-export function loadPosts() {
-  const posts = []
+// ── Reading time ──────────────────────────────────────────────
+function readingTime(text) {
+  const words = text.trim().split(/\s+/).length;
+  const mins  = Math.max(1, Math.round(words / 200));
+  return `${mins} min read`;
+}
 
-  for (const [, raw] of Object.entries(rawFiles)) {
-    const { meta, body } = parseFrontmatter(raw)
-    if (!meta.id || !meta.title) continue
-
-    posts.push({
-      id:      meta.id,
-      title:   meta.title,
-      date:    meta.date || '',
-      topic:   meta.topic || 'General',
+// ── Build post list ───────────────────────────────────────────
+export const POSTS = Object.entries(RAW)
+  .map(([path, raw]) => {
+    const { meta, body } = parseFrontmatter(raw);
+    const filename = path.replace('/blog/', '').replace('.md', '');
+    return {
+      id:      meta.id      || filename,
+      title:   meta.title   || filename,
+      date:    meta.date    || '',
+      topic:   meta.topic   || 'General',
       excerpt: meta.excerpt || '',
-      html:    marked.parse(body),
-      // Seed comments array (replace with a real backend / giscus in production)
-      comments: []
-    })
-  }
+      readingTime: readingTime(body),
+      body,
+      html: marked.parse(body),
+    };
+  })
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  return posts.sort((a, b) => b.date.localeCompare(a.date))
+// ── Likes (localStorage) ──────────────────────────────────────
+export function getLikes(id)  { return parseInt(localStorage.getItem(`blog-likes-${id}`) || '0', 10); }
+export function isLiked(id)   { return localStorage.getItem(`blog-liked-${id}`) === '1'; }
+export function toggleLike(id) {
+  const liked = isLiked(id);
+  const count = getLikes(id);
+  localStorage.setItem(`blog-liked-${id}`, liked ? '0' : '1');
+  localStorage.setItem(`blog-likes-${id}`, String(liked ? Math.max(0, count - 1) : count + 1));
+  return { liked: !liked, count: getLikes(id) };
+}
+
+// ── Topics + date groups ──────────────────────────────────────
+export function getTopics() {
+  const map = {};
+  POSTS.forEach(p => { map[p.topic] = (map[p.topic] || 0) + 1; });
+  return Object.entries(map).sort((a, b) => b[1] - a[1]);
+}
+
+export function getDateGroups() {
+  const map = {};
+  POSTS.forEach(p => {
+    if (!p.date) return;
+    const ym = p.date.slice(0, 7);
+    map[ym] = (map[ym] || 0) + 1;
+  });
+  return Object.entries(map).sort((a, b) => b[0].localeCompare(a[0]));
+}
+
+// ── Search ────────────────────────────────────────────────────
+export function searchPosts(query) {
+  const q = query.toLowerCase();
+  return POSTS.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    p.excerpt.toLowerCase().includes(q) ||
+    p.topic.toLowerCase().includes(q) ||
+    p.body.toLowerCase().includes(q)
+  );
 }
