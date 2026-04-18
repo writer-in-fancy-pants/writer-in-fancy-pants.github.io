@@ -43,7 +43,7 @@ Anthropic currently offers three production models: **Opus 4.7** (flagship, rele
 
 ### Performance & Specialization
 
-**Claude Opus 4.7** is Anthropic's most capable generally available model. Key improvements over Opus 4.6 include a 12-point CursorBench gain (70% vs 58%), near-perfect vision accuracy (98.5% vs 54.5%), 3x image resolution (3.75MP), a new `xhigh` effort level, and a `/ultrareview` command in Claude Code for deep bug detection. It introduces **task budgets** to control token spend in agentic loops and **adaptive thinking** (reasoning is hidden by default; opt in with `"display": "summarized"`). It is the only Claude model on the public frontier that can write a C compiler from scratch. The new tokenizer improves capability but may increase token counts by up to 35% for identical inputs — effective cost can be 10–15% higher than sticker price suggests.
+**Claude Opus 4.7** is Anthropic's most capable generally available model. Key improvements over Opus 4.6 include a 12-point CursorBench gain (70% vs 58%), near-perfect vision accuracy (98.5% vs 54.5%), 3x image resolution (3.75MP), a new `xhigh` effort level, and a `/ultrareview` command in Claude Code for deep bug detection. It introduces **task budgets** to control token spend in agentic loops and **adaptive thinking** (reasoning is hidden by default; opt in with `"display": "summarized"`). It is the only Claude model on the public frontier that can write a C compiler from scratch. **The new tokenizer improves capability but may increase token counts by up to 35% for identical inputs — effective cost can be 10–15% higher (or more) than sticker price suggests.**
 
 **Claude Sonnet 4.6** delivers near-Opus performance at 40% lower cost. It is preferred over Sonnet 4.5 by ~70% of developers and over the previous-generation Opus by ~59% on coding evaluations. Computer use accuracy hit 94%. It is the **default model in Claude Code** and the recommended default for most production use cases. Supports 1M context at standard pricing.
 
@@ -371,7 +371,7 @@ For reasoning tasks, use **Chain of Draft (CoD)** instead of Chain of Thought (C
 
 **What:** Run open-weight models on your own infrastructure when token volume crosses the breakeven point.
 
-**When it makes sense:** ~3–5B tokens/day is the typical breakeven where self-hosting becomes cheaper than API pricing. Below this, APIs win on convenience and reliability.
+**When it makes sense:** ~3–5B tokens/day is the typical breakeven where self-hosting becomes cheaper than API pricing. Below this, APIs win on convenience and reliability. **This assumes that you don't already own and use the hardware required, and the cost is the only concern.**
 
 **Cost comparison example (daily at 250M tokens input + output):**
 - DeepSeek V3.2 API: ~$1,250/day

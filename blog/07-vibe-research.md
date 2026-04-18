@@ -53,8 +53,17 @@ This is all me. How I behave, how I empower myself, engage with the world, be cu
 
 Everything worth caring about is also messy, complex, nuanced, and often emotionally charged. Climate change is up there on the list. So is market dynamics, human psyche, lifestyle choices, systemic inequalities, trauma, spirituality, stress, family, helping the world, and living a fruitful meaningful life. I am still learning. Learning to learn, and also learning to let go and just be.
 
-### Afterword
-It is worth doing. It is crazy really, the whole process - waking up every day, with new questions, and having it answered systematically from a universal corpus, in minutes - is peak sci-fi. It enriches my life. And those around me. It's like a wishing well. Only, like every creative writing class tells us, you need limitations and explore a concept to its fullest for an interesting story. I find it easy to get lost in the endless pursuit of novelty. LLM token spending may be infinite, but my attention is limited so that is what I work with.
+For each result, I read through and add my own comments to it, usually in bold. Or highlight the key points.
+
+## Example
+As I was writing this blog, I also ran a query in parallel, one that answers a quite relevant question - how do I make the best use of the tools and models available to me. I have already explained what I do, but there is likely quite a lot that I can add to my mental model. This is a long term process, rewiring itself, human + machine making both smarter. The example below, and the result in the next blog post. No running multiple queries this time.
+
+```
+Analyze the performance, size, resource usage, specialization, compute cost, and  recommended tasks for each of the Claude models. Return a table for comparison. Also research methods for maximizing usage efficiency ie minimizing number of chats and model calls, and minimizing token usage while maximizing output. Organize as a list of recommendations with examples. Include other popular models from other providers. Include state of the art open weight models. Identify top models in each size category for self-hosting. Organize the results in a markdown report.
+```
+
+## Afterword
+It is worth doing. It is crazy really, the whole process - waking up every day, with new questions, and having it answered systematically from a universal corpus, in minutes - is peak sci-fi. It enriches my life. And those around me. It's like a wishing well. Only, like every creative writing class tells us, you need limitations and explore a concept to its fullest for an interesting story. I find it easy to get lost in the endless pursuit of novelty. LLM token spending may be infinite, but my attention is limited so that is what I work with. Constructive feedback is always welcome.
 
 Peace.
 
