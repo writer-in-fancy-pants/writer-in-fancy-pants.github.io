@@ -2,7 +2,7 @@
 id: 03-analyzing-healing-crystals-report
 title: "Healing Crystal Veracity — Research Report"
 date: "2026-04-15"
-topic: "Research"
+topic: "Vibe Research"
 excerpt: "Deciphering relevance of crystals, based on cultural significance and shared human traits."
 meta-viewport: width=device-width, initial-scale=1.0
 ---

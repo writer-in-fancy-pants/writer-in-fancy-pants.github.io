@@ -2,7 +2,7 @@
 id: 05-work-health-matrix
 title: "Occupation, Lifestyle, and Health"
 date: "2026-04-17"
-topic: "Research"
+topic: "Vibe Research"
 excerpt: "Analyzing impact of occupation, income, lifestyle on health, and the choices available for meaningful change."
 meta-viewport: width=device-width, initial-scale=1.0
 ---

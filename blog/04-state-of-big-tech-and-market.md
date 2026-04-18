@@ -2,7 +2,7 @@
 id: 04-state-of-big-tech-and-market
 title: "Big Tech in the AI Era — Strategic Analysis 2026"
 date: "2026-04-16"
-topic: "Research"
+topic: "Vibe Research"
 excerpt: "Analyzing impact of AI, War, Legal issues, Politics, Inflation, and more on big tech."
 meta-viewport: width=device-width, initial-scale=1.0
 ---
