@@ -58,14 +58,24 @@ For each result, I read through and add my own comments to it, usually in bold. 
 ## Example
 As I was writing this blog, I also ran a query in parallel, one that answers a quite relevant question - how do I make the best use of the tools and models available to me. I have already explained what I do, but there is likely quite a lot that I can add to my mental model. This is a long term process, rewiring itself, human + machine making both smarter. The example below, and the result in the next blog post. No running multiple queries this time.
 
-```
-Analyze the performance, size, resource usage, specialization, compute cost, and  recommended tasks for each of the Claude models. Return a table for comparison. Also research methods for maximizing usage efficiency ie minimizing number of chats and model calls, and minimizing token usage while maximizing output. Organize as a list of recommendations with examples. Include other popular models from other providers. Include state of the art open weight models. Identify top models in each size category for self-hosting. Organize the results in a markdown report.
-```
+<div style="font-family: monospace; margin: 20px; padding: 20px; border: 2px solid var(--ink); border-radius: 10px;">
+  <p style="line-height: 1.6;">
+Analyze the performance, size, resource usage, specialization, 
+compute cost, and  recommended tasks for each of the Claude models. 
+Return a table for comparison. Also research methods for maximizing 
+usage efficiency ie minimizing number of chats and model calls, 
+and minimizing token usage while maximizing output. 
+Organize as a list of recommendations with examples. 
+Include other popular models from other providers. 
+Include state of the art open weight models. 
+Identify top models in each size category for self-hosting. 
+Organize the results in a markdown report.
+  </p>
+</div>
 
 ## Afterword
 It is worth doing. It is crazy really, the whole process - waking up every day, with new questions, and having it answered systematically from a universal corpus, in minutes - is peak sci-fi. It enriches my life. And those around me. It's like a wishing well. Only, like every creative writing class tells us, you need limitations and explore a concept to its fullest for an interesting story. I find it easy to get lost in the endless pursuit of novelty. LLM token spending may be infinite, but my attention is limited so that is what I work with. Constructive feedback is always welcome.
 
 Peace.
 
-
-
+---

@@ -11,7 +11,6 @@ const RAW = import.meta.glob('/blog/*.md', { query: '?raw', import: 'default' , 
 
 // ── Frontmatter parser ────────────────────────────────────────
 function parseFrontmatter(raw) {
-  console.log(raw, typeof raw)
   const match = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);
   if (!match) return { meta: {}, body: raw };
   const meta = {};
