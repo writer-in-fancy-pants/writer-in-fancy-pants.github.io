@@ -17,6 +17,7 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: background .25s, color .25s;
+  text-wrap: wrap;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
