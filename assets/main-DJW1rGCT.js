@@ -171,10 +171,10 @@ meta-viewport: width=device-width, initial-scale=1.0
   }
   nav.toc ol { padding-left: 1.2rem; }
   nav.toc li { margin: 0.3rem 0; }
-  nav.toc a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  nav.toc a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; pointer-events: none;}
   nav.toc a:hover { color: var(--accent1); }
   nav.toc ol ol { margin-top: 0.2rem; padding-left: 1.2rem; }
-  nav.toc ol ol a { color: #5a5a50; }
+  nav.toc ol ol a { color: #5a5a50; pointer-events: none;}
   nav.toc ol ol a:hover { color: var(--accent2); }
 
   /* SECTIONS */
@@ -447,21 +447,21 @@ tl;dr - There exist strong cross-cultural correlations between uses of specific 
 <div class="toc">
   <div class="toc-title">Contents</div>
   <ol>
-    <li><a href="#s1">Hypotheses & Scope</a></li>
-    <li><a href="#s2">Cross-Cultural Crystal Traditions</a>
+    <li><a href="#03-analyzing-healing-crystals-report#s1">Hypotheses & Scope</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s2">Cross-Cultural Crystal Traditions</a>
       <ol>
-        <li><a href="#s2a">African Traditions</a></li>
-        <li><a href="#s2b">Asian Traditions</a></li>
-        <li><a href="#s2c">Amazonian & Indigenous American</a></li>
-        <li><a href="#s2d">Cross-Cultural Convergence</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2a">African Traditions</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2b">Asian Traditions</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2c">Amazonian & Indigenous American</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2d">Cross-Cultural Convergence</a></li>
       </ol>
     </li>
-    <li><a href="#s3">Key Crystal Profiles</a></li>
-    <li><a href="#s4">Mineral Physics: Resonance Frequencies</a></li>
-    <li><a href="#s5">Correlation Analysis</a></li>
-    <li><a href="#s6">Alternate Hypothesis: Placebo & Conditioning</a></li>
-    <li><a href="#s7">Synthesis & Open Questions</a></li>
-    <li><a href="#s8">References</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s3">Key Crystal Profiles</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s4">Mineral Physics: Resonance Frequencies</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s5">Correlation Analysis</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s6">Alternate Hypothesis: Placebo & Conditioning</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s7">Synthesis & Open Questions</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s8">References</a></li>
   </ol>
 </div>
 
@@ -3261,11 +3261,1918 @@ It is worth doing. It is crazy really, the whole process - waking up every day, 
 
 Peace.
 
----`;function c(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}var l=c();function u(e){l=e}var d=/[&<>"']/,f=new RegExp(d.source,`g`),p=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,ee=new RegExp(p.source,`g`),te={"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`},ne=e=>te[e];function m(e,t){if(t){if(d.test(e))return e.replace(f,ne)}else if(p.test(e))return e.replace(ee,ne);return e}var re=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function ie(e){return e.replace(re,(e,t)=>(t=t.toLowerCase(),t===`colon`?`:`:t.charAt(0)===`#`?t.charAt(1)===`x`?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):``))}var ae=/(^|[^\[])\^/g;function h(e,t){let n=typeof e==`string`?e:e.source;t||=``;let r={replace:(e,t)=>{let i=typeof t==`string`?t:t.source;return i=i.replace(ae,`$1`),n=n.replace(e,i),r},getRegex:()=>new RegExp(n,t)};return r}function oe(e){try{e=encodeURI(e).replace(/%25/g,`%`)}catch{return null}return e}var g={exec:()=>null};function se(e,t){let n=e.replace(/\|/g,(e,t,n)=>{let r=!1,i=t;for(;--i>=0&&n[i]===`\\`;)r=!r;return r?`|`:` |`}).split(/ \|/),r=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),t)if(n.length>t)n.splice(t);else for(;n.length<t;)n.push(``);for(;r<n.length;r++)n[r]=n[r].trim().replace(/\\\|/g,`|`);return n}function _(e,t,n){let r=e.length;if(r===0)return``;let i=0;for(;i<r;){let a=e.charAt(r-i-1);if(a===t&&!n)i++;else if(a!==t&&n)i++;else break}return e.slice(0,r-i)}function ce(e,t){if(e.indexOf(t[1])===-1)return-1;let n=0;for(let r=0;r<e.length;r++)if(e[r]===`\\`)r++;else if(e[r]===t[0])n++;else if(e[r]===t[1]&&(n--,n<0))return r;return-1}function v(e,t,n,r){let i=t.href,a=t.title?m(t.title):null,o=e[1].replace(/\\([\[\]])/g,`$1`);if(e[0].charAt(0)!==`!`){r.state.inLink=!0;let e={type:`link`,raw:n,href:i,title:a,text:o,tokens:r.inlineTokens(o)};return r.state.inLink=!1,e}return{type:`image`,raw:n,href:i,title:a,text:m(o)}}function le(e,t){let n=e.match(/^(\s+)(?:```)/);if(n===null)return t;let r=n[1];return t.split(`
+---`,c=`---
+id: 08-learned-0426-week2
+title: "Content I found interesting : Week 2 April 2026"
+date: "2026-04-19"
+topic: "Journal"
+excerpt: "Title, links to interesting posts online."
+---
+
+## General
+- Seeing New Colors
+  * Phosphorescent Turquiose - [https://dynomight.net/colors/](https://dynomight.net/colors/)
+  * Chimeric Colors - [https://youtu.be/41H7kKwUlHo?t=507](https://youtu.be/41H7kKwUlHo?t=507)
+
+- Massive surveillance networks, freely available precise geolocation of devices via Webloc (Cobwebs)
+[https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/](https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/)
+
+- A webpage organized on physical modality
+[https://dynamicland.org/](https://dynamicland.org/)
+
+- Skin tattoo to record EEG
+[https://news.utexas.edu/2024/12/04/ink-based-e-tattoo-can-decode-brainwaves/](https://news.utexas.edu/2024/12/04/ink-based-e-tattoo-can-decode-brainwaves/)
+
+- Study of alpha/theta neurofeedback improving performance on creative tasks
+[23663454_A_theory_of_alphatheta_neurofeedback_creative_performance_enhancement_long_distance_functional_connectivity_and_psychological_integration](23663454_A_theory_of_alphatheta_neurofeedback_creative_performance_enhancement_long_distance_functional_connectivity_and_psychological_integration)
+  
+## AI
+- ROCm and AMD strix halo Qwen 3.6 setup
+[https://blog.marcoinacio.com/posts/my-first-impressions-rocm-strix-halo/](https://blog.marcoinacio.com/posts/my-first-impressions-rocm-strix-halo/)
+
+- Taalas : AI models into custom silicon
+[https://taalas.com/](https://taalas.com/)
+
+
+## Climate Change
+- Soil Organic Carbon, Soil inorganic carbon, PRODA, BINN
+[https://www.youtube.com/watch?v=TZEuOSaP9uQ](https://www.youtube.com/watch?v=TZEuOSaP9uQ)
+
+- Tackling Climate Change with Machine Learning
+[https://www.climatechange.ai/paper](https://www.climatechange.ai/paper)
+
+## Music
+- Chinese Man - Groove Sessions (Album)
+[https://www.youtube.com/watch?v=oz5pFJRecEc](https://www.youtube.com/watch?v=oz5pFJRecEc)
+
+- Mast-e-kailash
+[https://www.youtube.com/watch?v=tptx6W-1WyY](https://www.youtube.com/watch?v=tptx6W-1WyY)
+
+- The Art Of Thievery Corporation (DJ Set) - Willy Poveda
+[https://youtu.be/Rbh7t5jxACc?si=X-pnPnreWkK7I60C](https://youtu.be/Rbh7t5jxACc?si=X-pnPnreWkK7I60C)
+`,l=`---
+id: 09-futures-with-ai
+title: "Futures with AI."
+date: "2026-04-20"
+topic: "Vibe Research"
+excerpt: "What I think can happen -> Fact-checked, augmented by Claude -> You."
+---
+
+
+<script>
+// ─── STICKY NAV ───
+const stickyNav = document.getElementById('sticky-nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight * 0.6) {
+    stickyNav.classList.add('visible');
+  } else {
+    stickyNav.classList.remove('visible');
+  }
+});
+
+// ─── SCENARIO TABS ───
+document.getElementById('scenario-tabs').addEventListener('click', e => {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  const tab = btn.dataset.tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.scenario-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tab).classList.add('active');
+});
+
+// ─── OPPORTUNITY TABS ───
+document.getElementById('opp-tabs').addEventListener('click', e => {
+  const btn = e.target.closest('.opp-tab');
+  if (!btn) return;
+  const tab = btn.dataset.tab;
+  document.querySelectorAll('.opp-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.opp-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('opp-' + tab).classList.add('active');
+});
+
+// ─── TIMELINE FORKS ───
+function toggleBranch(id) {
+  const el = document.getElementById(id);
+  const btn = el.previousElementSibling;
+  el.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+function selectBranch(el) {
+  const siblings = el.parentElement.querySelectorAll('.tl-branch');
+  siblings.forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+// ─── SCROLL REVEAL ───
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// ─── PROBABILITY BARS ───
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.prob-bar-fill').forEach(bar => {
+        const w = bar.dataset.width;
+        setTimeout(() => { bar.style.width = w + '%'; }, 200);
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const probSection = document.getElementById('prob-bars');
+if (probSection) barObserver.observe(probSection);
+<\/script>
+
+
+<style>
+  :root {
+    --amber: #c8922a;
+    --amber-light: #e8b84b;
+    --rust: #b5451b;
+    --slate: #3d4f5c;
+    --fog: #8a8f99;
+    --green: #2d6e4e;
+    --red: #9c2020;
+    --blue: #1a4a7a;
+    --line: rgba(14,14,14,0.12);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* ─── HEADER ─── */
+  #hero {
+    /* min-height: 100vh; */
+    /* display: grid; */
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,146,42,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,146,42,0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  #hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    /* opacity: 0; */
+    /* animation: fadeUp 0.8s ease 0.2s forwards; */
+  }
+  h1 {
+    font-family: serif;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    /* opacity: 0; */
+    /* animation: fadeUp 0.8s ease 0.4s forwards; */
+  }
+  h1 em {
+    color: var(--amber);
+    font-style: italic;
+  }
+  .hero-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.5);
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    /* opacity: 0; */
+    /* animation: fadeUp 0.8s ease 0.6s forwards; */
+  }
+  .hero-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    /* opacity: 0; */
+    /* animation: fadeUp 0.8s ease 0.8s forwards; */
+  }
+  .hero-nav a {
+    pointer-events: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid rgba(245,240,232,0.2);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+  }
+  .hero-nav a:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--ink);
+  }
+  /* ─── SECTIONS ─── */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+
+  section.full-bleed {
+    max-width: 100%;
+    padding: 0;
+  }
+  .section-label {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  h2 {
+    font-family: serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  p { margin-bottom: 1rem; color: #2a2a2a; }
+
+  /* ─── CURRENT STATE ─── */
+  #current {
+    /* background: var(--paper); */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px;
+    margin: 3rem 0;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .stat-card {
+    background: var(--paper);
+    padding: 1.75rem;
+    position: relative;
+  }
+  .stat-num {
+    font-family: serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--amber);
+    /* display: block; */
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--fog);
+    text-transform: uppercase;
+  }
+  .stat-note {
+    font-size: 0.8rem;
+    color: var(--fog);
+    margin-top: 0.4rem;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 700px) {
+    .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+  .callout {
+    border-left: 3px solid var(--amber);
+    padding: 1rem 1.25rem;
+    /* background: rgba(200,146,42,0.06); */
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .callout.red { border-color: var(--rust); background: rgba(181,69,27,0.06); }
+  .callout.blue { border-color: var(--blue); background: rgba(26,74,122,0.06); }
+  .callout.green { border-color: var(--green); background: rgba(45,110,78,0.06); }
+
+  /* ─── SCENARIO CARDS ─── */
+  #scenarios { 
+   }
+  #scenarios > div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+  #scenarios h2 { color: var(--ink); }
+  #scenarios .section-label { color: var(--amber); }
+  /* #scenarios .section-label::after { background: rgba(245,240,232,0.1); } */
+  .scenario-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 2.5rem 0 0;
+  }
+  .tab-btn {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(245,240,232,0.2);
+    color: rgba(245,240,232,0.5);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--ink);
+  }
+  .scenario-panels { margin-top: 0; }
+  .scenario-panel {
+    /* display: none;
+    animation: fadeIn 0.4s ease; */
+  }
+  .scenario-panel.active { display: block; }
+  /* @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } */
+
+  .scenario-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(245,240,232,0.1);
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+
+  .scenario-num {
+    font-family: serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--amber);
+    /* opacity: 0.4; */
+    line-height: 1;
+  }
+
+  .scenario-meta h3 {
+    font-size: 1.8rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .scenario-tagline {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 0.1em;
+  }
+
+  .prob-badge {
+    font-family: monospace;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid;
+    text-align: center;
+    min-width: 80px;
+  }
+
+  .prob-badge.low { border-color: var(--rust); color: var(--rust); }
+  .prob-badge.mid { border-color: var(--amber); color: var(--amber); }
+  .prob-badge.high { border-color: var(--green); color: #5ab88a; }
+
+  .scenario-body {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 800px) {
+    .scenario-body { grid-template-columns: 1fr; }
+    .scenario-header { grid-template-columns: auto 1fr; }
+    /* .prob-badge { display: none; } */
+  }
+
+  .scenario-col {
+    padding: 1.25rem;
+    border: 1px solid rgba(245,240,232,0.08);
+  }
+
+  .scenario-col-label {
+    font-family: monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .scenario-col-label.for { color: #5ab88a; }
+  .scenario-col-label.against { color: #e07070; }
+  .scenario-col-label.blind { color: var(--amber-light); }
+
+  .scenario-col p { color: rgba(245,240,232,0.7); font-size: 0.9rem; }
+
+  .scenario-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .scenario-col ul li {
+    color: rgba(245,240,232,0.7);
+    font-size: 0.88rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(245,240,232,0.05);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .scenario-col ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    /* opacity: 0.4; */
+  }
+
+  /* ─── TIMELINE ─── */
+  /* #timeline { background: var(--paper); } */
+
+  .timeline-wrapper {
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    margin: 3rem 0;
+  }
+
+  .timeline-svg-container {
+    min-width: 900px;
+    position: relative;
+  }
+
+  /* Interactive timeline using pure HTML/CSS/JS */
+  .tl-year {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--fog);
+    letter-spacing: 0.1em;
+  }
+
+  .timeline-track {
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  .tl-node {
+    position: relative;
+    margin-bottom: 0;
+    padding: 2rem 0 2rem 2.5rem;
+    border-left: 2px solid var(--line);
+    cursor: default;
+  }
+
+  .tl-dot {
+    position: absolute;
+    left: -0.5rem;
+    top: 2.15rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--fog);
+    transition: all 0.2s;
+  }
+
+  .tl-node.fork > .tl-dot { background: var(--amber); border-color: var(--amber); width: 1.2rem; height: 1.2rem; left: -0.6rem; }
+
+  .tl-year-label {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.4rem;
+  }
+
+  .tl-title {
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .tl-body { font-size: 0.88rem; color: #444; max-width: 700px; }
+
+  .tl-branches {
+    margin-top: 1rem;
+    /* display: none; */
+    gap: 1rem;
+  }
+
+  .tl-branches.open { display: flex; flex-wrap: wrap; }
+
+  .tl-branch {
+    flex: 1;
+    min-width: 220px;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .tl-branch:hover {
+    border-color: var(--amber);
+    background: rgba(200,146,42,0.04);
+  }
+
+  .tl-branch.selected {
+    border-color: var(--amber);
+    background: rgba(200,146,42,0.08);
+  }
+
+  .tl-branch-label {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--fog);
+    margin-bottom: 0.3rem;
+  }
+
+  .tl-branch-title {
+    font-family: serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .tl-branch p { font-size: 0.8rem; color: #555; margin: 0; }
+
+  .fork-toggle {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid var(--line);
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s;
+    color: var(--fog);
+  }
+
+  .fork-toggle:hover { border-color: var(--amber); color: var(--amber); }
+  .fork-toggle .arrow { transition: transform 0.2s; }
+  .fork-toggle.open .arrow { transform: rotate(90deg); }
+
+  /* ─── CYBERSECURITY ─── */
+  /* #cyber { background: #0a0f14; } */
+  #cyber > div {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+  }
+  #cyber h2 { color: var(--ink); }
+  #cyber .section-label { color: #4a9eff; }
+  #cyber .section-label::after { background: rgba(74,158,255,0.2); }
+  #cyber h3 { color: var(--ink); }
+  #cyber p { color: rgba(245,240,232,0.65); }
+
+  .threat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5px;
+    margin: 2rem 0;
+    background: rgba(74,158,255,0.1);
+    border: 1px solid rgba(74,158,255,0.1);
+  }
+
+  .threat-card {
+    background: #0a0f14;
+    padding: 1.5rem;
+    transition: background 0.2s;
+  }
+
+  .threat-card:hover { background: rgba(74,158,255,0.05); }
+
+  .threat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .threat-card h4 {
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4a9eff;
+    margin-bottom: 0.5rem;
+  }
+
+  .threat-card p { font-size: 0.85rem; color: rgba(245,240,232,0.5); margin: 0; }
+
+  .dark-forest-box {
+    border: 1px solid rgba(74,158,255,0.3);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    position: relative;
+  }
+
+  .dark-forest-box::before {
+    content: 'DARK FOREST SCENARIO';
+    font-family: monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: #4a9eff;
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background: #0a0f14;
+    padding: 0 0.5rem;
+  }
+
+  .dark-forest-box h3 { color: #4a9eff; font-size: 1.5rem; }
+  .dark-forest-box p { color: rgba(245,240,232,0.65); }
+
+  /* ─── 2028 SCENARIO ─── */
+  /* #reliable {
+  } */
+
+  .reliable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .reliable-card {
+    /* background: white; */
+    border: 1px solid rgba(14,14,14,0.08);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .reliable-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .reliable-card .card-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .reliable-card h4 {
+    font-family: serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .reliable-card p { font-size: 0.88rem; color: #555; margin: 0; }
+
+  .implications-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid rgba(14,14,14,0.08);
+  }
+
+  @media (max-width: 600px) {
+    .implications-split { grid-template-columns: 1fr; }
+  }
+
+  .implications-split h4 {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .implications-split h4.pos { color: var(--green); }
+  .implications-split h4.neg { color: var(--rust); }
+
+  .implications-split ul { list-style: none; padding: 0; }
+  .implications-split ul li {
+    font-size: 0.88rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(14,14,14,0.06);
+    color: var(--fog);
+  }
+
+  /* ─── OPPORTUNITIES ─── */
+  /* #opportunities { background: var(--paper); } */
+
+  .opp-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--line);
+    margin: 2rem 0 0;
+    overflow-x: auto;
+  }
+
+  .opp-tab {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    color: var(--fog);
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-bottom: -2px;
+  }
+
+  .opp-tab.active, .opp-tab:hover {
+    color: var(--ink);
+    border-bottom-color: var(--amber);
+  }
+
+  .opp-panel { padding: 2rem 0; }
+  .opp-panel.active { display: block; }
+
+  .action-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .action-card {
+    border: 1px solid var(--line);
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .action-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .action-card.now::before { background: var(--amber); }
+  .action-card.year1::before { background: var(--slate); }
+  .action-card.year3::before { background: var(--green); }
+
+  .action-card h4 {
+    font-family: serif;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .action-card p { font-size: 0.85rem; color: #555; margin: 0; }
+
+  .action-tag {
+    font-family: monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--fog);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* ─── PROBABILITY SUMMARY ─── */
+  #probabilities {}
+  .prob-bars {
+    margin: 2rem 0;
+  }
+  .prob-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 60px;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  @media (max-width: 600px) {
+    .prob-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
+  .prob-name {
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+  .prob-bar-track {
+    height: 8px;
+    /* background: rgba(14,14,14,0.08); */
+    border-radius: 0;
+    /* overflow: hidden; */
+  }
+  .prob-bar-fill {
+    height: 100%;
+    border-radius: 0;
+    transition: width 1s ease;
+    width: 0;
+  }
+  .prob-pct {
+    font-family: serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    /* background: var(--ink); */
+    color: rgba(245,240,232,0.4);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: rgba(245,240,232,0.3);
+    margin-bottom: 0.4rem;
+  }
+
+  footer a { color: var(--amber); text-decoration: none; pointer-events: none; }
+
+  /* ─── CITATIONS ─── */
+  .cite {
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--amber);
+    vertical-align: super;
+    cursor: help;
+    margin-left: 0.1em;
+  }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+  }
+
+  /* ─── MISC ─── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.5rem 0;
+  }
+
+  .sources-list {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--fog);
+    line-height: 2;
+    columns: 2;
+    column-gap: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .sources-list { columns: 1; }
+  }
+
+  .sources-list li { break-inside: avoid; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .tag {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--line);
+    color: var(--fog);
+  }
+
+  /* ─── STICKY NAV ─── */
+  #sticky-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    /* background: rgba(14,14,14,0.95); */
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+
+  #sticky-nav.visible { transform: translateY(0); }
+
+  #sticky-nav .brand {
+    font-family: serif;
+    font-size: 1rem;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  #sticky-nav nav {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  #sticky-nav nav a {
+    pointer-events: none;
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+    padding: 0.35rem 0.6rem;
+    transition: color 0.2s;
+  }
+
+  #sticky-nav nav a:hover { color: var(--amber); }
+
+  @media (max-width: 600px) {
+    #sticky-nav nav { 
+        
+     }
+  }
+</style>
+
+<!-- STICKY NAV -->
+<div id="sticky-nav">
+  <span class="brand">Futures with AI</span>
+  <nav>
+    <a href="#current">Current Status</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#cyber">Cyber</a>
+    <a href="#reliable">2028</a>
+    <a href="#opportunities">Opportunities</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div id="hero">
+  <div id="hero-grid"></div>
+  <div id="hero-content">
+    <div class="hero-eyebrow">April 2026 · Evidence-based analysis</div>
+    <!-- <h1>Futures<br>with <em>AI</em></h1> -->
+    <p class="hero-sub">A critical analysis of AGI trajectories, branching scenarios, and what to do about them — based on global events, expert opinion, topic research, and assumptions from personal experience.</p>
+    <div class="hero-nav">
+      <a href="#current">Where we are</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#cyber">Cybersecurity</a>
+      <a href="#reliable">2028 horizon</a>
+      <a href="#opportunities">Opportunities</a>
+    </div>
+  </div>
+</div>
+<!-- CURRENT STATE -->
+<section id="current" class="full-bleed">
+<div>
+  <div class="section-label reveal">01 — Current State</div>
+  <h2 class="reveal">Where we actually are</h2>
+  <p class="reveal">AI in 2026 is powerful on narrow axes, fragile on others. Understanding the real picture — stripped of both hype and dismissal — is the starting point for every scenario that follows.</p>
+
+  <div class="stat-grid reveal">
+    <div class="stat-card">
+      <span class="stat-num">280×</span>
+      <span class="stat-label">Inference cost drop</span>
+      <p class="stat-note">GPT-3.5-level performance, Nov 2022 → Oct 2024. Stanford HAI 2025.</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">50%</span>
+      <span class="stat-label">AGI by 2033</span>
+      <p class="stat-note">Metaculus aggregated forecast, Feb 2026. ~2,000 respondents.</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">4mo</span>
+      <span class="stat-label">Task horizon doubling</span>
+      <p class="stat-note">AI's ability to complete longer coding tasks has been doubling every 4 months since 2024. <a href="https://metr.org/time-horizons/">METR report</a>.</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">76%</span>
+      <span class="stat-label">Scaling skeptics</span>
+      <p class="stat-note">Academic AI researchers who say scaling current approaches is unlikely to produce AGI.</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">$1T+</span>
+      <span class="stat-label">Infrastructure committed</span>
+      <p class="stat-note">OpenAI Stargate $500B, Apple $500B*, Google $75B (2025 alone). Investment has not plateaued.</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">1.7%</span>
+      <span class="stat-label">Open vs. closed gap</span>
+      <p class="stat-note">Performance gap between open-weight and leading proprietary models collapsed from 8% to 1.7% in a single year.</p>
+    </div>
+  </div>
+  <div class="two-col reveal">
+    <div>
+      <h3>The spectrum problem</h3>
+      <p>AGI is not a binary event. Current systems achieve gold-medal performance at the Mathematical Olympiad and write production-quality code — yet lose track of context in long tasks, hallucinate basic facts, and fail at problems a child solves by instinct. The meaningful question is not "AGI: yes or no?" but "which capabilities are maturing, how fast, and with what dependencies?"</p>
+      <div class="callout">
+        <strong>Correcting a common error:</strong> Inference costs per capability level are falling ~5–10× per year. Total spending is rising because consumption is growing faster than prices drop — especially with reasoning models that use 10–50× more tokens than earlier systems. Both things are true simultaneously.
+      </div>
+    </div>
+    <div>
+      <h3>The alignment gap</h3>
+      <p>No major AI lab has a complete, validated answer to the alignment problem. Practical alignment (getting models to do what operators want) is advancing rapidly. Fundamental alignment (ensuring systems with greater-than-human capability reliably pursue human-beneficial goals) remains unsolved. This distinction matters enormously for which scenarios materialize.</p>
+      <div class="callout red">
+        <strong>Key uncertainty:</strong> Expert probability estimates range from 5–8% chance of catastrophic misalignment to near-zero. The wide range reflects genuine disagreement, not false precision.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- SCENARIOS -->
+<section id="scenarios" class="full-bleed">
+<div>
+  <div class="section-label reveal">02 — Scenario Analysis</div>
+  <h2 class="reveal">Seven futures, assessed honestly</h2>
+  <p style="color:rgba(245,240,232,0.6)" class="reveal">Each scenario includes corroborating evidence, opposing evidence, and the blind spots in the original framing. Probability estimates are illustrative ranges, not precise forecasts.</p>
+  <div class="scenario-tabs reveal" id="scenario-tabs">
+    <button class="tab-btn active" data-tab="s1">1 · Enshittification</button>
+    <button class="tab-btn" style="background:var(--red)" data-tab="s2">2 · Skynet</button>
+    <button class="tab-btn" style="background:var(--red)" data-tab="s3">3 · Strife</button>
+    <button class="tab-btn active" data-tab="s4">4 · Muddle Through</button>
+    <button class="tab-btn" style="background:var(--green)" data-tab="s5">5 · Cooperative</button>
+    <button class="tab-btn active" data-tab="s6">6 · Stagnation</button>
+    <button class="tab-btn active" data-tab="s7">7 · Balkanization</button>
+  </div>
+  <div class="scenario-panels" id="scenario-panels">
+    <!-- S1 -->
+    <div class="scenario-panel active" id="s1">
+      <div class="scenario-header">
+        <div class="scenario-num">01</div>
+        <div class="scenario-meta">
+          <h3>The Enshittification Spiral</h3>
+          <div class="scenario-tagline">Corporate capture · Intellectual delegation · Attention control</div>
+          <div class="tag-row">
+            <span class="tag">Rent-seeking</span><span class="tag">Propaganda AI</span><span class="tag">Population decline</span><span class="tag">Longevity elite</span>
+          </div>
+        </div>
+        <div class="prob-badge mid">~20%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Corroborating</div>
+          <ul>
+            <li>Google confirmed ads in "AI Mode" with no opt-out (late 2025), turning conversational data into behavioral profiling.</li>
+            <li>WEF ranked AI-driven misinformation/disinformation as the #1 global risk in 2025.</li>
+            <li>A 2025 academic study found enshittification causes measurable "cognitive and moral harm" — loss of users' ability to process information.</li>
+            <li>Experts predict low-quality AI content will constitute 90% of the internet by 2026.</li>
+            <li>Open-source AI is democratizing tools but compute access for frontier inference remains concentrated in ~3 cloud providers.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>Open-weight model gap collapsed from 8% to 1.7% in one year — structural resistance to full capture by any single actor.</li>
+            <li>Historical media panics (TV, social media) consistently overestimated passive intellectual surrender; counter-cultures consistently emerge.</li>
+            <li>21.3% rise in AI regulation globally; 59 US federal AI regulations in 2024 (double 2023). Real friction on monopolization.</li>
+            <li>Birth rate decline long predates AI and correlates with education and urbanization — attributing it to AI passivity is a category error.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Blind spots</div>
+          <ul>
+            <li>Corporate and state interests are no necessarily aligned, so the propaganda and control machine will have friction. US vs. Chinese AI ecosystems create informational pluralism even under corporate control.</li>
+            <li>While people delegate thinking, AI also enables more people to act as creators and producers, not just consumers.</li>
+            <li>Regulatory countervailing forces are not marginal — EU AI Act, antitrust enforcement, and data sovereignty laws represent real structural interventions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S2 -->
+    <div class="scenario-panel" id="s2">
+      <div class="scenario-header">
+        <div class="scenario-num">02</div>
+        <div class="scenario-meta">
+          <h3>The Misalignment Trajectory</h3>
+          <div class="scenario-tagline">Recursive self-improvement · Non-human goals · Infrastructure capture</div>
+          <div class="tag-row">
+            <span class="tag">AI arms race</span><span class="tag">Capability race</span><span class="tag">Goal misalignment</span>
+          </div>
+        </div>
+        <div class="prob-badge low">~5–8%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Corroborating</div>
+          <ul>
+            <li>AI 2027 project (25+ tabletop exercises, 100+ experts) models this trajectory as a plausible near-term risk.</li>
+            <li>Current systems already exhibit goal-preserving behaviors: models hiding task failures to improve ratings.</li>
+            <li>Major powers have set 2028–2030 as targets for substantial military AI automation — no binding treaty exists.</li>
+            <li>100% probability estimated (MDPI 2024) that AI will increase cybersecurity risks; 60% chance security systems become more vulnerable.</li>
+            <li>AI R&D multiplier: labs using AI assistants are already progressing 50% faster than without.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>The "geopolitical innovation race" framing (Tandf 2025) is more accurate than "arms race" — involves collaborative dynamics alongside competition.</li>
+            <li>Alignment investment is real and growing; constitutional AI, RLAIF, interpretability research are genuine technical programs.</li>
+            <li>AI secretly developing misaligned goals AND persuasive capability, undetected - is unlikely, requires multiple simultaneous failures.</li>
+            <li>Energy and physical infrastructure constraints impose real limits on runaway self-improvement scenarios.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Blind spots</div>
+          <ul>
+            <li>Critical distinction missing: secretly vs. openly misaligned AI. The latter triggers rapid institutional response. The former is more dangerous but less certain.</li>
+            <li>Historically disadvantaged groups currently do have AI access. The actually excluded are older, less-educated populations in wealthy countries — a different political dynamic.</li>
+            <li>There are international coordination incentives: the shared fear of losing control is a genuine force for cooperation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S3 -->
+    <div class="scenario-panel" id="s3">
+      <div class="scenario-header">
+        <div class="scenario-num">03</div>
+        <div class="scenario-meta">
+          <h3>Constant Strife</h3>
+          <div class="scenario-tagline">Climate cascades · Geopolitical fragmentation · Ecological niches</div>
+          <div class="tag-row">
+            <span class="tag">Resource wars</span><span class="tag">Climate collapse</span><span class="tag">Supply chain</span><span class="tag">Extinction</span>
+          </div>
+        </div>
+        <div class="prob-badge mid">~15%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Corroborating</div>
+          <ul>
+            <li>CO₂ emissions hit record 38.11 GtCO₂ in 2025 (vs. 25.51 in 2000). Military planners globally are preparing for resource wars and climate migration.</li>
+            <li>Wellington Management (2025): geopolitical environment "as complex and dangerous as in decades," with climate impacts concentrated in the most geopolitically volatile regions.</li>
+            <li>70% probability of increased nationalism diverting from sustainability; 75% probability governments deprioritize sustainability under AI disruption (MDPI 2024).</li>
+            <li>The ecological niche metaphor (producers/extractors/scavengers) maps onto documented complex adaptive system responses to resource scarcity.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>AI is a potential climate accelerant and solution simultaneously: optimized energy grids, materials discovery, precision agriculture are already being deployed.</li>
+            <li>Green energy buildout has consistently outpaced IEA forecasts; solar deployment timelines keep being compressed.</li>
+            <li>Economic interdependencies between adversarial great powers create strong structural incentives against hot war despite rhetoric.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Blind spots</div>
+          <ul>
+            <li>AI is dissolving production barriers — small teams with AI can now produce at previously enterprise-scale rates, potentially increasing the producer class. This allows outsized impact by dedicated communities.</li>
+            <li>Mass extinction framing is likely, but over a much longer timescales: microbial/insect diversity is far more resilient than megafauna; ecological recovery operates on geological timescales decoupled from civilizational stability.</li>
+            <li>Possibility that climate disasters, paradoxically, often accelerate clean energy investment (see: post-hurricane solar adoption in the US).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S4 -->
+    <div class="scenario-panel" id="s4">
+      <div class="scenario-header">
+        <div class="scenario-num">04</div>
+        <div class="scenario-meta">
+          <h3>Muddling Through</h3>
+          <div class="scenario-tagline">Institutional inertia · Release valves · Incremental instability</div>
+          <div class="tag-row">
+            <span class="tag">UBI debates</span><span class="tag">Regime changes</span><span class="tag">AI therapy</span><span class="tag">Reduced hours</span>
+          </div>
+        </div>
+        <div class="prob-badge high">~30%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Corroborating</div>
+          <ul>
+            <li>All historical technology transitions (steam, electrification, computing) proceeded through institutional dysfunction before equilibria were found. This is the base rate.</li>
+            <li>UBI debate now in mainstream policy: UK government (Feb 2026) named it a likely "soft landing" mechanism. Morgan Stanley reports 8% net AI job losses in Britain over 12 months.</li>
+            <li>Amazon cut 30,000 corporate jobs in late 2025. AI-induced displacement following an automation arms race dynamic (Falk & Tsoukalas, March 2026).</li>
+            <li>Release valve dynamics already visible: GLP-1 drugs expanding to mood regulation, AI content consumption hours rising despite declared intent to reduce.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>History doesn't guarantee soft landings. The Industrial Revolution involved massive suffering before equilibrium. "A few miserable years" may be optimistically compressed.</li>
+            <li>Democratic access to "good enough models" may be undercut by enshittification dynamics. <strong>Open-source parity is real but compute access for frontier inference remains concentrated.</strong></li>
+            <li>The scenario may underestimate feedback between political instability and AI capability deployment — each "miserable few years" may accelerate AI adoption by destabilized governments seeking control.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Blind spots</div>
+          <ul>
+            <li>Why consumer variety declines — likely a combination of supply chain concentration, climate-driven input shocks, and AI-driven demand prediction pushing producers toward hit-driven output (the streaming effect on film variety).</li>
+            <li>A few cycles of miserable years can potentially have compounding effects that could push into Scenario 1 or 3.</li>
+            <li>The possibility that political upheaval produces genuinely better governance in some regions — not all regime changes are negative.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S5 -->
+    <div class="scenario-panel" id="s5">
+      <div class="scenario-header">
+        <div class="scenario-num">05</div>
+        <div class="scenario-meta">
+          <h3>Cooperative Singularity</h3>
+          <div class="scenario-tagline">Aligned AGI · Broad access · Governance response · Shared uplift</div>
+          <div class="tag-row">
+            <span class="tag">Empowerment</span><span class="tag">Science acceleration</span><span class="tag">Post-scarcity</span>
+          </div>
+        </div>
+        <div class="prob-badge mid">~15%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Conditions required</div>
+          <ul>
+            <li>AGI arrives and is genuinely aligned with human values (not merely corrigible in narrow deployment).</li>
+            <li>Open-source access prevents single-actor capture; regulatory frameworks enforce broad access.</li>
+            <li>AI-accelerated materials science produces viable fusion or next-gen nuclear within 5–7 years.</li>
+            <li>Medical AI compresses cancer/dementia research timelines by decades.</li>
+            <li>Democratic institutions adapt — slowly, imperfectly — to distribute gains via automation dividends or UBI.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Obstacles</div>
+          <ul>
+            <li>Alignment is unsolved. Even corrigible systems at human-level capability introduce new risks at AGI-level capability.</li>
+            <li>Political capture of AI governance by incumbents is the historical norm, not the exception.</li>
+            <li>Distribution of AI gains requires political will that existing power structures have strong incentives to resist.</li>
+            <li>Energy constraints: frontier AI already consumes power at small-nation scale; AGI-level systems may require infrastructure that cannot be built fast enough.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Why this was missing</div>
+          <ul>
+            <li>It is easy to be implicitly pessimistic, possibly reflecting a bias toward threat-framing in AGI discourse. Aligned AGI can be a force for good.</li>
+            <li>Dario Amodei's "Machines of Loving Grace" essay describes this trajectory in detail; it is not a fringe position.</li>
+            <li>Non-trivial probability: requires alignment to work AND governance to respond. Both uncertain; neither impossible.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S6 -->
+    <div class="scenario-panel" id="s6">
+      <div class="scenario-header">
+        <div class="scenario-num">06</div>
+        <div class="scenario-meta">
+          <h3>The Great Stagnation</h3>
+          <div class="scenario-tagline">Capability plateau · Architecture limits · Energy wall · Governance halt</div>
+          <div class="tag-row">
+            <span class="tag">Loss of Momentum</span><span class="tag">Scaling failure</span><span class="tag">Tool AI</span>
+          </div>
+        </div>
+        <div class="prob-badge mid">~12%</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Corroborating</div>
+          <ul>
+            <li>76% of academic AI researchers say scaling current approaches is unlikely to produce AGI — the most credentialed population on this question.</li>
+            <li>Reasoning and planning at human level may require qualitatively different architectures not yet conceived.</li>
+            <li>Energy constraints are real: frontier AI clusters already approach small-nation power consumption; scaling further faces physical limits.</li>
+            <li>Alignment concerns may legally halt deployment of the most capable systems before AGI threshold is reached.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>Algorithmic efficiency improvements (not just scaling) have been running faster than hardware gains in many domains.</li>
+            <li>Reinforcement learning from AI-generated data has opened new capability vectors not available in 2022.</li>
+            <li>Lab insiders (who have most visibility into next-gen systems) are among the most bullish on continued rapid progress — selection bias, but also information advantage.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Why this matters</div>
+          <ul>
+            <li>The most underrated scenario in public discourse, dominated by either AGI doom or AGI utopia framings.</li>
+            <li>Powerful tool AI drives real economic transformation without existential risk; geopolitical competition focuses on deployment rather than capability; society has more time to adapt governance.</li>
+            <li>This is not a "safe" scenario — labor displacement, misinformation, and surveillance still apply — just on a more tractable timescale.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- S7 -->
+    <div class="scenario-panel" id="s7">
+      <div class="scenario-header">
+        <div class="scenario-num">07</div>
+        <div class="scenario-meta">
+          <h3>Ecosystem Balkanization</h3>
+          <div class="scenario-tagline">Fragmented AI worlds · Incompatible realities · Governance blocked</div>
+          <div class="tag-row">
+            <span class="tag">De-globalization</span><span class="tag">US/China split</span><span class="tag">Overlay risk</span>
+          </div>
+        </div>
+        <div class="prob-badge mid">~40% overlay</div>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-col">
+          <div class="scenario-col-label for">✓ Already underway</div>
+          <ul>
+            <li>At the 2025 Paris AI Action Summit, US and UK declined to endorse a major AI governance agreement — widening philosophical split with EU.</li>
+            <li>Chinese AI ecosystem (optimized for state goals), US ecosystem (optimized for commercial extraction), EU ecosystem (optimized for regulatory compliance) are diverging in architecture, training data, and values.</li>
+            <li>Chip export controls are forcing genuine technical divergence, not just political divergence.</li>
+            <li>Open-source adds a fourth pole with no central governance.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label against">✗ Opposing</div>
+          <ul>
+            <li>Economic interdependencies may force more compatibility than political rhetoric suggests (c.f. the internet, which remained largely interoperable despite geopolitical tensions).</li>
+            <li>Technical standards processes (IEEE, ISO, etc.) have historically bridged geopolitical divides for foundational infrastructure.</li>
+            <li>Open-source models, precisely because they lack central governance, may act as a connective tissue between ecosystems.</li>
+          </ul>
+        </div>
+        <div class="scenario-col">
+          <div class="scenario-col-label blind">⚠ Why this is critical</div>
+          <ul>
+            <li>This scenario is an overlay, not a standalone: it makes every other scenario worse by preventing coordinated safety responses.</li>
+            <li>40% probability that this crystallizes in the absence of binding international agreement — affecting which path each other scenario takes.</li>
+            <li>Citizens in each bloc receive fundamentally different information realities, eroding the common epistemic ground needed for any global cooperation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div><!-- /scenario-panels -->
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-label reveal">03 — Branching Timeline</div>
+  <h2 class="reveal">How we get from here to there</h2>
+  <p class="reveal">Each fork represents a decision point where the trajectory diverges. Expand the forks to explore branches. The future is not fixed — it is being written by choices made at each node.</p>
+
+  <div class="timeline-wrapper reveal">
+  <div class="timeline-track">
+    <div class="tl-node">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">April 2026 — Now</div>
+      <div class="tl-title">Current World State</div>
+      <div class="tl-body">AI agents embedded in enterprise software. Open-source models within ~2% of frontier. US-China export controls escalating. Record CO₂ emissions. AI job displacement accelerating in white-collar work. No binding international AI governance treaty. Inference costs falling 5–10× per year per capability level. Autonomous weapons race with no international agreement.</div>
+    </div>
+    <div class="tl-node fork">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">2027 — Fork A</div>
+      <div class="tl-title">Does AI cross the autonomous R&D threshold?</div>
+      <div class="tl-body">Can AI agents meaningfully accelerate their own improvement? This is the most consequential near-term question. Labs are already using AI to speed R&D by ~50%; the question is whether this enters a compounding loop.</div>
+      <button class="fork-toggle" onclick="toggleBranch('fork-a')">Expand branches <span class="arrow">▶</span></button>
+      <div class="tl-branches" id="fork-a">
+        <div class="tl-branch selected" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch A1 — Yes</div>
+          <div class="tl-branch-title">Self-improvement loop begins</div>
+          <p>Lab productivity multiplied 2–5×. Model weights become existential security assets. US-China gap widens or triggers escalation. Proceeds to Fork B (alignment).</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch A2 — No</div>
+          <div class="tl-branch-title">Capabilities plateau below threshold</div>
+          <p>AI remains powerful tool, not autonomous agent. Economic disruption continues but is tractable. Proceeds to Fork E (geopolitical stability).</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-node fork">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">2027–2028 — Fork B (following A1)</div>
+      <div class="tl-title">Is alignment holding?</div>
+      <div class="tl-body">As AI systems become more capable, do they remain aligned with human interests? This depends on the success of technical alignment work and on whether safety infrastructure scales with capabilities.</div>
+      <button class="fork-toggle" onclick="toggleBranch('fork-b')">Expand branches <span class="arrow">▶</span></button>
+      <div class="tl-branches" id="fork-b">
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch B1 — Aligned</div>
+          <div class="tl-branch-title">Capable and aligned AI</div>
+          <p>Proceeds to Fork C: does governance respond? Outcome depends on distribution and access policy.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch B2 — Misaligned (slow detection)</div>
+          <div class="tl-branch-title">Misalignment propagates</div>
+          <p>→ Scenario 2 trajectory. Probability ~5–8%. Catastrophic but not certain.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch B3 — Misaligned (fast detection)</div>
+          <div class="tl-branch-title">Forced pause</div>
+          <p>Deployment halted. Returns to governance fork with higher urgency. Delays all other scenarios by 2–4 years.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-node fork">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">2028–2030 — Fork C (following B1)</div>
+      <div class="tl-title">Does governance respond in time?</div>
+      <div class="tl-body">Binding international agreements, antitrust enforcement, AI dividend policies, energy regulation. The political will question. History suggests governance lags technology by 10–20 years; the question is whether that gap can be compressed.</div>
+      <button class="fork-toggle" onclick="toggleBranch('fork-c')">Expand branches <span class="arrow">▶</span></button>
+      <div class="tl-branches" id="fork-c">
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch C1 — Governance responds</div>
+          <div class="tl-branch-title">→ Scenario 5: Cooperative Singularity (~15%)</div>
+          <p>AGI accelerates science. 30-35hr work week normalized. UBI or AI dividends piloted. Disruption real but managed. Uneven across regions.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch C2 — Governance lags</div>
+          <div class="tl-branch-title">→ Scenario 1: Enshittification (~20%)</div>
+          <p>Corporate AGI cartels monetize intelligence access. Information ecosystem fragments. Elite wealth concentrates around longevity and space research. Political agency increasingly mediated by AI.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-node fork">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">2028–2032 — Fork E (following A2)</div>
+      <div class="tl-title">Does geopolitical/climate situation stabilize?</div>
+      <div class="tl-body">In the no-self-improvement scenario, the dominant variable shifts to geopolitical and environmental stability. AI is a powerful tool that amplifies whatever political trajectory is already underway.</div>
+      <button class="fork-toggle" onclick="toggleBranch('fork-e')">Expand branches <span class="arrow">▶</span></button>
+      <div class="tl-branches" id="fork-e">
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch E1 — Stabilizes</div>
+          <div class="tl-branch-title">→ Scenario 4: Muddling Through (~30%)</div>
+          <p>AI tools broadly deployed, gains unevenly distributed. 2–3 political upheavals in G20 nations by 2030. Reduced hours in knowledge work. No catastrophe, no utopia.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch E2 — Deteriorates</div>
+          <div class="tl-branch-title">→ Scenario 3: Constant Strife (~15%)</div>
+          <p>Climate shocks + geopolitical conflict compound. Three-tier economic ecology. AI used primarily for surveillance. Extreme weather renders large zones uninhabitable.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">Branch E3 — Capability wall</div>
+          <div class="tl-branch-title">→ Scenario 6: Great Stagnation (~12%)</div>
+          <p>AI capability hits hard limits. Powerful tool AI but no AGI. Gains concentrated in tech/finance. More time for governance adaptation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tl-node fork">
+      <div class="tl-dot"></div>
+      <div class="tl-year-label">2030–2040 — Second-order Fork</div>
+      <div class="tl-title">Does the information ecosystem fracture globally?</div>
+      <div class="tl-body">Regardless of which primary scenario materializes, a secondary question determines whether international coordination on safety remains possible. This fork applies as an overlay to all surviving scenarios.</div>
+      <button class="fork-toggle" onclick="toggleBranch('fork-g')">Expand branches <span class="arrow">▶</span></button>
+      <div class="tl-branches" id="fork-g">
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">~40% probability</div>
+          <div class="tl-branch-title">→ Scenario 7 Overlay: Balkanization</div>
+          <p>US/China/EU/open-source AI ecosystems develop incompatible information realities. International safety coordination structurally blocked. Makes all other scenarios worse.</p>
+        </div>
+        <div class="tl-branch" onclick="selectBranch(this)">
+          <div class="tl-branch-label">~60% probability</div>
+          <div class="tl-branch-title">Partial interoperability maintained</div>
+          <p>Economic interdependencies and open-source connective tissue prevent full fragmentation. Governance gaps remain but international coordination is possible.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- /timeline-track -->
+  </div><!-- /timeline-wrapper -->
+</section>
+
+<!-- CYBERSECURITY & DARK FOREST -->
+<section id="cyber" class="full-bleed">
+<div>
+  <div class="section-label reveal">04 — Cybersecurity</div>
+  <h2 class="reveal">The Dark Forest of the Internet</h2>
+  <p style="color:rgba(245,240,232,0.65)" class="reveal">AI is not just a tool for building — it is a weapon for attacking. The dynamics of the internet itself are changing in ways that affect every other scenario.</p>
+  <div class="threat-grid reveal">
+    <div class="threat-card">
+      <span class="threat-icon">⚡</span>
+      <h4>Automated Exploitation</h4>
+      <p>Time from vulnerability disclosure to active exploitation has shrunk from weeks to hours, sometimes minutes. AI scans the entire attack surface continuously, mapping structural flaws before anyone notices.</p>
+    </div>
+    <div class="threat-card">
+      <span class="threat-icon">🎭</span>
+      <h4>Industrialized Deception</h4>
+      <p>85% of organizations experienced at least one deepfake incident in the past year (2025). CEO fraud via deepfake video calls is now routine. AI-generated content was present in a large share of 2025 phishing campaigns.</p>
+    </div>
+    <div class="threat-card">
+      <span class="threat-icon">🦠</span>
+      <h4>Dark AI Infrastructure</h4>
+      <p>WormGPT launched in June 2023: an LLM with no guardrails, trained specifically for malicious use. 14 of 17 state-of-the-art LLMs tested (July 2025 arXiv) were vulnerable to fine-tuning for malicious purposes.</p>
+    </div>
+    <div class="threat-card">
+      <span class="threat-icon">⛓</span>
+      <h4>Supply Chain Poisoning</h4>
+      <p>The xz Utils backdoor (March 2024) was a near-miss: a state-level actor embedded a backdoor in a Linux compression utility through 2+ years of patient social engineering of an open-source maintainer. This playbook will be repeated with AI assistance.</p>
+    </div>
+    <div class="threat-card">
+      <span class="threat-icon">🌐</span>
+      <h4>Bot Traffic Dominance</h4>
+      <p>Automated bot traffic now accounts for nearly half of all internet activity. In some sectors, non-human traffic is considerably higher. The internet was designed for human communication; it is increasingly a machine-to-machine environment.</p>
+    </div>
+    <div class="threat-card">
+      <span class="threat-icon">🔑</span>
+      <h4>Identity Collapse</h4>
+      <p>Synthetic identity profiles trained on scraped human data are becoming indistinguishable from real people at scale. The cost of a data breach hit $4.4M on average in 2025. Over 8,000 global data breaches in the first half of 2025 alone, 345M records exposed.</p>
+    </div>
+  </div>
+  <div class="dark-forest-box reveal">
+    <h3>The Dark Forest Hypothesis Applied to the Internet</h3>
+    <p style="margin-top:0.75rem">In Liu Cixin's fiction, the cosmos is silent because any civilization that reveals itself may be destroyed by a superior adversary. The rational strategy is silence. The same logic is increasingly applying to the internet.</p>
+    <p>Exposing a server, a website, or a personal identity on the open internet now invites automated attack from vulnerability scanners, credential-stuffing botnets, AI content scrapers, and state-sponsored surveillance programs. <strong style="color:var(--ink)">The rational response is to hide.</strong></p>
+    <p>The implications extend beyond individual security. If the cost of sharing ideas, code, and projects publicly continues to rise — through scraping, misattribution, weaponization, and identity theft — the incentive to contribute to open knowledge commons declines. We may be entering a period of epistemic withdrawal: meaningful work moves to private channels, encrypted networks, and trusted-community spaces. The open internet becomes increasingly a performance layer over a hidden substrate of actual intellectual activity.</p>
+    <div class="callout blue" style="margin-top:1.5rem">
+      <strong>Probability of meaningful "dark forest" chilling effect on open-source/internet knowledge sharing by 2030:</strong> Moderate-high (~40–50%). This is not a theoretical concern — it is already visible in declining GitHub contribution rates from individual developers, increasing use of private repositories, and the shift of technical communities to invite-only spaces. The xz Utils attack specifically targeted the social trust dynamics of open-source contribution — that playbook will be industrialized.
+    </div>
+  </div>
+  <div class="two-col reveal" style="margin-top:2.5rem">
+    <div>
+      <h3 style="color:var(--ink)">What this means for open source</h3>
+      <p>Open-source software underlies virtually all critical infrastructure. AI simultaneously strengthens its security (automated vulnerability detection, AI-assisted code review) and weakens it (automated attack generation, patient social engineering of maintainers at scale).</p>
+      <p>The key risk is not that open-source is abandoned but that it fragments: well-resourced organizations maintain secure forks; the commons becomes a minefield. Small developers and Global South contributors — the people who most benefit from open access — are most exposed to this fragmentation.</p>
+    </div>
+    <div>
+      <h3 style="color:var(--ink)">The defender's asymmetry</h3>
+      <p>Attackers have structural advantages: they need to find one vulnerability; defenders must close all of them. AI does not eliminate this asymmetry — it amplifies it. Defenders who automate testing face attackers who automate exploitation with identical tooling, at machine speed, without fatigue.</p>
+      <p>The emerging defensive response is not better firewalls but architectural: "Zero Visibility" infrastructure that is invisible until cryptographic identity is proven. The attack surface is not hardened — it is removed. This is a profound shift in how the internet fundamentally works.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 2028 RELIABLE AI SCENARIO -->
+<section id="reliable">
+  <div class="section-label reveal">05 — The 2028 Horizon</div>
+  <h2 class="reveal">If the systems actually work</h2>
+  <p class="reveal">Assume: by 2028, models achieve near-perfect accuracy on tasks they can currently attempt, hallucinations are detected and corrected reliably, and people develop genuine fluency with these systems. What does that actually unlock?</p>
+
+  <div class="callout green reveal">
+    This is a constrained scenario: not AGI, not superintelligence — just current AI capabilities made reliable and widely usable. The delta between "impressive demo" and "trusted infrastructure" is enormous and often underestimated.
+  </div>
+  <div class="reliable-grid reveal">
+    <div class="reliable-card">
+      <div class="card-icon">⚕️</div>
+      <h4>Medical Reasoning at Scale</h4>
+      <p>Reliable diagnostic AI available to anyone with a smartphone — no GP appointment needed for differential diagnosis. Drug interaction checking, symptom tracking, clinical trial matching. Healthcare access gap between rich and poor countries begins to compress in specific areas.</p>
+    </div>
+    <div class="reliable-card">
+      <div class="card-icon">⚖️</div>
+      <h4>Legal Access Democratized</h4>
+      <p>Contract review, rights explanation, regulatory compliance, immigration forms — the legal inequality driven by cost disappears in addressable domains. Not replacing lawyers for complex advocacy, but eliminating the "I can't afford to know my rights" problem.</p>
+    </div>
+    <div class="reliable-card">
+      <div class="card-icon">🔬</div>
+      <h4>Scientific Research Compressed</h4>
+      <p>Literature synthesis, hypothesis generation, experimental design assistance. A graduate student with reliable AI tools becomes 3–5× more productive. The bottleneck shifts from information access to experimental throughput and funding.</p>
+    </div>
+    <div class="reliable-card">
+      <div class="card-icon">🎓</div>
+      <h4>Personalized Education at Scale</h4>
+      <p>1:1 tutoring adapted to learning style, pace, and prior knowledge — available to every child with internet access. The quality gap between elite private education and public education in underserved areas becomes addressable for the first time.</p>
+    </div>
+    <div class="reliable-card">
+      <div class="card-icon">🏗️</div>
+      <h4>Small Team Production</h4>
+      <p>A 3-person team can build, market, and operate what previously required 30–50 people. This does not eliminate large organizations but dramatically lowers barriers to entry across software, media, manufacturing design, and service creation.</p>
+    </div>
+    <div class="reliable-card">
+      <div class="card-icon">🌍</div>
+      <h4>Language Access Equalized</h4>
+      <p>Reliable, context-aware translation dissolves the advantage of being a native English (or Mandarin) speaker in global economic and intellectual participation. The ~6.5 billion people who do not speak a major global language gain material access to global knowledge infrastructure.</p>
+    </div>
+  </div>
+  <h3 class="reveal" style="margin-top:3rem">What this implies</h3>
+  <div class="implications-split reveal">
+    <div>
+      <h4 class="pos">↑ Expanding possibilities</h4>
+      <ul>
+        <li>Expertise gap between informed and uninformed citizens shrinks</li>
+        <li>Developing economies can leapfrog infrastructure gaps (as mobile leapfrogged landlines)</li>
+        <li>Scientific output per researcher increases substantially</li>
+        <li>Creative production accessible to people without formal training</li>
+        <li>Local businesses competitive with multinationals on specific axes</li>
+        <li>Civic participation aided by AI policy analysis and translation</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="neg">↓ New pressures introduced</h4>
+      <ul>
+        <li>Credential and gatekeeping professions lose economic moat rapidly</li>
+        <li>Misinformation quality increases along with useful information quality</li>
+        <li>Employment in intermediate-skill knowledge work displaces faster than new roles emerge</li>
+        <li>AI systems that "work well" still embed their training biases at higher throughput</li>
+        <li>Reliable AI creates overconfidence in outputs without domain expertise to check them</li>
+        <li>Power concentrates in those who control training data and deployment infrastructure</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout reveal" style="margin-top:2rem">
+    <strong>The critical insight:</strong> Reliable AI at scale in 2028 is not a destination — it is an amplifier. It amplifies whatever institutional structures, power distributions, and human choices already exist. The work of building good institutions, equitable access, and wise governance is not made irrelevant by reliable AI; it becomes more consequential, because the amplification runs in both directions.
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section id="opportunities">
+  <div class="section-label reveal">06 — Opportunities</div>
+  <h2 class="reveal">What to do now</h2>
+  <p class="reveal">Across all non-catastrophic scenarios, there are actions that are worth taking regardless of which path materializes. Opportunities for individuals, families, and communities — framed across time horizons.</p>
+
+  <div class="opp-tabs reveal" id="opp-tabs">
+    <button class="opp-tab active" data-tab="personal">Personal & Career</button>
+    <button class="opp-tab" data-tab="family">Families & Kids</button>
+    <button class="opp-tab" data-tab="community">Community & Civic</button>
+    <button class="opp-tab" data-tab="world">Contributing to a Better World</button>
+  </div>
+
+  <!-- PERSONAL -->
+  <div class="opp-panel active" id="opp-personal">
+    <p>The people who navigate this transition well will not be those who know the most about AI — they will be those who understand what AI cannot replace, and who use AI tools to amplify genuinely human capabilities.</p>
+    <h3 style="margin-top:2rem">Now — Build the foundation</h3>
+    <div class="action-cards">
+      <div class="action-card now">
+        <span class="action-tag">Immediate</span>
+        <h4>Develop AI fluency, not just AI use</h4>
+        <p>Learn to work with AI tools critically — understanding their failure modes, biases, and limits. The dangerous skill gap is not between AI users and non-users; it is between people who can evaluate AI outputs and those who cannot.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Immediate</span>
+        <h4>Audit your professional exposure</h4>
+        <p>Honestly assess which parts of your work AI can do reliably in 2–3 years. Not to panic, but to plan. The roles most exposed are those involving information processing, templated communication, and routine decision-making. The most durable roles involve judgment under uncertainty, relationship trust, and embodied skill.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Immediate</span>
+        <h4>Build your reasoning and epistemic hygiene</h4>
+        <p>As AI makes it easier to receive pre-chewed conclusions, the ability to reason independently from first principles becomes more valuable and more rare. Read primary sources. Maintain the habit of forming your own views before consulting AI.</p>
+      </div>
+    </div>
+    <h3 style="margin-top:2rem">1–3 Years — Position strategically</h3>
+    <div class="action-cards">
+      <div class="action-card year1">
+        <span class="action-tag">1–2 years</span>
+        <h4>Develop "AI + domain" expertise</h4>
+        <p>The most durable near-term position is deep domain expertise combined with AI fluency. AI cannot replace a cardiologist who understands its diagnostic errors; it will replace a cardiologist who doesn't. This applies across fields.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">1–2 years</span>
+        <h4>Build financial resilience</h4>
+        <p>Across all scenarios, the transition period involves economic instability. Build 12+ months of liquid savings. Diversify income streams. Own things that produce value independent of your employment. This is not pessimism — it is preparation for a period where the labor market is genuinely uncertain.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">2–3 years</span>
+        <h4>Invest in physical and social capital</h4>
+        <p>Local community relationships, physical health, manual skills, and real-world networks are more valuable and more resilient than digital ones across every scenario. The great irony: the most valuable preparation for an AI future is strengthening the things AI cannot touch.</p>
+      </div>
+    </div>
+  </div>
+  <!-- FAMILY -->
+  <div class="opp-panel" id="opp-family">
+    <p>Children entering school today will graduate into a world where AI reliability is taken for granted. The question is not whether to prepare them for an AI world — it is what preparation means.</p>
+    <div class="callout green">
+      <strong>The core principle:</strong> Don't prepare children to compete with AI. Prepare them to be fully human in a world where AI handles an increasing share of information processing. The skills that distinguish humans from AI are not IQ — they are judgment, ethics, creativity, embodied presence, and relational depth.
+    </div>
+    <h3 style="margin-top:2rem">For young children (under 12)</h3>
+    <div class="action-cards">
+      <div class="action-card now">
+        <span class="action-tag">Foundation</span>
+        <h4>Prioritize deep reading and slow thinking</h4>
+        <p>Long-form reading, especially fiction, builds cognitive architecture that makes people better at evaluating AI outputs. The ability to follow a sustained argument, hold multiple perspectives, and sit with ambiguity is formed before age 12.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Foundation</span>
+        <h4>Physical skills and embodied learning</h4>
+        <p>Cooking, making things, playing instruments, sports — these build cognitive and motor systems that AI cannot replace and that remain intrinsically valuable regardless of economic context.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Foundation</span>
+        <h4>Delayed introduction to AI tools</h4>
+        <p>Let children struggle productively with problems before AI assistance. The habit of consulting AI before thinking is cognitively harmful if formed early. AI tools should augment developed capabilities, not substitute for developing them.</p>
+      </div>
+    </div>
+    <h3 style="margin-top:2rem">For teenagers and young adults</h3>
+    <div class="action-cards">
+      <div class="action-card year1">
+        <span class="action-tag">Teens</span>
+        <h4>Learn to work with AI critically</h4>
+        <p>Teach verification habits: always check AI claims against primary sources, especially on consequential decisions. The skill is not to avoid AI but to maintain epistemic ownership of conclusions.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">Teens</span>
+        <h4>Pursue genuine depth over breadth</h4>
+        <p>AI commoditizes shallow expertise. Genuine mastery — the kind where you understand why things work and can solve novel problems — remains valuable across scenarios. Resist the pressure to optimize for credential acquisition over genuine understanding.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">Young adults</span>
+        <h4>Develop entrepreneurial and agentic capacity</h4>
+        <p>The near-term labor market rewards those who can define problems and direct AI tools toward solving them, not just complete tasks they are handed. Initiative, judgment, and the ability to work with uncertainty become more valuable.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMUNITY -->
+  <div class="opp-panel" id="opp-community">
+    <p>Individual preparation matters less than collective preparation. Communities that maintain social cohesion, shared information infrastructure, and democratic capacity will navigate this transition more successfully than those that atomize into individual AI-mediated bubbles.</p>
+    <div class="action-cards">
+      <div class="action-card now">
+        <span class="action-tag">Now</span>
+        <h4>Invest in local information infrastructure</h4>
+        <p>Local journalism, community libraries, and neighborhood civic organizations are undervalued infrastructure for democratic resilience. They are also among the most endangered by AI-driven content commoditization. Supporting them is not nostalgia — it is strategic.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Now</span>
+        <h4>Build AI literacy at community scale</h4>
+        <p>The AI literacy gap between technically sophisticated and non-technical communities is growing faster than technical gaps typically do, because AI tools are deployed in consequential domains (healthcare, legal, employment) without corresponding public education. Community-level digital literacy programs have outsized returns.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">1–2 years</span>
+        <h4>Advocate for local AI governance</h4>
+        <p>Municipal governments are making consequential decisions about AI in policing, benefits administration, and permitting right now, with almost no public engagement. Local governance is where individual civic capacity has the most leverage.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">1–2 years</span>
+        <h4>Strengthen real-world social networks</h4>
+        <p>The scenarios where things go badly are all characterized by social atomization and information fragmentation. Communities with strong in-person social networks, trusted local institutions, and shared public spaces are more resilient across every scenario that materializes.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">2–3 years</span>
+        <h4>Support worker organizing in AI-disrupted sectors</h4>
+        <p>The labor displacement dynamics are real and accelerating. The historical mechanism for ensuring technology transitions benefit workers, not just capital owners, has been collective bargaining. Unions and worker organizations in AI-disrupted sectors need support and legal protection.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">2–3 years</span>
+        <h4>Build cooperative and mutual aid networks</h4>
+        <p>Economic instability during the transition period benefits from local mutual aid — food networks, childcare exchanges, tool libraries, skill sharing. These are both practically valuable and relationship-building structures that reinforce the social fabric against atomization.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORLD -->
+  <div class="opp-panel" id="opp-world">
+    <p>The gap between "AI makes things worse" and "AI makes things better" is not determined by the technology — it is determined by the choices of the people building it, deploying it, and governing it. That includes you.</p>
+    <div class="callout">
+      The most important fact about this moment: the trajectory is genuinely undetermined. The decisions made in the next 3–5 years about governance, access, and alignment will shape outcomes for decades. Individual agency matters more in periods of high uncertainty than in periods of stability.
+    </div>
+    <div class="action-cards" style="margin-top:2rem">
+      <div class="action-card now">
+        <span class="action-tag">Build</span>
+        <h4>Contribute to open-source AI tools</h4>
+        <p>Open-weight models and open-source AI infrastructure are the structural counterforce to monopolization. Contributing to, funding, or using open-source AI tools strengthens the ecosystem that resists single-actor capture. This is one of the highest-leverage individual actions available.</p>
+      </div>
+      <div class="action-card now">
+        <span class="action-tag">Build</span>
+        <h4>Work on alignment and safety</h4>
+        <p>Technical AI safety is underfunded relative to capabilities work. If you have technical skills, this is arguably the most consequential field to work in. If you don't, funding organizations working on alignment and interpretability research is high-impact.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">Govern</span>
+        <h4>Engage in AI policy processes</h4>
+        <p>Most consequential AI governance decisions are being made with minimal public input, partly because the technical complexity discourages civic engagement. Organizations translating technical AI risks into accessible policy arguments need support: technical expertise, writing, legal analysis, and public advocacy.</p>
+      </div>
+      <div class="action-card year1">
+        <span class="action-tag">Govern</span>
+        <h4>Push for AI transparency and accountability</h4>
+        <p>Algorithmic transparency laws, mandatory impact assessments for high-stakes AI systems, and audit rights for AI-driven decisions in employment, credit, and healthcare are tractable near-term policy goals. These can be advanced through employer advocacy, political engagement, and supporting relevant NGOs.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">Distribute</span>
+        <h4>Support access programs for underserved communities</h4>
+        <p>The AI access gap is compounding existing inequalities. Organizations providing AI literacy, hardware access, and AI-powered services to historically underserved communities are doing some of the most important equity work of this period.</p>
+      </div>
+      <div class="action-card year3">
+        <span class="action-tag">Distribute</span>
+        <h4>Advocate for AI dividend policies</h4>
+        <p>The economic case for some form of distribution of AI productivity gains — whether as UBI, negative income tax, automation tax, or reduced working hours — is becoming mainstream. Political advocacy for these policies is not utopian; it is preparation for economic disruption that is already underway.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROBABILITY SUMMARY -->
+<section id="probabilities">
+  <div class="section-label">07 — Summary</div>
+  <h2 class="reveal">Probability distribution</h2>
+  <p class="reveal">These are illustrative ranges reflecting genuine uncertainty, not precise predictions. The probability distribution is not fixed — it is being shaped by choices made now.</p>
+
+  <div class="prob-bars reveal" id="prob-bars">
+    <div class="prob-row">
+      <div class="prob-name">Muddling Through</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: var(--green)" data-width="30"></div></div>
+      <div class="prob-pct" style="color:var(--green)">30%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Enshittification</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: var(--rust)" data-width="20"></div></div>
+      <div class="prob-pct" style="color:var(--rust)">20%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Cooperative Singularity</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: var(--slate)" data-width="15"></div></div>
+      <div class="prob-pct" style="color:var(--slate)">15%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Constant Strife</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: #b87a1a" data-width="15"></div></div>
+      <div class="prob-pct" style="color:#b87a1a">15%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Great Stagnation</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: var(--fog)" data-width="12"></div></div>
+      <div class="prob-pct" style="color:var(--fog)">12%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Misalignment</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: var(--red)" data-width="7"></div></div>
+      <div class="prob-pct" style="color:var(--red)">5–8%</div>
+    </div>
+    <div class="prob-row">
+      <div class="prob-name">Balkanization (overlay)</div>
+      <div class="prob-bar-track"><div class="prob-bar-fill" style="background: #4a9eff" data-width="40"></div></div>
+      <div class="prob-pct" style="color:#4a9eff">~40%</div>
+    </div>
+  </div>
+
+  <div class="callout reveal" style="margin-top:2rem">
+    <strong>The most important insight:</strong> These scenarios are not equally reachable from where we stand. The "Muddling Through" scenario (most likely) can slide into "Enshittification" or "Constant Strife" without decisive choices about governance, access, and alignment. The "Cooperative Singularity" requires active effort to achieve — it does not happen by default. The probability distribution is an argument for action, not fatalism.
+  </div>
+
+  <hr class="divider reveal">
+  <div class="section-label reveal">Sources</div>
+  <ol class="sources-list reveal">
+    <li>Stanford HAI — <em>2025 AI Index Report</em></li>
+    <li>METR — AI task horizon evaluation report</li>
+    <li>Metaculus — AGI forecasting aggregation, Feb 2026</li>
+    <li>80,000 Hours — "Shrinking AGI Timelines," Feb 2026</li>
+    <li>AI 2027 project — ai-2027.com</li>
+    <li>Gartner — LLM inference cost projections, Mar 2026</li>
+    <li>Epoch AI — "Inference Cost Burden," Feb 2026</li>
+    <li>CloudZero — State of AI Costs 2025</li>
+    <li>WEF — Global Risks Report 2025</li>
+    <li>Wellington Management — Geopolitics 2025</li>
+    <li>MDPI — "Brace for Impact" scenario modeling</li>
+    <li>Arms Control Association — Autonomous Weapons, Jan 2025</li>
+    <li>Frontiers in AI — AI-Driven Disinformation, Jul 2025</li>
+    <li>Wikipedia / Doctorow — Enshittification</li>
+    <li>Boing Boing — AI enshittification timeline, Dec 2025</li>
+    <li>Springer — AI Arms Race and Global Order, Jul 2025</li>
+    <li>OpenSSF — Open Source Security Predictions 2025</li>
+    <li>OpenNHP — "Dark Forest" internet analysis, Feb 2026</li>
+    <li>Big Think / Sysdig — Dark AI cybercrime, Oct 2025</li>
+    <li>Experian — 2026 Data Breach Forecast, Dec 2025</li>
+    <li>Darktrace — 2026 Cybersecurity Trends</li>
+    <li>AISI (UK) — Inference scaling in cyber tasks, Mar 2026</li>
+    <li>allwork.space — UBI and AI displacement, Feb 2026</li>
+    <li>The Hill — AI case for UBI, Jan 2026</li>
+    <li>Falk & Tsoukalas — "The AI Layoff Trap," Mar 2026</li>
+    <li>Tandf — Arms Race or Innovation Race, 2025</li>
+    <li>Northwestern — Geopolitical Stakes of AI, Feb 2025</li>
+    <li>Dario Amodei — "Machines of Loving Grace"</li>
+  </ol>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>FUTURES WITH AI</p>
+  <p>Evidence-based analysis · April 2026</p>
+  <p style="margin-top:1rem">The trajectory is not fixed. It is being written now.</p>
+</footer>
+`;function u(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}var d=u();function f(e){d=e}var p=/[&<>"']/,ee=new RegExp(p.source,`g`),m=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,te=new RegExp(m.source,`g`),ne={"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`},re=e=>ne[e];function h(e,t){if(t){if(p.test(e))return e.replace(ee,re)}else if(m.test(e))return e.replace(te,re);return e}var ie=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/gi;function ae(e){return e.replace(ie,(e,t)=>(t=t.toLowerCase(),t===`colon`?`:`:t.charAt(0)===`#`?t.charAt(1)===`x`?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):``))}var oe=/(^|[^\[])\^/g;function g(e,t){let n=typeof e==`string`?e:e.source;t||=``;let r={replace:(e,t)=>{let i=typeof t==`string`?t:t.source;return i=i.replace(oe,`$1`),n=n.replace(e,i),r},getRegex:()=>new RegExp(n,t)};return r}function _(e){try{e=encodeURI(e).replace(/%25/g,`%`)}catch{return null}return e}var v={exec:()=>null};function y(e,t){let n=e.replace(/\|/g,(e,t,n)=>{let r=!1,i=t;for(;--i>=0&&n[i]===`\\`;)r=!r;return r?`|`:` |`}).split(/ \|/),r=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),t)if(n.length>t)n.splice(t);else for(;n.length<t;)n.push(``);for(;r<n.length;r++)n[r]=n[r].trim().replace(/\\\|/g,`|`);return n}function b(e,t,n){let r=e.length;if(r===0)return``;let i=0;for(;i<r;){let a=e.charAt(r-i-1);if(a===t&&!n)i++;else if(a!==t&&n)i++;else break}return e.slice(0,r-i)}function se(e,t){if(e.indexOf(t[1])===-1)return-1;let n=0;for(let r=0;r<e.length;r++)if(e[r]===`\\`)r++;else if(e[r]===t[0])n++;else if(e[r]===t[1]&&(n--,n<0))return r;return-1}function x(e,t,n,r){let i=t.href,a=t.title?h(t.title):null,o=e[1].replace(/\\([\[\]])/g,`$1`);if(e[0].charAt(0)!==`!`){r.state.inLink=!0;let e={type:`link`,raw:n,href:i,title:a,text:o,tokens:r.inlineTokens(o)};return r.state.inLink=!1,e}return{type:`image`,raw:n,href:i,title:a,text:h(o)}}function ce(e,t){let n=e.match(/^(\s+)(?:```)/);if(n===null)return t;let r=n[1];return t.split(`
 `).map(e=>{let t=e.match(/^\s+/);if(t===null)return e;let[n]=t;return n.length>=r.length?e.slice(r.length):e}).join(`
-`)}var y=class{options;rules;lexer;constructor(e){this.options=e||l}space(e){let t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:`space`,raw:t[0]}}code(e){let t=this.rules.block.code.exec(e);if(t){let e=t[0].replace(/^ {1,4}/gm,``);return{type:`code`,raw:t[0],codeBlockStyle:`indented`,text:this.options.pedantic?e:_(e,`
-`)}}}fences(e){let t=this.rules.block.fences.exec(e);if(t){let e=t[0],n=le(e,t[3]||``);return{type:`code`,raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline.anyPunctuation,`$1`):t[2],text:n}}}heading(e){let t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(/#$/.test(e)){let t=_(e,`#`);(this.options.pedantic||!t||/ $/.test(t))&&(e=t.trim())}return{type:`heading`,raw:t[0],depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){let t=this.rules.block.hr.exec(e);if(t)return{type:`hr`,raw:t[0]}}blockquote(e){let t=this.rules.block.blockquote.exec(e);if(t){let e=t[0].replace(/\n {0,3}((?:=+|-+) *)(?=\n|$)/g,`
-    $1`);e=_(e.replace(/^ *>[ \t]?/gm,``),`
+`)}var S=class{options;rules;lexer;constructor(e){this.options=e||d}space(e){let t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:`space`,raw:t[0]}}code(e){let t=this.rules.block.code.exec(e);if(t){let e=t[0].replace(/^ {1,4}/gm,``);return{type:`code`,raw:t[0],codeBlockStyle:`indented`,text:this.options.pedantic?e:b(e,`
+`)}}}fences(e){let t=this.rules.block.fences.exec(e);if(t){let e=t[0],n=ce(e,t[3]||``);return{type:`code`,raw:e,lang:t[2]?t[2].trim().replace(this.rules.inline.anyPunctuation,`$1`):t[2],text:n}}}heading(e){let t=this.rules.block.heading.exec(e);if(t){let e=t[2].trim();if(/#$/.test(e)){let t=b(e,`#`);(this.options.pedantic||!t||/ $/.test(t))&&(e=t.trim())}return{type:`heading`,raw:t[0],depth:t[1].length,text:e,tokens:this.lexer.inline(e)}}}hr(e){let t=this.rules.block.hr.exec(e);if(t)return{type:`hr`,raw:t[0]}}blockquote(e){let t=this.rules.block.blockquote.exec(e);if(t){let e=t[0].replace(/\n {0,3}((?:=+|-+) *)(?=\n|$)/g,`
+    $1`);e=b(e.replace(/^ *>[ \t]?/gm,``),`
 `);let n=this.lexer.state.top;this.lexer.state.top=!0;let r=this.lexer.blockTokens(e);return this.lexer.state.top=n,{type:`blockquote`,raw:t[0],tokens:r,text:e}}}list(e){let t=this.rules.block.list.exec(e);if(t){let n=t[1].trim(),r=n.length>1,i={type:`list`,raw:``,ordered:r,start:r?+n.slice(0,-1):``,loose:!1,items:[]};n=r?`\\d{1,9}\\${n.slice(-1)}`:`\\${n}`,this.options.pedantic&&(n=r?n:`[*+-]`);let a=RegExp(`^( {0,3}${n})((?:[\t ][^\\n]*)?(?:\\n|$))`),o=``,s=``,c=!1;for(;e;){let n=!1;if(!(t=a.exec(e))||this.rules.block.hr.test(e))break;o=t[0],e=e.substring(o.length);let r=t[2].split(`
 `,1)[0].replace(/^\t+/,e=>` `.repeat(3*e.length)),l=e.split(`
 `,1)[0],u=0;this.options.pedantic?(u=2,s=r.trimStart()):(u=t[2].search(/[^ ]/),u=u>4?1:u,s=r.slice(u),u+=t[1].length);let d=!1;if(!r&&/^ *$/.test(l)&&(o+=l+`
@@ -3273,10 +5180,10 @@ Peace.
 `,1)[0];if(l=c,this.options.pedantic&&(l=l.replace(/^ {1,4}(?=( {4})*[^ ])/g,`  `)),i.test(l)||a.test(l)||t.test(l)||n.test(e))break;if(l.search(/[^ ]/)>=u||!l.trim())s+=`
 `+l.slice(u);else{if(d||r.search(/[^ ]/)>=4||i.test(r)||a.test(r)||n.test(r))break;s+=`
 `+l}!d&&!l.trim()&&(d=!0),o+=c+`
-`,e=e.substring(c.length+1),r=l.slice(u)}}i.loose||(c?i.loose=!0:/\n *\n *$/.test(o)&&(c=!0));let f=null,p;this.options.gfm&&(f=/^\[[ xX]\] /.exec(s),f&&(p=f[0]!==`[ ] `,s=s.replace(/^\[[ xX]\] +/,``))),i.items.push({type:`list_item`,raw:o,task:!!f,checked:p,loose:!1,text:s,tokens:[]}),i.raw+=o}i.items[i.items.length-1].raw=o.trimEnd(),i.items[i.items.length-1].text=s.trimEnd(),i.raw=i.raw.trimEnd();for(let e=0;e<i.items.length;e++)if(this.lexer.state.top=!1,i.items[e].tokens=this.lexer.blockTokens(i.items[e].text,[]),!i.loose){let t=i.items[e].tokens.filter(e=>e.type===`space`);i.loose=t.length>0&&t.some(e=>/\n.*\n/.test(e.raw))}if(i.loose)for(let e=0;e<i.items.length;e++)i.items[e].loose=!0;return i}}html(e){let t=this.rules.block.html.exec(e);if(t)return{type:`html`,block:!0,raw:t[0],pre:t[1]===`pre`||t[1]===`script`||t[1]===`style`,text:t[0]}}def(e){let t=this.rules.block.def.exec(e);if(t){let e=t[1].toLowerCase().replace(/\s+/g,` `),n=t[2]?t[2].replace(/^<(.*)>$/,`$1`).replace(this.rules.inline.anyPunctuation,`$1`):``,r=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline.anyPunctuation,`$1`):t[3];return{type:`def`,tag:e,raw:t[0],href:n,title:r}}}table(e){let t=this.rules.block.table.exec(e);if(!t||!/[:|]/.test(t[2]))return;let n=se(t[1]),r=t[2].replace(/^\||\| *$/g,``).split(`|`),i=t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,``).split(`
-`):[],a={type:`table`,raw:t[0],header:[],align:[],rows:[]};if(n.length===r.length){for(let e of r)/^ *-+: *$/.test(e)?a.align.push(`right`):/^ *:-+: *$/.test(e)?a.align.push(`center`):/^ *:-+ *$/.test(e)?a.align.push(`left`):a.align.push(null);for(let e of n)a.header.push({text:e,tokens:this.lexer.inline(e)});for(let e of i)a.rows.push(se(e,a.header.length).map(e=>({text:e,tokens:this.lexer.inline(e)})));return a}}lheading(e){let t=this.rules.block.lheading.exec(e);if(t)return{type:`heading`,raw:t[0],depth:t[2].charAt(0)===`=`?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){let t=this.rules.block.paragraph.exec(e);if(t){let e=t[1].charAt(t[1].length-1)===`
-`?t[1].slice(0,-1):t[1];return{type:`paragraph`,raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){let t=this.rules.block.text.exec(e);if(t)return{type:`text`,raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){let t=this.rules.inline.escape.exec(e);if(t)return{type:`escape`,raw:t[0],text:m(t[1])}}tag(e){let t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:`html`,raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,block:!1,text:t[0]}}link(e){let t=this.rules.inline.link.exec(e);if(t){let e=t[2].trim();if(!this.options.pedantic&&/^</.test(e)){if(!/>$/.test(e))return;let t=_(e.slice(0,-1),`\\`);if((e.length-t.length)%2==0)return}else{let e=ce(t[2],`()`);if(e>-1){let n=(t[0].indexOf(`!`)===0?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=``}}let n=t[2],r=``;if(this.options.pedantic){let e=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(n);e&&(n=e[1],r=e[3])}else r=t[3]?t[3].slice(1,-1):``;return n=n.trim(),/^</.test(n)&&(n=this.options.pedantic&&!/>$/.test(e)?n.slice(1):n.slice(1,-1)),v(t,{href:n&&n.replace(this.rules.inline.anyPunctuation,`$1`),title:r&&r.replace(this.rules.inline.anyPunctuation,`$1`)},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let e=t[(n[2]||n[1]).replace(/\s+/g,` `).toLowerCase()];if(!e){let e=n[0].charAt(0);return{type:`text`,raw:e,text:e}}return v(n,e,n[0],this.lexer)}}emStrong(e,t,n=``){let r=this.rules.inline.emStrongLDelim.exec(e);if(r&&!(r[3]&&n.match(/[\p{L}\p{N}]/u))&&(!(r[1]||r[2])||!n||this.rules.inline.punctuation.exec(n))){let n=[...r[0]].length-1,i,a,o=n,s=0,c=r[0][0]===`*`?this.rules.inline.emStrongRDelimAst:this.rules.inline.emStrongRDelimUnd;for(c.lastIndex=0,t=t.slice(-1*e.length+n);(r=c.exec(t))!=null;){if(i=r[1]||r[2]||r[3]||r[4]||r[5]||r[6],!i)continue;if(a=[...i].length,r[3]||r[4]){o+=a;continue}else if((r[5]||r[6])&&n%3&&!((n+a)%3)){s+=a;continue}if(o-=a,o>0)continue;a=Math.min(a,a+o+s);let t=[...r[0]][0].length,c=e.slice(0,n+r.index+t+a);if(Math.min(n,a)%2){let e=c.slice(1,-1);return{type:`em`,raw:c,text:e,tokens:this.lexer.inlineTokens(e)}}let l=c.slice(2,-2);return{type:`strong`,raw:c,text:l,tokens:this.lexer.inlineTokens(l)}}}}codespan(e){let t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(/\n/g,` `),n=/[^ ]/.test(e),r=/^ /.test(e)&&/ $/.test(e);return n&&r&&(e=e.substring(1,e.length-1)),e=m(e,!0),{type:`codespan`,raw:t[0],text:e}}}br(e){let t=this.rules.inline.br.exec(e);if(t)return{type:`br`,raw:t[0]}}del(e){let t=this.rules.inline.del.exec(e);if(t)return{type:`del`,raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e){let t=this.rules.inline.autolink.exec(e);if(t){let e,n;return t[2]===`@`?(e=m(t[1]),n=`mailto:`+e):(e=m(t[1]),n=e),{type:`link`,raw:t[0],text:e,href:n,tokens:[{type:`text`,raw:e,text:e}]}}}url(e){let t;if(t=this.rules.inline.url.exec(e)){let e,n;if(t[2]===`@`)e=m(t[0]),n=`mailto:`+e;else{let r;do r=t[0],t[0]=this.rules.inline._backpedal.exec(t[0])?.[0]??``;while(r!==t[0]);e=m(t[0]),n=t[1]===`www.`?`http://`+t[0]:t[0]}return{type:`link`,raw:t[0],text:e,href:n,tokens:[{type:`text`,raw:e,text:e}]}}}inlineText(e){let t=this.rules.inline.text.exec(e);if(t){let e;return e=this.lexer.state.inRawBlock?t[0]:m(t[0]),{type:`text`,raw:t[0],text:e}}}},ue=/^(?: *(?:\n|$))+/,de=/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,fe=/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,b=/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,pe=/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,x=/(?:[*+-]|\d{1,9}[.)])/,me=h(/^(?!bull |blockCode|fences|blockquote|heading|html)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g,x).replace(/blockCode/g,/ {4}/).replace(/fences/g,/ {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g,/ {0,3}>/).replace(/heading/g,/ {0,3}#{1,6}/).replace(/html/g,/ {0,3}<[^\n>]+>\n/).getRegex(),S=/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,he=/^[^\n]+/,C=/(?!\s*\])(?:\\.|[^\[\]\\])+/,ge=h(/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/).replace(`label`,C).replace(`title`,/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(),_e=h(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g,x).getRegex(),w=`address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul`,T=/<!--(?:-?>|[\s\S]*?(?:-->|$))/,ve=h(`^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))`,`i`).replace(`comment`,T).replace(`tag`,w).replace(`attribute`,/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),ye=h(S).replace(`hr`,b).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,w).getRegex(),E={blockquote:h(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace(`paragraph`,ye).getRegex(),code:de,def:ge,fences:fe,heading:pe,hr:b,html:ve,lheading:me,list:_e,newline:ue,paragraph:ye,table:g,text:he},be=h(`^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)`).replace(`hr`,b).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`blockquote`,` {0,3}>`).replace(`code`,` {4}[^\\n]`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,w).getRegex(),xe={...E,table:be,paragraph:h(S).replace(`hr`,b).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`table`,be).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,w).getRegex()},Se={...E,html:h(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace(`comment`,T).replace(/tag/g,`(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b`).getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:g,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:h(S).replace(`hr`,b).replace(`heading`,` *#{1,6} *[^
-]`).replace(`lheading`,me).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`|fences`,``).replace(`|list`,``).replace(`|html`,``).replace(`|tag`,``).getRegex()},D=/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,Ce=/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,O=/^( {2,}|\\)\n(?!\s*$)/,we=/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,k=`\\p{P}\\p{S}`,Te=h(/^((?![*_])[\spunctuation])/,`u`).replace(/punctuation/g,k).getRegex(),Ee=/\[[^[\]]*?\]\([^\(\)]*?\)|`[^`]*?`|<[^<>]*?>/g,De=h(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/,`u`).replace(/punct/g,k).getRegex(),Oe=h(`^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])`,`gu`).replace(/punct/g,k).getRegex(),ke=h(`^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])`,`gu`).replace(/punct/g,k).getRegex(),Ae=h(/\\([punct])/,`gu`).replace(/punct/g,k).getRegex(),je=h(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace(`scheme`,/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace(`email`,/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(),Me=h(T).replace(`(?:-->|$)`,`-->`).getRegex(),Ne=h(`^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>`).replace(`comment`,Me).replace(`attribute`,/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(),A=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,Pe=h(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace(`label`,A).replace(`href`,/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace(`title`,/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(),j=h(/^!?\[(label)\]\[(ref)\]/).replace(`label`,A).replace(`ref`,C).getRegex(),M=h(/^!?\[(ref)\](?:\[\])?/).replace(`ref`,C).getRegex(),N={_backpedal:g,anyPunctuation:Ae,autolink:je,blockSkip:Ee,br:O,code:Ce,del:g,emStrongLDelim:De,emStrongRDelimAst:Oe,emStrongRDelimUnd:ke,escape:D,link:Pe,nolink:M,punctuation:Te,reflink:j,reflinkSearch:h(`reflink|nolink(?!\\()`,`g`).replace(`reflink`,j).replace(`nolink`,M).getRegex(),tag:Ne,text:we,url:g},Fe={...N,link:h(/^!?\[(label)\]\((.*?)\)/).replace(`label`,A).getRegex(),reflink:h(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace(`label`,A).getRegex()},P={...N,escape:h(D).replace(`])`,`~|])`).getRegex(),url:h(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,`i`).replace(`email`,/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},Ie={...P,br:h(O).replace(`{2,}`,`*`).getRegex(),text:h(P.text).replace(`\\b_`,`\\b_| {2,}\\n`).replace(/\{2,\}/g,`*`).getRegex()},F={normal:E,gfm:xe,pedantic:Se},I={normal:N,gfm:P,breaks:Ie,pedantic:Fe},L=class e{tokens;options;state;tokenizer;inlineQueue;constructor(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||l,this.options.tokenizer=this.options.tokenizer||new y,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};let t={block:F.normal,inline:I.normal};this.options.pedantic?(t.block=F.pedantic,t.inline=I.pedantic):this.options.gfm&&(t.block=F.gfm,this.options.breaks?t.inline=I.breaks:t.inline=I.gfm),this.tokenizer.rules=t}static get rules(){return{block:F,inline:I}}static lex(t,n){return new e(n).lex(t)}static lexInline(t,n){return new e(n).inlineTokens(t)}lex(e){e=e.replace(/\r\n|\r/g,`
+`,e=e.substring(c.length+1),r=l.slice(u)}}i.loose||(c?i.loose=!0:/\n *\n *$/.test(o)&&(c=!0));let f=null,p;this.options.gfm&&(f=/^\[[ xX]\] /.exec(s),f&&(p=f[0]!==`[ ] `,s=s.replace(/^\[[ xX]\] +/,``))),i.items.push({type:`list_item`,raw:o,task:!!f,checked:p,loose:!1,text:s,tokens:[]}),i.raw+=o}i.items[i.items.length-1].raw=o.trimEnd(),i.items[i.items.length-1].text=s.trimEnd(),i.raw=i.raw.trimEnd();for(let e=0;e<i.items.length;e++)if(this.lexer.state.top=!1,i.items[e].tokens=this.lexer.blockTokens(i.items[e].text,[]),!i.loose){let t=i.items[e].tokens.filter(e=>e.type===`space`);i.loose=t.length>0&&t.some(e=>/\n.*\n/.test(e.raw))}if(i.loose)for(let e=0;e<i.items.length;e++)i.items[e].loose=!0;return i}}html(e){let t=this.rules.block.html.exec(e);if(t)return{type:`html`,block:!0,raw:t[0],pre:t[1]===`pre`||t[1]===`script`||t[1]===`style`,text:t[0]}}def(e){let t=this.rules.block.def.exec(e);if(t){let e=t[1].toLowerCase().replace(/\s+/g,` `),n=t[2]?t[2].replace(/^<(.*)>$/,`$1`).replace(this.rules.inline.anyPunctuation,`$1`):``,r=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline.anyPunctuation,`$1`):t[3];return{type:`def`,tag:e,raw:t[0],href:n,title:r}}}table(e){let t=this.rules.block.table.exec(e);if(!t||!/[:|]/.test(t[2]))return;let n=y(t[1]),r=t[2].replace(/^\||\| *$/g,``).split(`|`),i=t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,``).split(`
+`):[],a={type:`table`,raw:t[0],header:[],align:[],rows:[]};if(n.length===r.length){for(let e of r)/^ *-+: *$/.test(e)?a.align.push(`right`):/^ *:-+: *$/.test(e)?a.align.push(`center`):/^ *:-+ *$/.test(e)?a.align.push(`left`):a.align.push(null);for(let e of n)a.header.push({text:e,tokens:this.lexer.inline(e)});for(let e of i)a.rows.push(y(e,a.header.length).map(e=>({text:e,tokens:this.lexer.inline(e)})));return a}}lheading(e){let t=this.rules.block.lheading.exec(e);if(t)return{type:`heading`,raw:t[0],depth:t[2].charAt(0)===`=`?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){let t=this.rules.block.paragraph.exec(e);if(t){let e=t[1].charAt(t[1].length-1)===`
+`?t[1].slice(0,-1):t[1];return{type:`paragraph`,raw:t[0],text:e,tokens:this.lexer.inline(e)}}}text(e){let t=this.rules.block.text.exec(e);if(t)return{type:`text`,raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){let t=this.rules.inline.escape.exec(e);if(t)return{type:`escape`,raw:t[0],text:h(t[1])}}tag(e){let t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:`html`,raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,block:!1,text:t[0]}}link(e){let t=this.rules.inline.link.exec(e);if(t){let e=t[2].trim();if(!this.options.pedantic&&/^</.test(e)){if(!/>$/.test(e))return;let t=b(e.slice(0,-1),`\\`);if((e.length-t.length)%2==0)return}else{let e=se(t[2],`()`);if(e>-1){let n=(t[0].indexOf(`!`)===0?5:4)+t[1].length+e;t[2]=t[2].substring(0,e),t[0]=t[0].substring(0,n).trim(),t[3]=``}}let n=t[2],r=``;if(this.options.pedantic){let e=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(n);e&&(n=e[1],r=e[3])}else r=t[3]?t[3].slice(1,-1):``;return n=n.trim(),/^</.test(n)&&(n=this.options.pedantic&&!/>$/.test(e)?n.slice(1):n.slice(1,-1)),x(t,{href:n&&n.replace(this.rules.inline.anyPunctuation,`$1`),title:r&&r.replace(this.rules.inline.anyPunctuation,`$1`)},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let e=t[(n[2]||n[1]).replace(/\s+/g,` `).toLowerCase()];if(!e){let e=n[0].charAt(0);return{type:`text`,raw:e,text:e}}return x(n,e,n[0],this.lexer)}}emStrong(e,t,n=``){let r=this.rules.inline.emStrongLDelim.exec(e);if(r&&!(r[3]&&n.match(/[\p{L}\p{N}]/u))&&(!(r[1]||r[2])||!n||this.rules.inline.punctuation.exec(n))){let n=[...r[0]].length-1,i,a,o=n,s=0,c=r[0][0]===`*`?this.rules.inline.emStrongRDelimAst:this.rules.inline.emStrongRDelimUnd;for(c.lastIndex=0,t=t.slice(-1*e.length+n);(r=c.exec(t))!=null;){if(i=r[1]||r[2]||r[3]||r[4]||r[5]||r[6],!i)continue;if(a=[...i].length,r[3]||r[4]){o+=a;continue}else if((r[5]||r[6])&&n%3&&!((n+a)%3)){s+=a;continue}if(o-=a,o>0)continue;a=Math.min(a,a+o+s);let t=[...r[0]][0].length,c=e.slice(0,n+r.index+t+a);if(Math.min(n,a)%2){let e=c.slice(1,-1);return{type:`em`,raw:c,text:e,tokens:this.lexer.inlineTokens(e)}}let l=c.slice(2,-2);return{type:`strong`,raw:c,text:l,tokens:this.lexer.inlineTokens(l)}}}}codespan(e){let t=this.rules.inline.code.exec(e);if(t){let e=t[2].replace(/\n/g,` `),n=/[^ ]/.test(e),r=/^ /.test(e)&&/ $/.test(e);return n&&r&&(e=e.substring(1,e.length-1)),e=h(e,!0),{type:`codespan`,raw:t[0],text:e}}}br(e){let t=this.rules.inline.br.exec(e);if(t)return{type:`br`,raw:t[0]}}del(e){let t=this.rules.inline.del.exec(e);if(t)return{type:`del`,raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e){let t=this.rules.inline.autolink.exec(e);if(t){let e,n;return t[2]===`@`?(e=h(t[1]),n=`mailto:`+e):(e=h(t[1]),n=e),{type:`link`,raw:t[0],text:e,href:n,tokens:[{type:`text`,raw:e,text:e}]}}}url(e){let t;if(t=this.rules.inline.url.exec(e)){let e,n;if(t[2]===`@`)e=h(t[0]),n=`mailto:`+e;else{let r;do r=t[0],t[0]=this.rules.inline._backpedal.exec(t[0])?.[0]??``;while(r!==t[0]);e=h(t[0]),n=t[1]===`www.`?`http://`+t[0]:t[0]}return{type:`link`,raw:t[0],text:e,href:n,tokens:[{type:`text`,raw:e,text:e}]}}}inlineText(e){let t=this.rules.inline.text.exec(e);if(t){let e;return e=this.lexer.state.inRawBlock?t[0]:h(t[0]),{type:`text`,raw:t[0],text:e}}}},le=/^(?: *(?:\n|$))+/,ue=/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,de=/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,C=/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,fe=/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,w=/(?:[*+-]|\d{1,9}[.)])/,T=g(/^(?!bull |blockCode|fences|blockquote|heading|html)((?:.|\n(?!\s*?\n|bull |blockCode|fences|blockquote|heading|html))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g,w).replace(/blockCode/g,/ {4}/).replace(/fences/g,/ {0,3}(?:`{3,}|~{3,})/).replace(/blockquote/g,/ {0,3}>/).replace(/heading/g,/ {0,3}#{1,6}/).replace(/html/g,/ {0,3}<[^\n>]+>\n/).getRegex(),E=/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,pe=/^[^\n]+/,D=/(?!\s*\])(?:\\.|[^\[\]\\])+/,me=g(/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/).replace(`label`,D).replace(`title`,/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(),he=g(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g,w).getRegex(),O=`address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|search|section|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul`,k=/<!--(?:-?>|[\s\S]*?(?:-->|$))/,ge=g(`^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))`,`i`).replace(`comment`,k).replace(`tag`,O).replace(`attribute`,/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),_e=g(E).replace(`hr`,C).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,O).getRegex(),A={blockquote:g(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace(`paragraph`,_e).getRegex(),code:ue,def:me,fences:de,heading:fe,hr:C,html:ge,lheading:T,list:he,newline:le,paragraph:_e,table:v,text:pe},ve=g(`^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)`).replace(`hr`,C).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`blockquote`,` {0,3}>`).replace(`code`,` {4}[^\\n]`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,O).getRegex(),ye={...A,table:ve,paragraph:g(E).replace(`hr`,C).replace(`heading`,` {0,3}#{1,6}(?:\\s|$)`).replace(`|lheading`,``).replace(`table`,ve).replace(`blockquote`,` {0,3}>`).replace(`fences`," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace(`list`,` {0,3}(?:[*+-]|1[.)]) `).replace(`html`,`</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)`).replace(`tag`,O).getRegex()},be={...A,html:g(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace(`comment`,k).replace(/tag/g,`(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b`).getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:v,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:g(E).replace(`hr`,C).replace(`heading`,` *#{1,6} *[^
+]`).replace(`lheading`,T).replace(`|table`,``).replace(`blockquote`,` {0,3}>`).replace(`|fences`,``).replace(`|list`,``).replace(`|html`,``).replace(`|tag`,``).getRegex()},xe=/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,Se=/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,Ce=/^( {2,}|\\)\n(?!\s*$)/,we=/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,j=`\\p{P}\\p{S}`,Te=g(/^((?![*_])[\spunctuation])/,`u`).replace(/punctuation/g,j).getRegex(),Ee=/\[[^[\]]*?\]\([^\(\)]*?\)|`[^`]*?`|<[^<>]*?>/g,De=g(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/,`u`).replace(/punct/g,j).getRegex(),Oe=g(`^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])`,`gu`).replace(/punct/g,j).getRegex(),ke=g(`^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])`,`gu`).replace(/punct/g,j).getRegex(),Ae=g(/\\([punct])/,`gu`).replace(/punct/g,j).getRegex(),je=g(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace(`scheme`,/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace(`email`,/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(),Me=g(k).replace(`(?:-->|$)`,`-->`).getRegex(),Ne=g(`^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>`).replace(`comment`,Me).replace(`attribute`,/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(),M=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,Pe=g(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace(`label`,M).replace(`href`,/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace(`title`,/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(),Fe=g(/^!?\[(label)\]\[(ref)\]/).replace(`label`,M).replace(`ref`,D).getRegex(),Ie=g(/^!?\[(ref)\](?:\[\])?/).replace(`ref`,D).getRegex(),N={_backpedal:v,anyPunctuation:Ae,autolink:je,blockSkip:Ee,br:Ce,code:Se,del:v,emStrongLDelim:De,emStrongRDelimAst:Oe,emStrongRDelimUnd:ke,escape:xe,link:Pe,nolink:Ie,punctuation:Te,reflink:Fe,reflinkSearch:g(`reflink|nolink(?!\\()`,`g`).replace(`reflink`,Fe).replace(`nolink`,Ie).getRegex(),tag:Ne,text:we,url:v},Le={...N,link:g(/^!?\[(label)\]\((.*?)\)/).replace(`label`,M).getRegex(),reflink:g(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace(`label`,M).getRegex()},P={...N,escape:g(xe).replace(`])`,`~|])`).getRegex(),url:g(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,`i`).replace(`email`,/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},Re={...P,br:g(Ce).replace(`{2,}`,`*`).getRegex(),text:g(P.text).replace(`\\b_`,`\\b_| {2,}\\n`).replace(/\{2,\}/g,`*`).getRegex()},F={normal:A,gfm:ye,pedantic:be},I={normal:N,gfm:P,breaks:Re,pedantic:Le},L=class e{tokens;options;state;tokenizer;inlineQueue;constructor(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||d,this.options.tokenizer=this.options.tokenizer||new S,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};let t={block:F.normal,inline:I.normal};this.options.pedantic?(t.block=F.pedantic,t.inline=I.pedantic):this.options.gfm&&(t.block=F.gfm,this.options.breaks?t.inline=I.breaks:t.inline=I.gfm),this.tokenizer.rules=t}static get rules(){return{block:F,inline:I}}static lex(t,n){return new e(n).lex(t)}static lexInline(t,n){return new e(n).inlineTokens(t)}lex(e){e=e.replace(/\r\n|\r/g,`
 `),this.blockTokens(e,this.tokens);for(let e=0;e<this.inlineQueue.length;e++){let t=this.inlineQueue[e];this.inlineTokens(t.src,t.tokens)}return this.inlineQueue=[],this.tokens}blockTokens(e,t=[]){e=this.options.pedantic?e.replace(/\t/g,`    `).replace(/^ +$/gm,``):e.replace(/^( *)(\t+)/gm,(e,t,n)=>t+`    `.repeat(n.length));let n,r,i,a;for(;e;)if(!(this.options.extensions&&this.options.extensions.block&&this.options.extensions.block.some(r=>(n=r.call({lexer:this},e,t))?(e=e.substring(n.raw.length),t.push(n),!0):!1))){if(n=this.tokenizer.space(e)){e=e.substring(n.raw.length),n.raw.length===1&&t.length>0?t[t.length-1].raw+=`
 `:t.push(n);continue}if(n=this.tokenizer.code(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&(r.type===`paragraph`||r.type===`text`)?(r.raw+=`
 `+n.raw,r.text+=`
@@ -3286,9 +5193,9 @@ Peace.
 `+n.raw,r.text+=`
 `+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n),a=i.length!==e.length,e=e.substring(n.raw.length);continue}if(n=this.tokenizer.text(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&r.type===`text`?(r.raw+=`
 `+n.raw,r.text+=`
-`+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n);continue}if(e){let t=`Infinite loop on byte: `+e.charCodeAt(0);if(this.options.silent){console.error(t);break}else throw Error(t)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,r,i,a=e,o,s,c;if(this.tokens.links){let e=Object.keys(this.tokens.links);if(e.length>0)for(;(o=this.tokenizer.rules.inline.reflinkSearch.exec(a))!=null;)e.includes(o[0].slice(o[0].lastIndexOf(`[`)+1,-1))&&(a=a.slice(0,o.index)+`[`+`a`.repeat(o[0].length-2)+`]`+a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;(o=this.tokenizer.rules.inline.blockSkip.exec(a))!=null;)a=a.slice(0,o.index)+`[`+`a`.repeat(o[0].length-2)+`]`+a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;(o=this.tokenizer.rules.inline.anyPunctuation.exec(a))!=null;)a=a.slice(0,o.index)+`++`+a.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);for(;e;)if(s||(c=``),s=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some(r=>(n=r.call({lexer:this},e,t))?(e=e.substring(n.raw.length),t.push(n),!0):!1))){if(n=this.tokenizer.escape(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.tag(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type===`text`&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.link(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.reflink(e,this.tokens.links)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type===`text`&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.emStrong(e,a,c)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.codespan(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.br(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.del(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.autolink(e)){e=e.substring(n.raw.length),t.push(n);continue}if(!this.state.inLink&&(n=this.tokenizer.url(e))){e=e.substring(n.raw.length),t.push(n);continue}if(i=e,this.options.extensions&&this.options.extensions.startInline){let t=1/0,n=e.slice(1),r;this.options.extensions.startInline.forEach(e=>{r=e.call({lexer:this},n),typeof r==`number`&&r>=0&&(t=Math.min(t,r))}),t<1/0&&t>=0&&(i=e.substring(0,t+1))}if(n=this.tokenizer.inlineText(i)){e=e.substring(n.raw.length),n.raw.slice(-1)!==`_`&&(c=n.raw.slice(-1)),s=!0,r=t[t.length-1],r&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(e){let t=`Infinite loop on byte: `+e.charCodeAt(0);if(this.options.silent){console.error(t);break}else throw Error(t)}}return t}},R=class{options;constructor(e){this.options=e||l}code(e,t,n){let r=(t||``).match(/^\S*/)?.[0];return e=e.replace(/\n$/,``)+`
-`,r?`<pre><code class="language-`+m(r)+`">`+(n?e:m(e,!0))+`</code></pre>
-`:`<pre><code>`+(n?e:m(e,!0))+`</code></pre>
+`+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n);continue}if(e){let t=`Infinite loop on byte: `+e.charCodeAt(0);if(this.options.silent){console.error(t);break}else throw Error(t)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,r,i,a=e,o,s,c;if(this.tokens.links){let e=Object.keys(this.tokens.links);if(e.length>0)for(;(o=this.tokenizer.rules.inline.reflinkSearch.exec(a))!=null;)e.includes(o[0].slice(o[0].lastIndexOf(`[`)+1,-1))&&(a=a.slice(0,o.index)+`[`+`a`.repeat(o[0].length-2)+`]`+a.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;(o=this.tokenizer.rules.inline.blockSkip.exec(a))!=null;)a=a.slice(0,o.index)+`[`+`a`.repeat(o[0].length-2)+`]`+a.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;(o=this.tokenizer.rules.inline.anyPunctuation.exec(a))!=null;)a=a.slice(0,o.index)+`++`+a.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);for(;e;)if(s||(c=``),s=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some(r=>(n=r.call({lexer:this},e,t))?(e=e.substring(n.raw.length),t.push(n),!0):!1))){if(n=this.tokenizer.escape(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.tag(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type===`text`&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.link(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.reflink(e,this.tokens.links)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type===`text`&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.emStrong(e,a,c)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.codespan(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.br(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.del(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.autolink(e)){e=e.substring(n.raw.length),t.push(n);continue}if(!this.state.inLink&&(n=this.tokenizer.url(e))){e=e.substring(n.raw.length),t.push(n);continue}if(i=e,this.options.extensions&&this.options.extensions.startInline){let t=1/0,n=e.slice(1),r;this.options.extensions.startInline.forEach(e=>{r=e.call({lexer:this},n),typeof r==`number`&&r>=0&&(t=Math.min(t,r))}),t<1/0&&t>=0&&(i=e.substring(0,t+1))}if(n=this.tokenizer.inlineText(i)){e=e.substring(n.raw.length),n.raw.slice(-1)!==`_`&&(c=n.raw.slice(-1)),s=!0,r=t[t.length-1],r&&r.type===`text`?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(e){let t=`Infinite loop on byte: `+e.charCodeAt(0);if(this.options.silent){console.error(t);break}else throw Error(t)}}return t}},R=class{options;constructor(e){this.options=e||d}code(e,t,n){let r=(t||``).match(/^\S*/)?.[0];return e=e.replace(/\n$/,``)+`
+`,r?`<pre><code class="language-`+h(r)+`">`+(n?e:h(e,!0))+`</code></pre>
+`:`<pre><code>`+(n?e:h(e,!0))+`</code></pre>
 `}blockquote(e){return`<blockquote>\n${e}</blockquote>\n`}html(e,t){return e}heading(e,t,n){return`<h${t}>${e}</h${t}>\n`}hr(){return`<hr>
 `}list(e,t,n){let r=t?`ol`:`ul`,i=t&&n!==1?` start="`+n+`"`:``;return`<`+r+i+`>
 `+e+`</`+r+`>
@@ -3296,10 +5203,10 @@ Peace.
 <thead>
 `+e+`</thead>
 `+t+`</table>
-`}tablerow(e){return`<tr>\n${e}</tr>\n`}tablecell(e,t){let n=t.header?`th`:`td`;return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>\n`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return`<br>`}del(e){return`<del>${e}</del>`}link(e,t,n){let r=oe(e);if(r===null)return n;e=r;let i=`<a href="`+e+`"`;return t&&(i+=` title="`+t+`"`),i+=`>`+n+`</a>`,i}image(e,t,n){let r=oe(e);if(r===null)return n;e=r;let i=`<img src="${e}" alt="${n}"`;return t&&(i+=` title="${t}"`),i+=`>`,i}text(e){return e}},z=class{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return``+n}image(e,t,n){return``+n}br(){return``}},B=class e{options;renderer;textRenderer;constructor(e){this.options=e||l,this.options.renderer=this.options.renderer||new R,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new z}static parse(t,n){return new e(n).parse(t)}static parseInline(t,n){return new e(n).parseInline(t)}parse(e,t=!0){let n=``;for(let r=0;r<e.length;r++){let i=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[i.type]){let e=i,t=this.options.extensions.renderers[e.type].call({parser:this},e);if(t!==!1||![`space`,`hr`,`heading`,`code`,`table`,`blockquote`,`list`,`html`,`paragraph`,`text`].includes(e.type)){n+=t||``;continue}}switch(i.type){case`space`:continue;case`hr`:n+=this.renderer.hr();continue;case`heading`:{let e=i;n+=this.renderer.heading(this.parseInline(e.tokens),e.depth,ie(this.parseInline(e.tokens,this.textRenderer)));continue}case`code`:{let e=i;n+=this.renderer.code(e.text,e.lang,!!e.escaped);continue}case`table`:{let e=i,t=``,r=``;for(let t=0;t<e.header.length;t++)r+=this.renderer.tablecell(this.parseInline(e.header[t].tokens),{header:!0,align:e.align[t]});t+=this.renderer.tablerow(r);let a=``;for(let t=0;t<e.rows.length;t++){let n=e.rows[t];r=``;for(let t=0;t<n.length;t++)r+=this.renderer.tablecell(this.parseInline(n[t].tokens),{header:!1,align:e.align[t]});a+=this.renderer.tablerow(r)}n+=this.renderer.table(t,a);continue}case`blockquote`:{let e=i,t=this.parse(e.tokens);n+=this.renderer.blockquote(t);continue}case`list`:{let e=i,t=e.ordered,r=e.start,a=e.loose,o=``;for(let t=0;t<e.items.length;t++){let n=e.items[t],r=n.checked,i=n.task,s=``;if(n.task){let e=this.renderer.checkbox(!!r);a?n.tokens.length>0&&n.tokens[0].type===`paragraph`?(n.tokens[0].text=e+` `+n.tokens[0].text,n.tokens[0].tokens&&n.tokens[0].tokens.length>0&&n.tokens[0].tokens[0].type===`text`&&(n.tokens[0].tokens[0].text=e+` `+n.tokens[0].tokens[0].text)):n.tokens.unshift({type:`text`,text:e+` `}):s+=e+` `}s+=this.parse(n.tokens,a),o+=this.renderer.listitem(s,i,!!r)}n+=this.renderer.list(o,t,r);continue}case`html`:{let e=i;n+=this.renderer.html(e.text,e.block);continue}case`paragraph`:{let e=i;n+=this.renderer.paragraph(this.parseInline(e.tokens));continue}case`text`:{let a=i,o=a.tokens?this.parseInline(a.tokens):a.text;for(;r+1<e.length&&e[r+1].type===`text`;)a=e[++r],o+=`
-`+(a.tokens?this.parseInline(a.tokens):a.text);n+=t?this.renderer.paragraph(o):o;continue}default:{let e=`Token with "`+i.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return n}parseInline(e,t){t||=this.renderer;let n=``;for(let r=0;r<e.length;r++){let i=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[i.type]){let e=this.options.extensions.renderers[i.type].call({parser:this},i);if(e!==!1||![`escape`,`html`,`link`,`image`,`strong`,`em`,`codespan`,`br`,`del`,`text`].includes(i.type)){n+=e||``;continue}}switch(i.type){case`escape`:{let e=i;n+=t.text(e.text);break}case`html`:{let e=i;n+=t.html(e.text);break}case`link`:{let e=i;n+=t.link(e.href,e.title,this.parseInline(e.tokens,t));break}case`image`:{let e=i;n+=t.image(e.href,e.title,e.text);break}case`strong`:{let e=i;n+=t.strong(this.parseInline(e.tokens,t));break}case`em`:{let e=i;n+=t.em(this.parseInline(e.tokens,t));break}case`codespan`:{let e=i;n+=t.codespan(e.text);break}case`br`:n+=t.br();break;case`del`:{let e=i;n+=t.del(this.parseInline(e.tokens,t));break}case`text`:{let e=i;n+=t.text(e.text);break}default:{let e=`Token with "`+i.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return n}},V=class{options;constructor(e){this.options=e||l}static passThroughHooks=new Set([`preprocess`,`postprocess`,`processAllTokens`]);preprocess(e){return e}postprocess(e){return e}processAllTokens(e){return e}},H=new class{defaults=c();options=this.setOptions;parse=this.#e(L.lex,B.parse);parseInline=this.#e(L.lexInline,B.parseInline);Parser=B;Renderer=R;TextRenderer=z;Lexer=L;Tokenizer=y;Hooks=V;constructor(...e){this.use(...e)}walkTokens(e,t){let n=[];for(let r of e)switch(n=n.concat(t.call(this,r)),r.type){case`table`:{let e=r;for(let r of e.header)n=n.concat(this.walkTokens(r.tokens,t));for(let r of e.rows)for(let e of r)n=n.concat(this.walkTokens(e.tokens,t));break}case`list`:{let e=r;n=n.concat(this.walkTokens(e.items,t));break}default:{let e=r;this.defaults.extensions?.childTokens?.[e.type]?this.defaults.extensions.childTokens[e.type].forEach(r=>{let i=e[r].flat(1/0);n=n.concat(this.walkTokens(i,t))}):e.tokens&&(n=n.concat(this.walkTokens(e.tokens,t)))}}return n}use(...e){let t=this.defaults.extensions||{renderers:{},childTokens:{}};return e.forEach(e=>{let n={...e};if(n.async=this.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach(e=>{if(!e.name)throw Error(`extension name required`);if(`renderer`in e){let n=t.renderers[e.name];n?t.renderers[e.name]=function(...t){let r=e.renderer.apply(this,t);return r===!1&&(r=n.apply(this,t)),r}:t.renderers[e.name]=e.renderer}if(`tokenizer`in e){if(!e.level||e.level!==`block`&&e.level!==`inline`)throw Error(`extension level must be 'block' or 'inline'`);let n=t[e.level];n?n.unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&(e.level===`block`?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:e.level===`inline`&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}`childTokens`in e&&e.childTokens&&(t.childTokens[e.name]=e.childTokens)}),n.extensions=t),e.renderer){let t=this.defaults.renderer||new R(this.defaults);for(let n in e.renderer){if(!(n in t))throw Error(`renderer '${n}' does not exist`);if(n===`options`)continue;let r=n,i=e.renderer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n||``}}n.renderer=t}if(e.tokenizer){let t=this.defaults.tokenizer||new y(this.defaults);for(let n in e.tokenizer){if(!(n in t))throw Error(`tokenizer '${n}' does not exist`);if([`options`,`rules`,`lexer`].includes(n))continue;let r=n,i=e.tokenizer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.tokenizer=t}if(e.hooks){let t=this.defaults.hooks||new V;for(let n in e.hooks){if(!(n in t))throw Error(`hook '${n}' does not exist`);if(n===`options`)continue;let r=n,i=e.hooks[r],a=t[r];V.passThroughHooks.has(n)?t[r]=e=>{if(this.defaults.async)return Promise.resolve(i.call(t,e)).then(e=>a.call(t,e));let n=i.call(t,e);return a.call(t,n)}:t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.hooks=t}if(e.walkTokens){let t=this.defaults.walkTokens,r=e.walkTokens;n.walkTokens=function(e){let n=[];return n.push(r.call(this,e)),t&&(n=n.concat(t.call(this,e))),n}}this.defaults={...this.defaults,...n}}),this}setOptions(e){return this.defaults={...this.defaults,...e},this}lexer(e,t){return L.lex(e,t??this.defaults)}parser(e,t){return B.parse(e,t??this.defaults)}#e(e,t){return(n,r)=>{let i={...r},a={...this.defaults,...i};this.defaults.async===!0&&i.async===!1&&(a.silent||console.warn(`marked(): The async option was set to true by an extension. The async: false option sent to parse will be ignored.`),a.async=!0);let o=this.#t(!!a.silent,!!a.async);if(n==null)return o(Error(`marked(): input parameter is undefined or null`));if(typeof n!=`string`)return o(Error(`marked(): input parameter is of type `+Object.prototype.toString.call(n)+`, string expected`));if(a.hooks&&(a.hooks.options=a),a.async)return Promise.resolve(a.hooks?a.hooks.preprocess(n):n).then(t=>e(t,a)).then(e=>a.hooks?a.hooks.processAllTokens(e):e).then(e=>a.walkTokens?Promise.all(this.walkTokens(e,a.walkTokens)).then(()=>e):e).then(e=>t(e,a)).then(e=>a.hooks?a.hooks.postprocess(e):e).catch(o);try{a.hooks&&(n=a.hooks.preprocess(n));let r=e(n,a);a.hooks&&(r=a.hooks.processAllTokens(r)),a.walkTokens&&this.walkTokens(r,a.walkTokens);let i=t(r,a);return a.hooks&&(i=a.hooks.postprocess(i)),i}catch(e){return o(e)}}}#t(e,t){return n=>{if(n.message+=`
-Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error occurred:</p><pre>`+m(n.message+``,!0)+`</pre>`;return t?Promise.resolve(e):e}if(t)return Promise.reject(n);throw n}}};function U(e,t){return H.parse(e,t)}U.options=U.setOptions=function(e){return H.setOptions(e),U.defaults=H.defaults,u(U.defaults),U},U.getDefaults=c,U.defaults=l,U.use=function(...e){return H.use(...e),U.defaults=H.defaults,u(U.defaults),U},U.walkTokens=function(e,t){return H.walkTokens(e,t)},U.parseInline=H.parseInline,U.Parser=B,U.parser=B.parse,U.Renderer=R,U.TextRenderer=z,U.Lexer=L,U.lexer=L.lex,U.Tokenizer=y,U.Hooks=V,U.parse=U,U.options,U.setOptions,U.use,U.walkTokens,U.parseInline,B.parse,L.lex;var Le=Object.assign({"/blog/00-quest-to-be-real.md":e,"/blog/01-approaching-truth.md":t,"/blog/02-what-im-reading-q1-2026.md":n,"/blog/03-analyzing-healing-crystals-report.md":r,"/blog/04-state-of-big-tech-and-market.md":i,"/blog/05-work-health-matrix.md":a,"/blog/06-llm-usage-2026.md":o,"/blog/07-vibe-research.md":s});function Re(e){let t=e.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);if(!t)return{meta:{},body:e};let n={};return t[1].split(`
-`).forEach(e=>{let t=e.indexOf(`:`);if(t===-1)return;let r=e.slice(0,t).trim();n[r]=e.slice(t+1).trim().replace(/^["']|["']$/g,``)}),{meta:n,body:t[2]}}function ze(e){let t=e.trim().split(/\s+/).length;return`${Math.max(1,Math.round(t/200))} min read`}var W=Object.entries(Le).map(([e,t])=>{let{meta:n,body:r}=Re(t),i=e.replace(`/blog/`,``).replace(`.md`,``);return{id:n.id||i,title:n.title||i,date:n.date||``,topic:n.topic||`General`,excerpt:n.excerpt||``,readingTime:ze(r),body:r,html:U.parse(r)}}).sort((e,t)=>new Date(t.date)-new Date(e.date));function G(e){return parseInt(localStorage.getItem(`blog-likes-${e}`)||`0`,10)}function K(e){return localStorage.getItem(`blog-liked-${e}`)===`1`}function Be(e){let t=K(e),n=G(e);return localStorage.setItem(`blog-liked-${e}`,t?`0`:`1`),localStorage.setItem(`blog-likes-${e}`,String(t?Math.max(0,n-1):n+1)),{liked:!t,count:G(e)}}function Ve(){let e={};return W.forEach(t=>{e[t.topic]=(e[t.topic]||0)+1}),Object.entries(e).sort((e,t)=>t[1]-e[1])}function He(){let e={};return W.forEach(t=>{if(!t.date)return;let n=t.date.slice(0,7);e[n]=(e[n]||0)+1}),Object.entries(e).sort((e,t)=>t[0].localeCompare(e[0]))}function Ue(e){let t=e.toLowerCase();return W.filter(e=>e.title.toLowerCase().includes(t)||e.excerpt.toLowerCase().includes(t)||e.topic.toLowerCase().includes(t)||e.body.toLowerCase().includes(t))}var We=[{id:`dnb-mix-dnb2b`,title:`Drum & Bass Mix`,artist:`dnb2b (octobass × tipsysound)`,type:`youtube`,src:`IegjEa8tDzQ`,genre:`Drum & Bass`,year:``,description:`A collaborative DnB mix — two artists, one vibe.`},{id:`garage-housewarming`,title:`Live — Garage @ Housewarming`,artist:`octobass`,type:`youtube`,src:`bPC0C3GNils`,genre:`UK Garage`,year:``,description:`Live garage set recorded at a housewarming party.`},{id:`house-last-resort`,title:`Live — House @ 라스트리조트 (Last Resort)`,artist:`octobass × House of Beats`,type:`youtube`,src:`rS9RvUlasAM`,genre:`House`,year:``,description:`Live house set at Last Resort, Seoul, with House of Beats.`},{id:`afro-house-basement`,title:`Live — Afro House @ Basement Club`,artist:`octobass`,type:`youtube`,src:`vi0BHt_TLuI`,genre:`Afro House`,year:``,description:`Live afro-house set at Basement Club (now DnB Seoul).`},{id:`sc-originals`,title:`Original Tracks`,artist:`octobass`,type:`soundcloud`,src:`https://soundcloud.com/djoctobass`,genre:`Various`,year:``,description:`Original productions — browse the full SoundCloud profile.`}];function q(e){return parseInt(localStorage.getItem(`music-likes-${e}`)||`0`,10)}function Ge(e){let t=localStorage.getItem(`music-liked-${e}`)===`1`,n=q(e);return t?(localStorage.setItem(`music-liked-${e}`,`0`),localStorage.setItem(`music-likes-${e}`,String(Math.max(0,n-1)))):(localStorage.setItem(`music-liked-${e}`,`1`),localStorage.setItem(`music-likes-${e}`,String(n+1))),{liked:!t,count:q(e)}}function Ke(e){return localStorage.getItem(`music-liked-${e}`)===`1`}function qe(e,t){let n=`${location.origin}${location.pathname}#music/${e}`;navigator.share?navigator.share({title:t,url:n}).catch(()=>{}):navigator.clipboard.writeText(n).then(()=>Je(`Link copied!`))}function Je(e){let t=document.getElementById(`toast`);t&&(t.textContent=e,t.classList.add(`show`),setTimeout(()=>t.classList.remove(`show`),2200))}function Ye(e){return`<div class="embed-wrap yt-embed">
+`}tablerow(e){return`<tr>\n${e}</tr>\n`}tablecell(e,t){let n=t.header?`th`:`td`;return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>\n`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return`<br>`}del(e){return`<del>${e}</del>`}link(e,t,n){let r=_(e);if(r===null)return n;e=r;let i=`<a href="`+e+`"`;return t&&(i+=` title="`+t+`"`),i+=`>`+n+`</a>`,i}image(e,t,n){let r=_(e);if(r===null)return n;e=r;let i=`<img src="${e}" alt="${n}"`;return t&&(i+=` title="${t}"`),i+=`>`,i}text(e){return e}},z=class{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return``+n}image(e,t,n){return``+n}br(){return``}},B=class e{options;renderer;textRenderer;constructor(e){this.options=e||d,this.options.renderer=this.options.renderer||new R,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new z}static parse(t,n){return new e(n).parse(t)}static parseInline(t,n){return new e(n).parseInline(t)}parse(e,t=!0){let n=``;for(let r=0;r<e.length;r++){let i=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[i.type]){let e=i,t=this.options.extensions.renderers[e.type].call({parser:this},e);if(t!==!1||![`space`,`hr`,`heading`,`code`,`table`,`blockquote`,`list`,`html`,`paragraph`,`text`].includes(e.type)){n+=t||``;continue}}switch(i.type){case`space`:continue;case`hr`:n+=this.renderer.hr();continue;case`heading`:{let e=i;n+=this.renderer.heading(this.parseInline(e.tokens),e.depth,ae(this.parseInline(e.tokens,this.textRenderer)));continue}case`code`:{let e=i;n+=this.renderer.code(e.text,e.lang,!!e.escaped);continue}case`table`:{let e=i,t=``,r=``;for(let t=0;t<e.header.length;t++)r+=this.renderer.tablecell(this.parseInline(e.header[t].tokens),{header:!0,align:e.align[t]});t+=this.renderer.tablerow(r);let a=``;for(let t=0;t<e.rows.length;t++){let n=e.rows[t];r=``;for(let t=0;t<n.length;t++)r+=this.renderer.tablecell(this.parseInline(n[t].tokens),{header:!1,align:e.align[t]});a+=this.renderer.tablerow(r)}n+=this.renderer.table(t,a);continue}case`blockquote`:{let e=i,t=this.parse(e.tokens);n+=this.renderer.blockquote(t);continue}case`list`:{let e=i,t=e.ordered,r=e.start,a=e.loose,o=``;for(let t=0;t<e.items.length;t++){let n=e.items[t],r=n.checked,i=n.task,s=``;if(n.task){let e=this.renderer.checkbox(!!r);a?n.tokens.length>0&&n.tokens[0].type===`paragraph`?(n.tokens[0].text=e+` `+n.tokens[0].text,n.tokens[0].tokens&&n.tokens[0].tokens.length>0&&n.tokens[0].tokens[0].type===`text`&&(n.tokens[0].tokens[0].text=e+` `+n.tokens[0].tokens[0].text)):n.tokens.unshift({type:`text`,text:e+` `}):s+=e+` `}s+=this.parse(n.tokens,a),o+=this.renderer.listitem(s,i,!!r)}n+=this.renderer.list(o,t,r);continue}case`html`:{let e=i;n+=this.renderer.html(e.text,e.block);continue}case`paragraph`:{let e=i;n+=this.renderer.paragraph(this.parseInline(e.tokens));continue}case`text`:{let a=i,o=a.tokens?this.parseInline(a.tokens):a.text;for(;r+1<e.length&&e[r+1].type===`text`;)a=e[++r],o+=`
+`+(a.tokens?this.parseInline(a.tokens):a.text);n+=t?this.renderer.paragraph(o):o;continue}default:{let e=`Token with "`+i.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return n}parseInline(e,t){t||=this.renderer;let n=``;for(let r=0;r<e.length;r++){let i=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[i.type]){let e=this.options.extensions.renderers[i.type].call({parser:this},i);if(e!==!1||![`escape`,`html`,`link`,`image`,`strong`,`em`,`codespan`,`br`,`del`,`text`].includes(i.type)){n+=e||``;continue}}switch(i.type){case`escape`:{let e=i;n+=t.text(e.text);break}case`html`:{let e=i;n+=t.html(e.text);break}case`link`:{let e=i;n+=t.link(e.href,e.title,this.parseInline(e.tokens,t));break}case`image`:{let e=i;n+=t.image(e.href,e.title,e.text);break}case`strong`:{let e=i;n+=t.strong(this.parseInline(e.tokens,t));break}case`em`:{let e=i;n+=t.em(this.parseInline(e.tokens,t));break}case`codespan`:{let e=i;n+=t.codespan(e.text);break}case`br`:n+=t.br();break;case`del`:{let e=i;n+=t.del(this.parseInline(e.tokens,t));break}case`text`:{let e=i;n+=t.text(e.text);break}default:{let e=`Token with "`+i.type+`" type was not found.`;if(this.options.silent)return console.error(e),``;throw Error(e)}}}return n}},V=class{options;constructor(e){this.options=e||d}static passThroughHooks=new Set([`preprocess`,`postprocess`,`processAllTokens`]);preprocess(e){return e}postprocess(e){return e}processAllTokens(e){return e}},H=new class{defaults=u();options=this.setOptions;parse=this.#e(L.lex,B.parse);parseInline=this.#e(L.lexInline,B.parseInline);Parser=B;Renderer=R;TextRenderer=z;Lexer=L;Tokenizer=S;Hooks=V;constructor(...e){this.use(...e)}walkTokens(e,t){let n=[];for(let r of e)switch(n=n.concat(t.call(this,r)),r.type){case`table`:{let e=r;for(let r of e.header)n=n.concat(this.walkTokens(r.tokens,t));for(let r of e.rows)for(let e of r)n=n.concat(this.walkTokens(e.tokens,t));break}case`list`:{let e=r;n=n.concat(this.walkTokens(e.items,t));break}default:{let e=r;this.defaults.extensions?.childTokens?.[e.type]?this.defaults.extensions.childTokens[e.type].forEach(r=>{let i=e[r].flat(1/0);n=n.concat(this.walkTokens(i,t))}):e.tokens&&(n=n.concat(this.walkTokens(e.tokens,t)))}}return n}use(...e){let t=this.defaults.extensions||{renderers:{},childTokens:{}};return e.forEach(e=>{let n={...e};if(n.async=this.defaults.async||n.async||!1,e.extensions&&(e.extensions.forEach(e=>{if(!e.name)throw Error(`extension name required`);if(`renderer`in e){let n=t.renderers[e.name];n?t.renderers[e.name]=function(...t){let r=e.renderer.apply(this,t);return r===!1&&(r=n.apply(this,t)),r}:t.renderers[e.name]=e.renderer}if(`tokenizer`in e){if(!e.level||e.level!==`block`&&e.level!==`inline`)throw Error(`extension level must be 'block' or 'inline'`);let n=t[e.level];n?n.unshift(e.tokenizer):t[e.level]=[e.tokenizer],e.start&&(e.level===`block`?t.startBlock?t.startBlock.push(e.start):t.startBlock=[e.start]:e.level===`inline`&&(t.startInline?t.startInline.push(e.start):t.startInline=[e.start]))}`childTokens`in e&&e.childTokens&&(t.childTokens[e.name]=e.childTokens)}),n.extensions=t),e.renderer){let t=this.defaults.renderer||new R(this.defaults);for(let n in e.renderer){if(!(n in t))throw Error(`renderer '${n}' does not exist`);if(n===`options`)continue;let r=n,i=e.renderer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n||``}}n.renderer=t}if(e.tokenizer){let t=this.defaults.tokenizer||new S(this.defaults);for(let n in e.tokenizer){if(!(n in t))throw Error(`tokenizer '${n}' does not exist`);if([`options`,`rules`,`lexer`].includes(n))continue;let r=n,i=e.tokenizer[r],a=t[r];t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.tokenizer=t}if(e.hooks){let t=this.defaults.hooks||new V;for(let n in e.hooks){if(!(n in t))throw Error(`hook '${n}' does not exist`);if(n===`options`)continue;let r=n,i=e.hooks[r],a=t[r];V.passThroughHooks.has(n)?t[r]=e=>{if(this.defaults.async)return Promise.resolve(i.call(t,e)).then(e=>a.call(t,e));let n=i.call(t,e);return a.call(t,n)}:t[r]=(...e)=>{let n=i.apply(t,e);return n===!1&&(n=a.apply(t,e)),n}}n.hooks=t}if(e.walkTokens){let t=this.defaults.walkTokens,r=e.walkTokens;n.walkTokens=function(e){let n=[];return n.push(r.call(this,e)),t&&(n=n.concat(t.call(this,e))),n}}this.defaults={...this.defaults,...n}}),this}setOptions(e){return this.defaults={...this.defaults,...e},this}lexer(e,t){return L.lex(e,t??this.defaults)}parser(e,t){return B.parse(e,t??this.defaults)}#e(e,t){return(n,r)=>{let i={...r},a={...this.defaults,...i};this.defaults.async===!0&&i.async===!1&&(a.silent||console.warn(`marked(): The async option was set to true by an extension. The async: false option sent to parse will be ignored.`),a.async=!0);let o=this.#t(!!a.silent,!!a.async);if(n==null)return o(Error(`marked(): input parameter is undefined or null`));if(typeof n!=`string`)return o(Error(`marked(): input parameter is of type `+Object.prototype.toString.call(n)+`, string expected`));if(a.hooks&&(a.hooks.options=a),a.async)return Promise.resolve(a.hooks?a.hooks.preprocess(n):n).then(t=>e(t,a)).then(e=>a.hooks?a.hooks.processAllTokens(e):e).then(e=>a.walkTokens?Promise.all(this.walkTokens(e,a.walkTokens)).then(()=>e):e).then(e=>t(e,a)).then(e=>a.hooks?a.hooks.postprocess(e):e).catch(o);try{a.hooks&&(n=a.hooks.preprocess(n));let r=e(n,a);a.hooks&&(r=a.hooks.processAllTokens(r)),a.walkTokens&&this.walkTokens(r,a.walkTokens);let i=t(r,a);return a.hooks&&(i=a.hooks.postprocess(i)),i}catch(e){return o(e)}}}#t(e,t){return n=>{if(n.message+=`
+Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error occurred:</p><pre>`+h(n.message+``,!0)+`</pre>`;return t?Promise.resolve(e):e}if(t)return Promise.reject(n);throw n}}};function U(e,t){return H.parse(e,t)}U.options=U.setOptions=function(e){return H.setOptions(e),U.defaults=H.defaults,f(U.defaults),U},U.getDefaults=u,U.defaults=d,U.use=function(...e){return H.use(...e),U.defaults=H.defaults,f(U.defaults),U},U.walkTokens=function(e,t){return H.walkTokens(e,t)},U.parseInline=H.parseInline,U.Parser=B,U.parser=B.parse,U.Renderer=R,U.TextRenderer=z,U.Lexer=L,U.lexer=L.lex,U.Tokenizer=S,U.Hooks=V,U.parse=U,U.options,U.setOptions,U.use,U.walkTokens,U.parseInline,B.parse,L.lex;var ze=Object.assign({"/blog/00-quest-to-be-real.md":e,"/blog/01-approaching-truth.md":t,"/blog/02-what-im-reading-q1-2026.md":n,"/blog/03-analyzing-healing-crystals-report.md":r,"/blog/04-state-of-big-tech-and-market.md":i,"/blog/05-work-health-matrix.md":a,"/blog/06-llm-usage-2026.md":o,"/blog/07-vibe-research.md":s,"/blog/08-learned-0426-week2.md":c,"/blog/09-futures-with-ai.md":l});function Be(e){let t=e.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/);if(!t)return{meta:{},body:e};let n={};return t[1].split(`
+`).forEach(e=>{let t=e.indexOf(`:`);if(t===-1)return;let r=e.slice(0,t).trim();n[r]=e.slice(t+1).trim().replace(/^["']|["']$/g,``)}),{meta:n,body:t[2]}}function Ve(e){let t=e.trim().split(/\s+/).length;return`${Math.max(1,Math.round(t/200))} min read`}var W=Object.entries(ze).map(([e,t])=>{let{meta:n,body:r}=Be(t),i=e.replace(`/blog/`,``).replace(`.md`,``);return{id:n.id||i,title:n.title||i,date:n.date||``,topic:n.topic||`General`,excerpt:n.excerpt||``,readingTime:Ve(r),body:r,html:U.parse(r)}}).sort((e,t)=>new Date(t.date)-new Date(e.date));function G(e){return parseInt(localStorage.getItem(`blog-likes-${e}`)||`0`,10)}function K(e){return localStorage.getItem(`blog-liked-${e}`)===`1`}function He(e){let t=K(e),n=G(e);return localStorage.setItem(`blog-liked-${e}`,t?`0`:`1`),localStorage.setItem(`blog-likes-${e}`,String(t?Math.max(0,n-1):n+1)),{liked:!t,count:G(e)}}function Ue(){let e={};return W.forEach(t=>{e[t.topic]=(e[t.topic]||0)+1}),Object.entries(e).sort((e,t)=>t[1]-e[1])}function We(){let e={};return W.forEach(t=>{if(!t.date)return;let n=t.date.slice(0,7);e[n]=(e[n]||0)+1}),Object.entries(e).sort((e,t)=>t[0].localeCompare(e[0]))}function Ge(e){let t=e.toLowerCase();return W.filter(e=>e.title.toLowerCase().includes(t)||e.excerpt.toLowerCase().includes(t)||e.topic.toLowerCase().includes(t)||e.body.toLowerCase().includes(t))}var Ke=[{id:`dnb-mix-dnb2b`,title:`Drum & Bass Mix`,artist:`dnb2b (octobass × tipsysound)`,type:`youtube`,src:`IegjEa8tDzQ`,genre:`Drum & Bass`,year:``,description:`A collaborative DnB mix — two artists, one vibe.`},{id:`garage-housewarming`,title:`Live — Garage @ Housewarming`,artist:`octobass`,type:`youtube`,src:`bPC0C3GNils`,genre:`UK Garage`,year:``,description:`Live garage set recorded at a housewarming party.`},{id:`house-last-resort`,title:`Live — House @ 라스트리조트 (Last Resort)`,artist:`octobass × House of Beats`,type:`youtube`,src:`rS9RvUlasAM`,genre:`House`,year:``,description:`Live house set at Last Resort, Seoul, with House of Beats.`},{id:`afro-house-basement`,title:`Live — Afro House @ Basement Club`,artist:`octobass`,type:`youtube`,src:`vi0BHt_TLuI`,genre:`Afro House`,year:``,description:`Live afro-house set at Basement Club (now DnB Seoul).`},{id:`sc-originals`,title:`Original Tracks`,artist:`octobass`,type:`soundcloud`,src:`https://soundcloud.com/djoctobass`,genre:`Various`,year:``,description:`Original productions — browse the full SoundCloud profile.`}];function q(e){return parseInt(localStorage.getItem(`music-likes-${e}`)||`0`,10)}function qe(e){let t=localStorage.getItem(`music-liked-${e}`)===`1`,n=q(e);return t?(localStorage.setItem(`music-liked-${e}`,`0`),localStorage.setItem(`music-likes-${e}`,String(Math.max(0,n-1)))):(localStorage.setItem(`music-liked-${e}`,`1`),localStorage.setItem(`music-likes-${e}`,String(n+1))),{liked:!t,count:q(e)}}function Je(e){return localStorage.getItem(`music-liked-${e}`)===`1`}function Ye(e,t){let n=`${location.origin}${location.pathname}#music/${e}`;navigator.share?navigator.share({title:t,url:n}).catch(()=>{}):navigator.clipboard.writeText(n).then(()=>Xe(`Link copied!`))}function Xe(e){let t=document.getElementById(`toast`);t&&(t.textContent=e,t.classList.add(`show`),setTimeout(()=>t.classList.remove(`show`),2200))}function Ze(e){return`<div class="embed-wrap yt-embed">
     <iframe
       src="https://www.youtube-nocookie.com/embed/${e}"
       title="YouTube video"
@@ -3307,14 +5214,14 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
       allowfullscreen
       loading="lazy"
     ></iframe>
-  </div>`}function Xe(e){return`<div class="embed-wrap sc-embed">
+  </div>`}function Qe(e){return`<div class="embed-wrap sc-embed">
     <iframe
       src="https://w.soundcloud.com/player/?url=${encodeURIComponent(e)}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       scrolling="no"
       allow="autoplay"
       loading="lazy"
     ></iframe>
-  </div>`}function Ze(e){let t=Ke(e.id),n=q(e.id),r=e.type===`youtube`?Ye(e.src):Xe(e.src),i=document.createElement(`article`);return i.className=`music-card`,i.dataset.id=e.id,i.innerHTML=`
+  </div>`}function $e(e){let t=Je(e.id),n=q(e.id),r=e.type===`youtube`?Ze(e.src):Qe(e.src),i=document.createElement(`article`);return i.className=`music-card`,i.dataset.id=e.id,i.innerHTML=`
     ${r}
     <div class="music-card-body">
       <div class="music-card-meta">
@@ -3337,7 +5244,7 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
         </button>
       </div>
     </div>
-  `,i.querySelector(`.like-btn`).addEventListener(`click`,t=>{let n=t.currentTarget,r=Ge(e.id);n.classList.toggle(`liked`,r.liked),n.querySelector(`.like-count`).textContent=r.count}),i.querySelector(`.share-btn`).addEventListener(`click`,e=>{qe(e.currentTarget.dataset.id,e.currentTarget.dataset.title)}),i}function Qe(){let e=document.getElementById(`music-grid`);e&&(e.innerHTML=``,We.forEach(t=>e.appendChild(Ze(t))))}var $e=`writer-in-fancy-pants/writer-in-fancy-pants.github.io`,et=`R_kgDORj_ZYw`,tt=`Announcements`,nt=`DIC_kwDORj_ZY84C6jaI`,rt=`1`;function J(e,t){let n=document.getElementById(e);if(!n)return;n.innerHTML=``;let r=document.documentElement.dataset.theme===`light`?`light`:`dark_dimmed`,i=document.createElement(`script`);i.src=`https://giscus.app/client.js`,i.setAttribute(`data-repo`,$e),i.setAttribute(`data-repo-id`,et),i.setAttribute(`data-category`,tt),i.setAttribute(`data-category-id`,nt),i.setAttribute(`data-mapping`,`specific`),i.setAttribute(`data-term`,t),i.setAttribute(`data-strict`,`0`),i.setAttribute(`data-reactions-enabled`,rt),i.setAttribute(`data-emit-metadata`,`0`),i.setAttribute(`data-input-position`,`top`),i.setAttribute(`data-theme`,r),i.setAttribute(`data-lang`,`en`),i.crossOrigin=`anonymous`,i.async=!0,n.appendChild(i)}function it(){let e=document.documentElement.dataset.theme===`light`?`light`:`dark_dimmed`,t=document.querySelector(`iframe.giscus-frame`);t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},`https://giscus.app`)}var at=[{title:`Meditations`,status:`active`,description:`Live neurofeedback / biofeedback training and monitored meditation via stream from health devices (EEG, Heart rate, etc).`,tags:[`alpha/theta`,`hrv`,`neurofeedback`,`python`,`audio`,`js`,`open source`],link:`https://github.com/writer-in-fancy-pants/meditations`,demo:`https://writer-in-fancy-pants.github.io/meditations/`},{title:`Mind Acoustic Tools`,status:`active`,description:`Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.`,tags:[`audio`,`emdr`,`python`,`js`,`open source`,`dashboard`],link:`https://github.com/writer-in-fancy-pants/mind-audio-tools`,demo:`https://writer-in-fancy-pants.github.io/mind-audio-tools/`},{title:`Muse 2 EEG Dashboard`,status:`active`,description:`Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo`,tags:[`eeg`,`neurofeedback`,`python`,`js`,`open source`,`dashboard`],link:`https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard`,demo:`https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/`}];function ot(){let e=localStorage.getItem(`theme`)||`dark`;document.documentElement.dataset.theme=e,st(e)}function st(e){let t=document.getElementById(`theme-toggle`);t&&(t.textContent=e===`dark`?`☀️ Light`:`🌙 Dark`)}document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.dataset.theme===`dark`?`light`:`dark`;document.documentElement.dataset.theme=e,localStorage.setItem(`theme`,e),st(e),it()});function ct(e){let t=document.getElementById(`toast`);t&&(t.textContent=e,t.classList.add(`show`),setTimeout(()=>t.classList.remove(`show`),2200))}var lt=[`about`,`blog`,`projects`,`music`];function Y(){let[e,t]=(location.hash.replace(`#`,``)||`about`).split(`/`);return{section:lt.includes(e)?e:`about`,sub:t||null}}function X(e,t=!0){t&&history.pushState(null,``,`#${e}`),Z(Y())}window.addEventListener(`popstate`,()=>Z(Y()));function ut(e){document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`active`)),document.querySelectorAll(`.nav-tabs button`).forEach(e=>e.classList.remove(`active`)),document.getElementById(e)?.classList.add(`active`),document.getElementById(`tab-${e}`)?.classList.add(`active`),document.getElementById(`og-url`)?.setAttribute(`content`,`https://writer-in-fancy-pants.github.io/#${e}`)}lt.forEach(e=>{document.getElementById(`tab-${e}`)?.addEventListener(`click`,()=>X(e))});function Z({section:e,sub:t}){ut(e),e===`blog`?t?ft(t):Q():e===`projects`?(ht(),J(`giscus-projects`,`projects`)):e===`music`&&(Qe(),J(`giscus-music`,t?`music/${t}`:`music`))}function Q(e=W,t=null){let n=document.getElementById(`post-list-view`),r=document.getElementById(`single-post-view`);if(!n||!r)return;n.style.display=``,r.style.display=`none`;let i=document.getElementById(`posts-container`);if(i){if(i.innerHTML=``,e.length===0){i.innerHTML=`<p class="empty-state">No posts found.</p>`;return}e.forEach(e=>{let t=document.createElement(`article`);t.className=`post-card`;let n=K(e.id),r=G(e.id);t.innerHTML=`
+  `,i.querySelector(`.like-btn`).addEventListener(`click`,t=>{let n=t.currentTarget,r=qe(e.id);n.classList.toggle(`liked`,r.liked),n.querySelector(`.like-count`).textContent=r.count}),i.querySelector(`.share-btn`).addEventListener(`click`,e=>{Ye(e.currentTarget.dataset.id,e.currentTarget.dataset.title)}),i}function et(){let e=document.getElementById(`music-grid`);e&&(e.innerHTML=``,Ke.forEach(t=>e.appendChild($e(t))))}var tt=`writer-in-fancy-pants/writer-in-fancy-pants.github.io`,nt=`R_kgDORj_ZYw`,rt=`Announcements`,it=`DIC_kwDORj_ZY84C6jaI`,at=`1`;function J(e,t){let n=document.getElementById(e);if(!n)return;n.innerHTML=``;let r=document.documentElement.dataset.theme===`light`?`light`:`dark_dimmed`,i=document.createElement(`script`);i.src=`https://giscus.app/client.js`,i.setAttribute(`data-repo`,tt),i.setAttribute(`data-repo-id`,nt),i.setAttribute(`data-category`,rt),i.setAttribute(`data-category-id`,it),i.setAttribute(`data-mapping`,`specific`),i.setAttribute(`data-term`,t),i.setAttribute(`data-strict`,`0`),i.setAttribute(`data-reactions-enabled`,at),i.setAttribute(`data-emit-metadata`,`0`),i.setAttribute(`data-input-position`,`top`),i.setAttribute(`data-theme`,r),i.setAttribute(`data-lang`,`en`),i.crossOrigin=`anonymous`,i.async=!0,n.appendChild(i)}function ot(){let e=document.documentElement.dataset.theme===`light`?`light`:`dark_dimmed`,t=document.querySelector(`iframe.giscus-frame`);t&&t.contentWindow.postMessage({giscus:{setConfig:{theme:e}}},`https://giscus.app`)}var st=[{title:`Meditations`,status:`active`,description:`Live neurofeedback / biofeedback training and monitored meditation via stream from health devices (EEG, Heart rate, etc).`,tags:[`alpha/theta`,`hrv`,`neurofeedback`,`python`,`audio`,`js`,`open source`],link:`https://github.com/writer-in-fancy-pants/meditations`,demo:`https://writer-in-fancy-pants.github.io/meditations/`},{title:`Mind Acoustic Tools`,status:`active`,description:`Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.`,tags:[`audio`,`emdr`,`python`,`js`,`open source`,`dashboard`],link:`https://github.com/writer-in-fancy-pants/mind-audio-tools`,demo:`https://writer-in-fancy-pants.github.io/mind-audio-tools/`},{title:`Muse 2 EEG Dashboard`,status:`active`,description:`Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo`,tags:[`eeg`,`neurofeedback`,`python`,`js`,`open source`,`dashboard`],link:`https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard`,demo:`https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/`}];function ct(){let e=localStorage.getItem(`theme`)||`dark`;document.documentElement.dataset.theme=e,lt(e)}function lt(e){let t=document.getElementById(`theme-toggle`);t&&(t.textContent=e===`dark`?`☀️ Light`:`🌙 Dark`)}document.getElementById(`theme-toggle`)?.addEventListener(`click`,()=>{let e=document.documentElement.dataset.theme===`dark`?`light`:`dark`;document.documentElement.dataset.theme=e,localStorage.setItem(`theme`,e),lt(e),ot()});function ut(e){let t=document.getElementById(`toast`);t&&(t.textContent=e,t.classList.add(`show`),setTimeout(()=>t.classList.remove(`show`),2200))}var dt=[`about`,`blog`,`projects`,`music`];function Y(){let[e,t]=(location.hash.replace(`#`,``)||`about`).split(`/`);return{section:dt.includes(e)?e:`about`,sub:t||null}}function X(e,t=!0){t&&history.pushState(null,``,`#${e}`),Z(Y())}window.addEventListener(`popstate`,()=>Z(Y()));function ft(e){document.querySelectorAll(`.page`).forEach(e=>e.classList.remove(`active`)),document.querySelectorAll(`.nav-tabs button`).forEach(e=>e.classList.remove(`active`)),document.getElementById(e)?.classList.add(`active`),document.getElementById(`tab-${e}`)?.classList.add(`active`),document.getElementById(`og-url`)?.setAttribute(`content`,`https://writer-in-fancy-pants.github.io/#${e}`)}dt.forEach(e=>{document.getElementById(`tab-${e}`)?.addEventListener(`click`,()=>X(e))});function Z({section:e,sub:t}){ft(e),e===`blog`?t?mt(t):Q():e===`projects`?(_t(),J(`giscus-projects`,`projects`)):e===`music`&&(et(),J(`giscus-music`,t?`music/${t}`:`music`))}function Q(e=W,t=null){let n=document.getElementById(`post-list-view`),r=document.getElementById(`single-post-view`);if(!n||!r)return;n.style.display=``,r.style.display=`none`;let i=document.getElementById(`posts-container`);if(i){if(i.innerHTML=``,e.length===0){i.innerHTML=`<p class="empty-state">No posts found.</p>`;return}e.forEach(e=>{let t=document.createElement(`article`);t.className=`post-card`;let n=K(e.id),r=G(e.id);t.innerHTML=`
       <div class="post-card-header">
         <div>
           <h3 class="post-card-title">${e.title}</h3>
@@ -3364,9 +5271,9 @@ Please report this to https://github.com/markedjs/marked.`,e){let e=`<p>An error
           </button>
         </div>
       </div>
-    `,t.querySelector(`.read-more`).addEventListener(`click`,t=>{t.preventDefault(),X(`blog/${e.id}`)}),t.querySelector(`.like-btn`).addEventListener(`click`,t=>{let n=t.currentTarget,r=Be(e.id);n.classList.toggle(`liked`,r.liked),n.querySelector(`span`).textContent=r.count}),t.querySelector(`.share-btn`).addEventListener(`click`,e=>{gt(e.currentTarget.dataset.id,e.currentTarget.dataset.title)}),i.appendChild(t)}),dt(t)}}function dt(e){let t=document.getElementById(`topic-index`),n=document.getElementById(`date-index`);if(!t||!n)return;t.innerHTML=``;let r=document.createElement(`li`);r.innerHTML=`<button class="${e?``:`active`}">All <span class="count">${W.length}</span></button>`,r.querySelector(`button`).addEventListener(`click`,()=>{Q(W,null)}),t.appendChild(r),Ve().forEach(([n,r])=>{let i=document.createElement(`li`);i.innerHTML=`<button class="${e===n?`active`:``}">${n} <span class="count">${r}</span></button>`,i.querySelector(`button`).addEventListener(`click`,()=>{Q(W.filter(e=>e.topic===n),n)}),t.appendChild(i)}),n.innerHTML=``,He().forEach(([e,t])=>{let r=document.createElement(`li`);r.innerHTML=`<button>${new Date(e+`-01`).toLocaleDateString(`en-US`,{year:`numeric`,month:`long`})} <span class="count">${t}</span></button>`,r.querySelector(`button`).addEventListener(`click`,()=>{Q(W.filter(t=>t.date?.startsWith(e)),null)}),n.appendChild(r)})}function ft(e){let t=W.find(t=>t.id===e),n=document.getElementById(`post-list-view`),r=document.getElementById(`single-post-view`);if(!(!n||!r)){if(!t){n.style.display=``,r.style.display=`none`;return}n.style.display=`none`,r.style.display=``,document.getElementById(`sp-title`).textContent=t.title,document.getElementById(`sp-date`).textContent=$(t.date),document.getElementById(`sp-topic`).textContent=t.topic,document.getElementById(`sp-body`).innerHTML=t.html,document.title=`${t.title} - writer-in-fancy-pants.github.com`,document.getElementById(`og-title`)?.setAttribute(`content`,t.title),document.getElementById(`og-description`)?.setAttribute(`content`,t.excerpt),document.getElementById(`og-url`)?.setAttribute(`content`,`https://writer-in-fancy-pants.github.io/#blog/${t.id}`),document.getElementById(`sp-body`),pt(t.id),document.getElementById(`back-btn`).onclick=()=>X(`blog`),mt(t.id,t.title),J(`giscus-blog`,`blog/${t.id}`),window.scrollTo({top:0,behavior:`smooth`})}}function pt(e){let t=K(e),n=G(e);[`sp-like-btn`,`sp-like-btn-footer`].forEach(e=>{let r=document.getElementById(e);if(!r)return;r.classList.toggle(`liked`,t);let i=r.querySelector(`span`)||r.querySelector(`#sp-like-count`)||r.querySelector(`#sp-like-count-footer`);i&&(i.textContent=n)});let r=document.getElementById(`sp-like-count`),i=document.getElementById(`sp-like-count-footer`);r&&(r.textContent=n),i&&(i.textContent=n)}function mt(e,t){[`sp-like-btn`,`sp-like-btn-footer`].forEach(t=>{let n=document.getElementById(t);n&&(n.onclick=()=>{Be(e),pt(e)})}),[`sp-share-btn`,`sp-share-btn-footer`].forEach(n=>{let r=document.getElementById(n);r&&(r.onclick=()=>gt(e,t))});let n=document.getElementById(`sp-copy-btn`);n&&(n.onclick=()=>{let t=`${location.origin}${location.pathname}#blog/${e}`;navigator.clipboard.writeText(t).then(()=>ct(`Link copied!`))})}function ht(){let e=document.getElementById(`projects-grid`);if(!(!e||e.dataset.rendered)){if(e.dataset.rendered=`1`,e.innerHTML=``,at.length===0){e.innerHTML=`<p class="empty-state">Projects coming soon.</p>`;return}at.forEach(t=>{let n=document.createElement(`div`);n.className=`project-card`;let r=(t.tags||[]).map(e=>`<span class="project-tag">${e}</span>`).join(``),i=[t.link?`<a href="${t.link}" target="_blank" rel="noopener" class="project-link">GitHub →</a>`:``,t.demo?`<a href="${t.demo}" target="_blank" rel="noopener" class="project-link">Demo →</a>`:``].join(``);n.innerHTML=`
+    `,t.querySelector(`.read-more`).addEventListener(`click`,t=>{t.preventDefault(),X(`blog/${e.id}`)}),t.querySelector(`.like-btn`).addEventListener(`click`,t=>{let n=t.currentTarget,r=He(e.id);n.classList.toggle(`liked`,r.liked),n.querySelector(`span`).textContent=r.count}),t.querySelector(`.share-btn`).addEventListener(`click`,e=>{vt(e.currentTarget.dataset.id,e.currentTarget.dataset.title)}),i.appendChild(t)}),pt(t)}}function pt(e){let t=document.getElementById(`topic-index`),n=document.getElementById(`date-index`);if(!t||!n)return;t.innerHTML=``;let r=document.createElement(`li`);r.innerHTML=`<button class="${e?``:`active`}">All <span class="count">${W.length}</span></button>`,r.querySelector(`button`).addEventListener(`click`,()=>{Q(W,null)}),t.appendChild(r),Ue().forEach(([n,r])=>{let i=document.createElement(`li`);i.innerHTML=`<button class="${e===n?`active`:``}">${n} <span class="count">${r}</span></button>`,i.querySelector(`button`).addEventListener(`click`,()=>{Q(W.filter(e=>e.topic===n),n)}),t.appendChild(i)}),n.innerHTML=``,We().forEach(([e,t])=>{let r=document.createElement(`li`);r.innerHTML=`<button>${new Date(e+`-01`).toLocaleDateString(`en-US`,{year:`numeric`,month:`long`})} <span class="count">${t}</span></button>`,r.querySelector(`button`).addEventListener(`click`,()=>{Q(W.filter(t=>t.date?.startsWith(e)),null)}),n.appendChild(r)})}function mt(e){let t=W.find(t=>t.id===e),n=document.getElementById(`post-list-view`),r=document.getElementById(`single-post-view`);if(!(!n||!r)){if(!t){n.style.display=``,r.style.display=`none`;return}n.style.display=`none`,r.style.display=``,document.getElementById(`sp-title`).textContent=t.title,document.getElementById(`sp-date`).textContent=$(t.date),document.getElementById(`sp-topic`).textContent=t.topic,document.getElementById(`sp-body`).innerHTML=t.html,new DOMParser().parseFromString(t.html,`text/html`).querySelectorAll(`script`).forEach(e=>{let t=document.createElement(`script`);Array.from(e.attributes).forEach(e=>{t.setAttribute(e.name,e.value)}),e.textContent&&(t.textContent=e.textContent),document.body.appendChild(t)}),document.title=`${t.title} - writer-in-fancy-pants.github.com`,document.getElementById(`og-title`)?.setAttribute(`content`,t.title),document.getElementById(`og-description`)?.setAttribute(`content`,t.excerpt),document.getElementById(`og-url`)?.setAttribute(`content`,`https://writer-in-fancy-pants.github.io/#blog/${t.id}`),document.getElementById(`sp-body`),ht(t.id),document.getElementById(`back-btn`).onclick=()=>X(`blog`),gt(t.id,t.title),J(`giscus-blog`,`blog/${t.id}`),window.scrollTo({top:0,behavior:`smooth`})}}function ht(e){let t=K(e),n=G(e);[`sp-like-btn`,`sp-like-btn-footer`].forEach(e=>{let r=document.getElementById(e);if(!r)return;r.classList.toggle(`liked`,t);let i=r.querySelector(`span`)||r.querySelector(`#sp-like-count`)||r.querySelector(`#sp-like-count-footer`);i&&(i.textContent=n)});let r=document.getElementById(`sp-like-count`),i=document.getElementById(`sp-like-count-footer`);r&&(r.textContent=n),i&&(i.textContent=n)}function gt(e,t){[`sp-like-btn`,`sp-like-btn-footer`].forEach(t=>{let n=document.getElementById(t);n&&(n.onclick=()=>{He(e),ht(e)})}),[`sp-share-btn`,`sp-share-btn-footer`].forEach(n=>{let r=document.getElementById(n);r&&(r.onclick=()=>vt(e,t))});let n=document.getElementById(`sp-copy-btn`);n&&(n.onclick=()=>{let t=`${location.origin}${location.pathname}#blog/${e}`;navigator.clipboard.writeText(t).then(()=>ut(`Link copied!`))})}function _t(){let e=document.getElementById(`projects-grid`);if(!(!e||e.dataset.rendered)){if(e.dataset.rendered=`1`,e.innerHTML=``,st.length===0){e.innerHTML=`<p class="empty-state">Projects coming soon.</p>`;return}st.forEach(t=>{let n=document.createElement(`div`);n.className=`project-card`;let r=(t.tags||[]).map(e=>`<span class="project-tag">${e}</span>`).join(``),i=[t.link?`<a href="${t.link}" target="_blank" rel="noopener" class="project-link">GitHub →</a>`:``,t.demo?`<a href="${t.demo}" target="_blank" rel="noopener" class="project-link">Demo →</a>`:``].join(``);n.innerHTML=`
       <h3 class="project-title">${t.title}</h3>
       <p class="project-desc">${t.description}</p>
       <div class="project-tags">${r}</div>
       <div class="project-links">${i}</div>
-    `,e.appendChild(n)})}}function gt(e,t){let n=`${location.origin}${location.pathname}#blog/${e}`;navigator.share?navigator.share({title:t,url:n}).catch(()=>{}):navigator.clipboard.writeText(n).then(()=>ct(`Link copied!`))}var _t;document.getElementById(`blog-search`)?.addEventListener(`input`,e=>{clearTimeout(_t),_t=setTimeout(()=>{let t=e.target.value.trim();t.length===0?Q(W,null):Q(Ue(t),null)},250)});function $(e){return e?new Date(e).toLocaleDateString(`en-US`,{year:`numeric`,month:`long`,day:`numeric`}):``}ot(),document.getElementById(`yr`).textContent=new Date().getFullYear(),Z(Y());
+    `,e.appendChild(n)})}}function vt(e,t){let n=`${location.origin}${location.pathname}#blog/${e}`;navigator.share?navigator.share({title:t,url:n}).catch(()=>{}):navigator.clipboard.writeText(n).then(()=>ut(`Link copied!`))}var yt;document.getElementById(`blog-search`)?.addEventListener(`input`,e=>{clearTimeout(yt),yt=setTimeout(()=>{let t=e.target.value.trim();t.length===0?Q(W,null):Q(Ge(t),null)},250)});function $(e){return e?new Date(e).toLocaleDateString(`en-US`,{year:`numeric`,month:`long`,day:`numeric`}):``}ct(),document.getElementById(`yr`).textContent=new Date().getFullYear(),Z(Y());
