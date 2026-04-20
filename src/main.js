@@ -279,6 +279,27 @@ function renderPost(id) {
   //document.getElementById('sp-reading-time').textContent = post.readingTime;
   document.getElementById('sp-body').innerHTML          = post.html;
 
+  // Add scripts from html
+  const parser = new DOMParser();
+  const doc =parser.parseFromString(post.html, 'text/html');
+  const scripts = doc.querySelectorAll('script');
+  scripts.forEach(script => {
+      const newScript = document.createElement('script');
+      
+      // Copy attributes (e.g., src, type, async)
+      Array.from(script.attributes).forEach(attr => {
+          newScript.setAttribute(attr.name, attr.value);
+      });
+
+      // If it's an inline script, copy the text content
+      if (script.textContent) {
+          newScript.textContent = script.textContent;
+      }
+
+      // Append to the page to trigger execution
+      document.body.appendChild(newScript);
+  });
+
   // Update SEO meta
   document.title = `${post.title} - writer-in-fancy-pants.github.com`;
   document.getElementById('og-title')?.setAttribute('content', post.title);

@@ -104,10 +104,10 @@ meta-viewport: width=device-width, initial-scale=1.0
   }
   nav.toc ol { padding-left: 1.2rem; }
   nav.toc li { margin: 0.3rem 0; }
-  nav.toc a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  nav.toc a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; pointer-events: none;}
   nav.toc a:hover { color: var(--accent1); }
   nav.toc ol ol { margin-top: 0.2rem; padding-left: 1.2rem; }
-  nav.toc ol ol a { color: #5a5a50; }
+  nav.toc ol ol a { color: #5a5a50; pointer-events: none;}
   nav.toc ol ol a:hover { color: var(--accent2); }
 
   /* SECTIONS */
@@ -380,21 +380,21 @@ tl;dr - There exist strong cross-cultural correlations between uses of specific 
 <div class="toc">
   <div class="toc-title">Contents</div>
   <ol>
-    <li><a href="#s1">Hypotheses & Scope</a></li>
-    <li><a href="#s2">Cross-Cultural Crystal Traditions</a>
+    <li><a href="#03-analyzing-healing-crystals-report#s1">Hypotheses & Scope</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s2">Cross-Cultural Crystal Traditions</a>
       <ol>
-        <li><a href="#s2a">African Traditions</a></li>
-        <li><a href="#s2b">Asian Traditions</a></li>
-        <li><a href="#s2c">Amazonian & Indigenous American</a></li>
-        <li><a href="#s2d">Cross-Cultural Convergence</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2a">African Traditions</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2b">Asian Traditions</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2c">Amazonian & Indigenous American</a></li>
+        <li><a href="#03-analyzing-healing-crystals-report#s2d">Cross-Cultural Convergence</a></li>
       </ol>
     </li>
-    <li><a href="#s3">Key Crystal Profiles</a></li>
-    <li><a href="#s4">Mineral Physics: Resonance Frequencies</a></li>
-    <li><a href="#s5">Correlation Analysis</a></li>
-    <li><a href="#s6">Alternate Hypothesis: Placebo & Conditioning</a></li>
-    <li><a href="#s7">Synthesis & Open Questions</a></li>
-    <li><a href="#s8">References</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s3">Key Crystal Profiles</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s4">Mineral Physics: Resonance Frequencies</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s5">Correlation Analysis</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s6">Alternate Hypothesis: Placebo & Conditioning</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s7">Synthesis & Open Questions</a></li>
+    <li><a href="#03-analyzing-healing-crystals-report#s8">References</a></li>
   </ol>
 </div>
 

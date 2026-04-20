@@ -1,8 +1,7 @@
-
 ---
 id: 08-learned-0426-week2
 title: "Content I found interesting : Week 2 April 2026"
-date: "2026-04-18"
+date: "2026-04-19"
 topic: "Journal"
 excerpt: "Title, links to interesting posts online."
 ---
@@ -13,7 +12,7 @@ excerpt: "Title, links to interesting posts online."
   * Chimeric Colors - [https://youtu.be/41H7kKwUlHo?t=507](https://youtu.be/41H7kKwUlHo?t=507)
 
 - Massive surveillance networks, freely available precise geolocation of devices via Webloc (Cobwebs)
-[https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/#3-Webloc](https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/#3-Webloc)
+[https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/](https://citizenlab.ca/research/analysis-of-penlinks-ad-based-geolocation-surveillance-tech/)
 
 - A webpage organized on physical modality
 [https://dynamicland.org/](https://dynamicland.org/)
