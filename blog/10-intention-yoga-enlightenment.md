@@ -1,7 +1,7 @@
 ---
 id: 10-intention-yoga-enlightenment
 title: "What I mean by a practice?"
-date: "2026-04-20"
+date: "2026-04-25"
 topic: "Journal"
 excerpt: "Based on a recent discussion, and the thoughts that came after."
 ---
