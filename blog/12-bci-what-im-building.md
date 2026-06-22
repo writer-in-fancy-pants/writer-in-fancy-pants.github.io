@@ -1,7 +1,7 @@
 ---
 id: 12-bci-what-im-building
 title: "What I'm building : Self-conditioning via neuro/biofeedback"
-date: "2026-04-29"
+date: "2026-05-05"
 topic: "Project"
 excerpt: "Achieving a balanced bodymind with EEG and other biosensors."
 ---
@@ -32,4 +32,8 @@ I have a long period of break. I should actually learn how neuroscientists think
 
 Huh, non-linear dynamics is also important. While implementing and observing Katz dimension, I realized it can track my meditation state pretty well. Well, that solves one of the original motivations.
 
+I really should build a standalone tool that my non-technical friends can also use. Possibly a python library with all the features I have discovered as well. Possibly a research report / write-up on observations.
+
 Can I play music with my head? Can I use my brainwaves as parts of a composition? Turns out I can. And it sounds soothing, the way I have set it up. Another segway.
+
+I do need other feedback mechanisms. And to use proper ML. And annotated data collection along with markers from all the music and movies and games and keyboards and whatever else.
