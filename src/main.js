@@ -23,7 +23,7 @@ const PROJECTS = [
   },
   {
     title : "Mind Acoustic Tools",
-    status: 'active',
+    //status: 'active',
     description : 'Tools that use spatial (stereo) audio. Currently supports Hearing Test, EMDR self-therapy, and guided meditations. Work in progress, would love feedback on expected features.',
     tags: ['audio', 'emdr', 'python', 'js', 'open source', 'dashboard'],
     link : 'https://github.com/writer-in-fancy-pants/mind-audio-tools',
@@ -31,11 +31,19 @@ const PROJECTS = [
   },
   {
     title : "Muse 2 EEG Dashboard",
-    status: 'active',
+    //status: 'active',
     description : 'Dashboard to visualize and compare EEG sessions using various neurofeedback metrics and frequency spectrum power distribution. Upload csv files with "timestamps,TF9,AF7,AF8,TF10" header and signal ordering. Other recordings should be converted to this format before uploading using conversion tools provided in the repo',
     tags: ['eeg', 'neurofeedback', 'python', 'js', 'open source', 'dashboard'],
     link: 'https://github.com/writer-in-fancy-pants/muse2-eeg-dashboard',
     demo: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/'
+  },
+  {
+    title:       'Experimental Modular Voice Dubbing',
+    status:       'active',
+    description: 'What it does.',
+    tags:        ['Python', 'Dubbing', 'TTS', 'Speech', 'Speech-to-speech', 'AI', 'TV', 'Movies'],
+    link:        'https://github.com/writer-in-fancy-pants/audio_dubbing',
+    //demo:        'https://...',   // optional
   },
   // Add your projects here. Example:
   // {
