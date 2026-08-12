@@ -38,9 +38,9 @@ const PROJECTS = [
     demo: 'https://writer-in-fancy-pants.github.io/muse2-eeg-dashboard/'
   },
   {
-    title:       'Experimental Modular Voice Dubbing',
+    title:       'Experimental AI Voice Dubbing',
     status:       'active',
-    description: 'What it does.',
+    description: 'Natural dubbing of video content into target language',
     tags:        ['Python', 'Dubbing', 'TTS', 'Speech', 'Speech-to-speech', 'AI', 'TV', 'Movies'],
     link:        'https://github.com/writer-in-fancy-pants/audio_dubbing',
     //demo:        'https://...',   // optional
