@@ -239,4 +239,11 @@ Right now, AI models are going through the same stage where they fail visibly an
 
 The other option is Pratyahara - limiting the senses. Only consuming as much content as our attention can handle. More scrutiny something requires, more time it needs, and hence either engage with it responsibly, or not at all. 
 
+## Coming back full circle
+This brings me to the loss of knowledge and culture. I find a lot of grounding in traditions. Events and songs and food and art, all meant to be done by humans, grounded in reality and human connection. We are social creatures, meant to spend time with the community, with our people being ourselves. Customs and rites and cultures come with built-in guidelines, steered by the group. It is not fabulous, not often, but it is touching. Literally. The vibes, the sounds, the color, just being in the moment, it is so refreshing, even if it is a bit silly.
+
+As AI also takes up the mantle of copying art, we have this opportunity to claim art back, to reignite the bonkers actions of our forefathers connected to the earth and the sky, shooting shit and singing diddies in the same tone as the hymns. Culture is meant to be fun, to connect one to the world around them. 
+
+It need not be your own culture either. As the internet feels less and less real, with barely a chance to talk to an actual person, why not take a break and pick up a brush or an instrument or whatever, stepping through the artfully created tutorials and shared content with nary a visitor in decades. Make your agent guide you to the door. Recharge your attention.
+
 Do not let the brands exhaust you emotionally, nor buy into the narrative of "Nothing can change". Apathy is the single worst option of the lot. Stay human. Pick your battles but keep trying. Peace!
